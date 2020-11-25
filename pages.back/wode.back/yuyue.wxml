@@ -1,0 +1,129 @@
+<view class='tab'>
+	<view class='true'>
+		全部预约
+	</view>
+	<view>
+		预约中
+	</view>
+	<view>
+		准备看房
+	</view>
+	<view>
+		已完成
+	</view>
+	<view>
+		已取消看房
+	</view>
+</view>
+<view class='list'>
+	<view class='head'>
+		<text>预约中</text>丨看房时间：2020-02-05 09:32
+	</view>
+	<view class='bdy'>
+		<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' mode='widthFix'></image>
+		<view>
+			<view class='title'>
+				北花园物业
+			</view>
+			<view class='txt'>
+				120m²丨朝南丨3室1厅丨精装修
+			</view>
+			<view class='txt_box'>
+				<text class='y_box'>整租</text>
+				<text class='b_box'>住宅</text>
+				<text>整租</text>
+				<text>临地铁</text>
+			</view>
+		</view>
+	</view>
+	<view class='address'>
+		<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+		朝阳区高碑店<text>9200元/月</text>
+	</view>
+	<view class='bottom'>
+		<view>取消预约</view>
+		<navigator>联系顾问</navigator>
+	</view>
+</view>
+<view class='list'>
+	<view class='head'>
+		<text>预约中</text>丨看房时间：2020-02-05 09:32
+	</view>
+	<view class='bdy'>
+		<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' mode='widthFix'></image>
+		<view>
+			<view class='title'>
+				北花园物业
+			</view>
+			<view class='txt'>
+				120m²丨朝南丨3室1厅丨精装修
+			</view>
+			<view class='txt_box'>
+				<text class='y_box'>整租</text>
+				<text class='b_box'>住宅</text>
+				<text>整租</text>
+				<text>临地铁</text>
+			</view>
+		</view>
+	</view>
+	<view class='address'>
+		<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+		朝阳区高碑店<text>9200元/月</text>
+	</view>
+	<view class='bottom'>
+		<view>评价顾问</view>
+		<navigator>联系顾问</navigator>
+	</view>
+</view>
+<view class='list'>
+	<view class='head'>
+		<text>预约中</text>丨看房时间：2020-02-05 09:32
+	</view>
+	<view class='bdy'>
+		<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' mode='widthFix'></image>
+		<view>
+			<view class='title'>
+				北花园物业
+			</view>
+			<view class='txt'>
+				120m²丨朝南丨3室1厅丨精装修
+			</view>
+			<view class='txt_box'>
+				<text class='y_box'>整租</text>
+				<text class='b_box'>住宅</text>
+				<text>整租</text>
+				<text>临地铁</text>
+			</view>
+		</view>
+	</view>
+	<view class='address'>
+		<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+		朝阳区高碑店<text>9200元/月</text>
+	</view>
+	<view class='bottom'>
+		<view>再次预约</view>
+		<navigator>联系顾问</navigator>
+	</view>
+</view>
+<view class='b_pj'>
+	<view class='pj_bdy'>
+		<view class='title'>
+			评价
+		</view>
+		<view class='pj_btn'>
+			<text>非常差</text>
+			<text>非常满意</text>
+		</view>
+		<view class='jdt'>
+			<text class="{{jdt>=index?'yes':''}}" data-index='{{index}}' wx:for="{{jdt_num}}"></text>
+			<view class='jdt_btn' style='left:{{jdt}}0%;'>
+				<text></text>
+				<view>1分</view>
+			</view>
+		</view>
+		<textarea name="pj_cent" id="pj_cent" cols="30" rows="10" placeholder="请输入您的评语">
+		</textarea>
+		<view class='btn'>确认提交</view>
+	</view>
+	<view class='gb'>X</view>
+</view>

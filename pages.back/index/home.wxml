@@ -1,0 +1,13 @@
+<view class='tab'>
+	<view class="{{tab==0?'true':''}}" bindtap='tab' data-index='0'><text>在售</text></view>
+	<view class="{{tab==1?'true':''}}" bindtap='tab' data-index='1'><text>在租</text></view>	
+</view>
+<navigator url='/pages/shequ/serce' class='toserce'>你想住在哪个社区？</navigator>
+<view class='title'>周边热搜</view>
+<view class='now_city'>
+	<navigator ur='/page/index?id=1'>新城国际</navigator>
+	<navigator ur='/page/index?id=2'>阳光上东</navigator>
+	<navigator ur='/page/index?id=2'>阳光上东</navigator>
+	<navigator ur='/page/index?id=2'>阳光上东</navigator>
+	<navigator ur='/page/index?id=2'>阳光上东</navigator>
+</view>

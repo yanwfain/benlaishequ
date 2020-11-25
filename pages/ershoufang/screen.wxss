@@ -1,0 +1,41 @@
+page{padding-bottom: 100rpx;}
+.title{color: #333;padding:20rpx;}
+.box{padding:0 50rpx 60rpx}
+.box>text{display: inline-block;width: 150rpx;padding:12rpx 0;background: #f9f9f9;margin:0 15rpx 20rpx 0;text-align: center;font-size: 24rpx;}
+.box>text.true{background: #C3A874;color: #fff;}
+.bottom{height: 100rpx;position: fixed;bottom: 0;left: 0;width: 100%;display: flex;}
+.bottom>view{flex:1;background: #f9f9f9;font-weight: bold;text-align: center;height: 100rpx;line-height: 100rpx;font-size: 32rpx;}
+.bottom>view:nth-child(2){flex: 2;background: #C3A874;color: #fff;}
+.time_top{
+  width: 60%;
+  /* margin: 0 auto; */
+
+  padding: 20rpx 0rpx;
+  /* background: #f9f9f9; */
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+  text-align: right;
+}
+picker{
+  width: 100%;
+}
+.picker-area-text{
+  /* width: 50%; */
+  text-align: right;
+}
+.triangle-down{
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #666666;
+  border-right: 1px solid #666666;
+  transform: rotate(45deg);
+
+}
+.ruzhuTIme{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

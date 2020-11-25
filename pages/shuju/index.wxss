@@ -1,0 +1,68 @@
+/* pages/shuju/index.wxss */
+.top_nav{
+  width: 94%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #CFCFCF;
+}
+.lefts{
+  font-size: 34rpx;
+  font-weight: 600;
+
+}
+.rights{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #C3A874;
+}
+.rights image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 12rpx;
+}
+.dv1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx 0;
+}
+.dv1_left{
+  width: 49%;
+  border-right: 1px solid #CFCFCF;
+  text-align: center;
+}
+.dv1_right{
+  width: 50%;
+
+  text-align: center;
+}
+.contdv1{
+  width: 94%;
+  margin: 0 auto;
+  padding: 20rpx 0;
+}
+.toip_tit{
+  font-size: 34rpx;
+  font-weight: 600;
+  padding-bottom: 20rpx;
+}
+.cont{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+.cont_tab{
+  width: 31%;
+  margin: 1.1%;
+  padding: 40rpx 0;
+  text-align: center;
+  border-radius: 14rpx;
+  background: #F7F7F7;
+}

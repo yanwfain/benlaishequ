@@ -1,0 +1,38 @@
+<view class="list">
+  <view class="left">头像</view>
+  <image mode="aspectFill" bindtap="addPic1s" wx:if="{{imgboxs[imgboxs.length-1]}}" src="{{imgboxs[imgboxs.length-1].url2}}" class="img1" ></image>
+  <image class="img1" mode="aspectFill" bindtap="addPic1s" src="../../image/wei.png" wx:else></image>
+</view>
+<view class="list">
+  <view class="left">姓名</view>
+  <input class="right" bindinput="name" value="{{name}}" placeholder="请输入您的姓名"></input>
+</view>
+<view class="list">
+  <view class="left">手机号</view>
+  <input class="right" type="number" bindinput="tel" value="{{tel}}" placeholder="请输入您的手机号"></input>
+</view>
+<view class="list">
+  <view class="left">从业时间</view>
+<view class="time_top">
+			<picker bindchange="changeDate" mode="date" fields="day" value="{{date}}">
+				<view class="picker-area-text">
+					{{date_time?date_time:'请选择从业时间'}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+</view>
+<view class="list">
+  <view class="left">成交套数</view>
+  <input class="right" type="number" value="{{success}}" bindinput="success" placeholder="请输入您的成交套数"></input>
+</view>
+<view class="list">
+  <view class="left">擅长业务</view>
+  <picker bindchange="pickerProChangef2" range="{{ pickerProDataf2 }}" range-key="{{'name'}}" value="{{countryIndex2}}">
+  	<view class="txt" style="">
+				{{pickerProDataf2[countryIndex2].name?pickerProDataf2[countryIndex2].name:"请选择"}}	
+        <view class="triangle-down"></view>
+			</view>
+		</picker>
+</view>
+<view class="btn" bindtap="submit">确定</view>

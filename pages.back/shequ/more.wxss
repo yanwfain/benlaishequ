@@ -1,0 +1,30 @@
+/* pages/guanli/shequtupian.wxss */
+page{
+  background: #F9F7F5;
+}
+.top_title{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+.title1{
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.img1{
+  width: 100%;
+  display: flex;
+  margin-top: 14rpx;
+  flex-wrap: wrap;
+}
+.img1 image{
+  width: 48%;
+  height: 320rpx;
+  margin: 1%;
+}
+.sheTxt{
+  padding: 20rpx;
+  color: #666666;
+  background: white;
+  margin-top: 20rpx;
+}

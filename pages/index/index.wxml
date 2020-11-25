@@ -1,0 +1,158 @@
+<view class="Shouquan" wx:if="{{!hasUserInfo}}">
+	<view class="titless">
+		提示 ！
+	</view>
+	<view class="cont_tltsops">
+		您还未授权请先授权！
+	</view>
+	<view class="btn_button">
+		<view class="quxiao_btn" bindtap="ggopfn">
+			取消
+		</view>
+		<button class="butn_bottys" open-type="getUserInfo" bindgetuserinfo="getUserInfo">去授权 </button>
+	</view>
+</view>
+<view class="opsbjc" wx:if="{{!hasUserInfo}}" bindtap="ggopfn"></view>
+<view class="opsbjc" wx:if="{{isSiuser}}" bindtap="ggopfns"></view>
+<view class="Shouquan" wx:if="{{isSiuser}}">
+	<view class="titless">
+		提示 ！
+	</view>
+	<view class="cont_tltsops">
+		您的账号未绑定手机号，点击获取
+	</view>
+	<view class="btn_button">
+		<view class="quxiao_btn" bindtap="ggopfns">
+			取消
+		</view>
+		<button class="butn_bottys" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">获取 </button>
+	</view>
+</view>
+<view class='top'>
+	<navigator class='city' url='/pages/index/city?city={{city}}'>
+		<view class="picker">
+			{{city}}
+		</view>
+	</navigator>
+	<navigator class='serc' url="/pages/index/home">你想住在哪个社区</navigator>
+</view>
+
+<swiper indicator-dots autoplay="true" indicator-color="gray" indicator-active-color="#dd441c" interval="3000" duration="1000" circular='true' bindchange="bindchange" style="height:{{heig}}vw;">
+	<block wx:for='{{imgList}}'>
+		<swiper-item>
+			<image src="{{item.imgUrl}}" mode="aspectFill" data-id='{{item.id}}' class="slide-image" mode="widthFix" bindload="imageLoad" />
+		</swiper-item>
+	</block>
+</swiper>
+<view class='menu'>
+	<navigator url='/pages/shequ/serce'>
+		<image src='http://yt.baike360.cn/index/image/1.png'></image>
+		<view>社区查询</view>
+	</navigator>
+	<navigator url='/pages/zufang/index'>
+		<image src='http://yt.baike360.cn/index/image/2.png'></image>
+		<view>租房</view>
+	</navigator>
+	<navigator url='/pages/ershoufang/index'>
+		<image src='http://yt.baike360.cn/index/image/3.png'></image>
+		<view>二手房</view>
+	</navigator>
+	<navigator url='/pages/xinfang/index'>
+		<image src='http://yt.baike360.cn/index/image/4.png'></image>
+		<view>新房</view>
+	</navigator>
+</view>
+<view class='app_title'>
+	附近社区
+	<!-- <navigator class='t_left' url='/pages/shequ/detail'>我的社区</navigator> -->
+</view>
+<navigator class='app_row' wx:for="{{shequ}}" url='/pages/shequ/detail?id={{item.id}}&communityAnotherName={{item.communityAnotherName}}'>
+	<image src='http://yt.baike360.cn/index/image/6.png' mode="aspectFill"></image>
+	<view class='app_top'>
+		{{item.communityAnotherName}}
+	</view>
+	<view class='app_bottom'>
+		<view class='app_left'>
+			<view class='app_cent'>
+				{{item.mainType}}
+			</view>
+			<view class='app_biaoqian'>
+				<text>整租</text>
+				<text>住宅</text>
+				<text>整租</text>
+				<text>临地铁</text>
+			</view>
+		</view>
+		<image src='http://yt.baike360.cn/index/image/7.png' class='app_right' mode="widthFix"></image>
+	</view>
+</navigator>
+<!-- <view class="searchBox"> -->
+<view class='page-con'>
+	<view class='stage'>
+		<block wx:if="{{swiperList.length>1}}">
+			<view class='wrapper' bindtouchstart='start' bindtouchend='end'>
+				<block wx:for='{{swiperList}}' wx:key="index">
+					<image mode="widthFix" hidden="{{index>2}}" class='imgBasic  {{item.active ? item.swpClass : ""}}' src='https://legal.baike360.cn/public/uploads/z-4.png' data-index='{{index}}'>
+						<view class="delit_txt1" data-id="{{item.id}}">
+							<view class="item-text">
+								<view>顾问杜</view>
+								<view style="font-weight:500;font-size:30rpx">18866895566</view>
+
+							</view>
+							<view class="num_tab">
+								<view class="list">
+									<view class="txt1">180</view>
+									<view class="txt2">带看次数</view>
+								</view>
+								<view class="list">
+									<view class="txt1">682</view>
+									<view class="txt2">预约成功次数</view>
+								</view>
+								<view class="list">
+									<view class="txt1">2977</view>
+									<view class="txt2">成交次数</view>
+								</view>
+							</view>
+						</view>
+					</image>
+
+				</block>
+			</view>
+		</block>
+		<block wx:if="{{swiperList.length==1}}">
+			<view class='wrapper' bindtouchstart='start' bindtouchend='end'>
+				<block wx:for='{{swiperList}}' wx:key="index">
+					<image mode="widthFix" hidden="{{index>2}}" class='imgBasic  {{item.active ? item.swpClass : ""}}' src='https://legal.baike360.cn/public/uploads/z-4.png' data-index='{{index}}'></image>
+					<view class="delit_txt1" style="z-index:10; transform:scale(1);" data-id="{{item.id}}">
+						<view class="item-text">
+							<view>顾问杜</view>
+							<view style="font-weight:500;font-size:30rpx">18866895566</view>
+
+						</view>
+						<view class="num_tab">
+							<view class="list">
+								<view class="txt1">180</view>
+								<view class="txt2">带看次数</view>
+							</view>
+							<view class="list">
+								<view class="txt1">682</view>
+								<view class="txt2">预约成功次数</view>
+							</view>
+							<view class="list">
+								<view class="txt1">2977</view>
+								<view class="txt2">成交次数</view>
+							</view>
+						</view>
+					</view>
+				</block>
+			</view>
+		</block>
+	</view>
+</view>
+
+<!-- </view> -->
+
+<view class='btm_title'>
+	社区租售，本来可以更简单
+</view>
+<include src="/pages/menu.wxml"></include>

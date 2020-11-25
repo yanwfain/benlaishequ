@@ -1,0 +1,203 @@
+/* pages/guanli/fangyuanguanli.wxss */
+.top_head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 96%;
+  margin: 0 auto;
+}
+.right{
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #C3A874;
+  display: flex;
+  align-items: center;
+}
+.topshaixuan{
+  /* width: 100%; */
+  margin-left: 20rpx;
+  /* margin: 0 auto; */
+  display: flex;
+  font-size: 30rpx;
+  align-items: center;
+color: #1F1F1F;
+}
+
+.triangle-down {
+  height:0;
+  border-left:4px solid transparent;
+  border-right:4px solid transparent;
+  border-top:6px solid #333333;
+  margin-left:14rpx;
+}
+.bor_bb{
+  margin-top: 30rpx;
+  width: 100%;
+  height: 1px;
+  background: #F9F7F5;
+}
+.tabbtn{
+  width: 94%;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 30rpx 0;
+}
+.seran{
+  width: 24%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F6F6F6;
+  padding: 10rpx 0;
+  border-radius: 60rpx;
+}
+.seran image{
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 10rpx;
+}
+.seran view{
+  color: #CFCFCF;
+}
+.tab-lei{
+  width: 23%;
+  font-size: 28rpx;
+  color: #888888;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab-lei .triangle-down{
+  border-top:6px solid #F6F6F6;
+}
+.list_user{
+  padding:20rpx 0;
+}
+.list_btn{
+  display: flex;
+  align-items: center;
+  width: 96%;
+  margin: 0 auto;
+
+}
+.cont{
+  width: 90%;
+  margin: 0 auto;
+}
+.user_name{
+  font-size: 34rpx;
+  font-weight: 600;
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightmoney{
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #C3A874;
+}
+.type_staus{
+  width: 100%;
+  font-size: 28rpx;
+  color: #666666;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #DDDDDD;
+}
+.type_staus text{
+  color: black;
+
+}
+.btn{
+  width: 23%;
+  margin:4% 1%;
+  font-size: 30rpx;
+  padding:12rpx 0;
+  text-align: center;
+}
+.obg1{
+  color: black;
+  background: #EBEAEA;
+}
+.obg2{
+  color: white;
+  background: #C3A874;
+}
+.obg3{
+  color: #C3A874;
+  background: #303030;
+}
+.tit_top{
+  display: flex;
+  margin-top: 20rpx;
+}
+.left_top_tit{
+  font-size: 34rpx;
+  font-weight: 600;
+  margin-right: 20rpx;
+  color: #C3A874;
+}
+.bianji{
+  font-size: 28rpx;
+  color: #666666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bianji image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.isnumModel{
+  width: 100%;
+  height: 430rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  background: #FAFAFA;
+}
+.ismodelTop{
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30rpx;
+  background: white;
+}
+.delequxiao{
+  color: #959595;
+}
+.btnsubmit{
+  color: #C3A874;
+}
+radio-group{
+  
+  margin: 0 auto;
+  background: #FAFAFA;
+  padding: 30rpx;
+}
+.modellist1{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #666666;
+  margin-bottom: 40rpx;
+}
+.txt_ismodel{
+  font-size: 30rpx;
+
+}
+.inp_ismode{
+  width: 56%;
+  border: 1px solid #CFCFCF;
+  background: white;
+  font-size: 30rpx;
+  padding: 20rpx 10rpx;
+}

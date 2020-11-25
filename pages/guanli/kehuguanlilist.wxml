@@ -1,0 +1,91 @@
+<view class="top_guanli">
+	<view class="left">
+		<view class="time_top">
+			<picker bindchange="changeDate" mode="date" fields="day" value="{{date}}">
+				<view class="picker-area-text">
+					{{date_time?date_time:'时间'}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+		<view class="time_top">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}"
+				value="{{countryIndex}}">
+				<view class="txt" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"状态"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="right" bindtap="adduserFn">
+		<text style="font-size:40rpx;">+ </text>添加新客户
+	</view>
+</view>
+<view class="srear">
+	<image src="https://legal.baike360.cn/public/uploads/z-7.png"></image>
+	<input class="inp_srear" placeholder="搜索" value="{{keyword}}" bindconfirm="bindconfirm" confirm-type='search'></input>
+</view>
+<view class="list_user" wx:for="{{movieList}}">
+	<view class="bordd"></view>
+	<view class="cont">
+		<view class="top_dvlist">
+			<view class="toptabDl">
+				<view class="user_name">{{item.userRealName?item.userRealName:'测试数据'}}</view>
+				<view class="type_staus">
+					<text wx:if="{{item.userIntention==1}}">寻租</text><text wx:if="{{item.userIntention==2}}">买房</text><text
+						wx:if="{{item.userIntention==3}}">出租</text><text wx:if="{{item.userIntention==4}}">出售</text><text
+						wx:if="{{item.userIntention==5}}">委托</text><text wx:if="{{item.userIntention==6}}">出租出售</text>
+				</view>
+			</view>
+			<view class="cont_times">{{item.createDate}}</view>
+		</view>
+
+
+
+		<view class="tit_top">
+			<view class="left_top_tit" wx:if="{{item.userStatus==1}}">已推荐</view>
+			<view class="left_top_tit" wx:if="{{item.userStatus==2}}">看房中</view>
+			<view class="left_top_tit" wx:if="{{item.userStatus==3}}">待签</view>
+			<view class="left_top_tit" wx:if="{{item.userStatus==4}}">草签</view>
+			<view class="left_top_tit" wx:if="{{item.userStatus==5}}">签约</view>
+			<view class="left_top_tit" wx:if="{{item.userStatus==6}}">交易完成</view>
+			<!-- <view class="bianji" bindtap="delitFn" data-id="{{item.id}}">
+				<image src="../../image/xuigai.png"></image>
+					<view class="txt"  style="">
+						修改状态
+					</view>
+			</view> -->
+			
+		</view>
+
+
+		<view class="list_btn">
+				<view class="btn" style="background:#F2EDE5;" data-id="{{item.id}}" bindtap="tuijianFn">推荐</view>
+				<view class="btn obg1" bindtap="lookFn" data-id="{{item.id}}" data-tel="{{item.userPhone}}">查看电话</view>
+				<view class="btn obg2" bindtap="editFn" data-id="{{item.id}}">修改信息</view>
+				<view class="btn obg3" bindtap="delitFn" data-id="{{item.id}}">跟进记录</view>
+				<!-- <view class="btn obg3" bindtap="delitFn1">写跟进</view> -->
+			</view>
+
+	</view>
+</view>
+
+<block wx:if="{{ismoedli}}">
+
+
+	<view class="isbacgrd" bindtap="delehide"></view>
+	<view class="ismodeli">
+		<view class="title">客户电话</view>
+		<view class="modeli">{{telPhone}}</view>
+		<view class="btnmodel" bindtap="telFn">立即拨打</view>
+		<view class="loko" style="margin:0 auto;margin-top:20rpx;width:90%">查看记录</view>
+		<view class="userlooklist">
+			<view class="loko" wx:for="{{listTel}}">
+				<view>{{item.viewTime}}</view>
+				<view>{{item.agentName}}</view>
+			</view>
+		</view>
+	</view>
+	<image class="img_dele" bindtap="delehide" src="../../image/63a00400b62b5f7121dd0785ab0c483.png"></image>
+</block>

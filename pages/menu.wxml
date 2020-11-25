@@ -1,0 +1,13 @@
+<view class='tabbar_padding'></view>
+<view class='tabbar'>
+	<navigator open-type="redirect" url='/pages/index/index'>
+		<image wx:if="{{tid==1}}" src='http://yt.baike360.cn/index/image/8.png'></image>
+		<image wx:if="{{tid==2}}" src='http://yt.baike360.cn/index/image/9.png'></image>
+		<view>首页</view>
+	</navigator>
+	<navigator open-type="redirect" url='/pages/wode/index'>
+		<image wx:if="{{tid==2}}" src='http://yt.baike360.cn/index/image/10.png'></image>
+		<image wx:if="{{tid==1}}" src='http://yt.baike360.cn/index/image/11.png'></image>
+		<view>我的</view>
+	</navigator>
+</view>

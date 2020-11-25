@@ -1,0 +1,133 @@
+/* pages/guanli/fangyuanshangchuan.wxss */
+.top_tit1{
+  width: 92%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  padding: 20rpx 0;
+}
+.cont{
+  padding: 30rpx;
+  background: #FAFAFA;
+}
+.txt{
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+.txts{
+  font-size: 28rpx;
+
+}
+.list{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+  font-size: 28rpx;
+  border-top: 1px solid #CFCFCF;
+}
+.list_cont{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+  font-size: 28rpx;
+  position: relative;
+}
+.optyis{
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  left: 30%;
+  top:0;
+  z-index: 2;
+}
+.left{
+  color: #666666;
+  display: flex;
+  align-items: center;
+
+}
+.right{
+  display: flex;
+  align-items: center;
+  color: #1F1F1F;
+}
+.triangle-down {
+  height:0;
+  border-left:4px solid transparent;
+  border-right:4px solid transparent;
+  border-top:6px solid #888888;
+  margin-left:14rpx;
+}
+.cont1{
+  width: 96%;
+  margin: 0 auto;
+  height: 350rpx;
+  background: #FAFAFA;
+  border: 1px solid #CFCFCF;
+  /* margin-top: 20rpx; */
+}
+textarea{
+  padding: 20rpx;
+  height: 290rpx;
+  font-size: 28rpx;
+  width: 96%;
+  margin: 0 auto;
+}
+switch{
+  margin-left: 10rpx;
+}
+.inp_ip1{
+  width: 60%;
+  padding: 14rpx;
+  font-size: 28rpx;
+  border: 1px solid #CFCFCF;
+  background: white;
+}
+.left_1{
+  display: flex;
+  align-items: center;
+
+}
+.btn_sub{
+  width: 100%;
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+  background: linear-gradient(to right, #C3A874 0%,#B38F51 100%);
+}
+.list-left{
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: space-between;
+}
+.tab{
+  /* width: 94%; */
+  margin: 0 auto;
+  font-size: 26rpx;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+
+}
+.tablei{
+  width: 17%;
+  margin: 2% 1%;
+  padding:10rpx 0rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  border:1px solid rgb(238, 238, 238);
+}
+.activetab{
+  background: #B38F51;
+  border:1px solid white;
+  color: white;
+}

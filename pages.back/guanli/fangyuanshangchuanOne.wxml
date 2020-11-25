@@ -1,0 +1,56 @@
+<view class="top_tit1">
+	<text>1 房源信息 </text>
+	<text style="color:#959595"> —— </text>
+	<text style="color:#959595">2 房源状态 </text>
+	<text style="color:#959595"> —— </text>
+	<text style="color:#959595">3 上传照片</text>
+
+</view>
+<view class="cont">
+	<view class="list">
+		<view class="left">选择社区</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">选择楼座</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">选择单元</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">选择房间</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+
+</view>
+<view class="btn_sub" bindtap="submit1">下一步</view>

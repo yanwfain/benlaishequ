@@ -1,0 +1,92 @@
+<view class='top'>
+  <navigator class='city' bindtap="change">
+    <view class="picker" >
+      <view style="width:200rpx;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;"> {{shequdelit?shequdelit:'选择社区'}}</view>
+    </view>
+  </navigator>
+  <navigator class='serc' url="/pages/index/home">你想住在哪个社区</navigator>
+</view>
+<view class='tochange' wx:if="{{show}}">
+  <view class='app_left'>
+    <view class='list' bindtap="xloptpageFn">物业选择</view>
+    <view class='list true'>星级</view>
+  </view>
+  <view class='app_right'>
+    <view class="list {{tid==1?'true':''}}" bindtap="clickFn" data-id="1">
+      <image src='http://yt.baike360.cn/index/image/1x.png'></image>
+      一星
+      <text wx:if="{{tid==1}}">✔</text>
+        <text wx:else>  </text>
+
+    </view>
+    <view class="list {{tid==2?'true':''}}"  bindtap="clickFn" data-id="2">
+     <image src='http://yt.baike360.cn/index/image/2x.png'></image>
+      二星
+        <text wx:if="{{tid==2}}">✔</text>
+        <text wx:else>  </text>
+
+    </view>
+    <view class="list {{tid==3?'true':''}}"  bindtap="clickFn" data-id="3">
+     <image src='http://yt.baike360.cn/index/image/3x.png'></image>
+      三星
+          <text wx:if="{{tid==3}}">✔</text>
+        <text wx:else>  </text>
+
+    </view>
+    <view class="list {{tid==4?'true':''}}"  bindtap="clickFn" data-id="4">
+     <image src='http://yt.baike360.cn/index/image/4x.png'></image>
+      四星
+         <text wx:if="{{tid==4}}">✔</text>
+        <text wx:else>  </text>
+
+    </view>
+    <view class="list {{tid==5?'true':''}}"  bindtap="clickFn" data-id="5">
+    <image src='http://yt.baike360.cn/index/image/5x.png'></image>
+      五星
+        <text wx:if="{{tid==5}}">✔</text>
+        <text wx:else>  </text>
+
+    </view>
+  </view>
+</view>
+<view class="{{show?'hidd':''}}" >
+
+
+<view class="app_row " wx:for="{{list}}">
+  <navigator url='/pages/shequ/detail?id={{item.id}}'>
+    <image src='http://yt.baike360.cn/index/image/6.png' mode="widthFix"></image>
+    <view class='app_top'>
+      {{item.community_another_name}}
+
+    </view>
+  </navigator>
+	<view class='app_rows'>
+    <navigator url="/pages/zufang/index?id={{item.id}}&title={{item.community_another_name}}">
+			<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' mode="widthFix"></image>
+			<view>在租 {{item.lea}}套 <text>></text></view>
+		</navigator>
+		<navigator url="/pages/ershoufang/index?id={{item.id}}&title={{item.community_another_name}}">
+			<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' mode="widthFix"></image>
+			<view>在售 {{item.sel}}套 <text>></text></view>
+		</navigator>
+  </view>
+  <navigator class='app_bottom' url='/pages/shequ/detail?id={{item.id}}'>
+    <view class='app_left'>
+      <view class='app_cent'>
+        {{item.main_type}}
+      </view>
+      <view class='app_biaoqian'>
+        <text>整租</text>
+        <text>住宅</text>
+        <text>整租</text>
+        <text>临地铁</text>
+      </view>
+    </view>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' class='app_right'  mode="widthFix"></image>
+  </navigator>
+</view>
+<view class='btm_title'>
+  社区租售，本来可以更简单
+</view>
+</view>
+<!-- <include src ="/pages/menu.wxml"></include> -->

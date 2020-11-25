@@ -1,0 +1,90 @@
+<view class='list' wx:for="{{movieList}}">
+	<navigator class='bdy' url='/pages/zufang/detail?id={{item.houseId}}'>
+		<image src="{{img[0].url?img[0].url:'../../image/9cd38718fdd975715930f3f36e76d54.png'}}" mode='widthFix'></image>
+		<view>
+			<view class='title'>
+				{{item.communityName}}{{item.buildNum}}号楼{{item.houseCode}}
+			</view>
+			<view class='txt'>
+				{{item.build_area}}m²丨{{item.orientation}}丨{{item.bedroom_number}}室{{item.livingroom_number}}厅丨<block wx:if="{{item.renovation==1}}">毛坯</block> <block wx:if="{{item.renovation==2}}">简装</block><block wx:if="{{item.renovation==3}}">精装</block><block wx:if="{{!item.renovation}}">无装修情况</block>
+			</view>
+			<view class='txt'>
+				房屋编号：BL56546556
+			</view>
+			<view class='txt_box'>
+				<text class='y_box'>整租</text>
+				<text class='b_box'>住宅</text>
+				<text>整租</text>
+				<text>临地铁</text>
+			</view>
+		</view>
+	</navigator>
+	<!-- <view class='address'>
+		<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+		朝阳区高碑店<text>9200元/月</text>
+	</view> -->
+	<view class='bottom'>
+		<view class='b_y'>打分</view>
+		<view class='b_h'>打标签</view>
+		<view data-id="{{item.houseId}}" bindtap="deleshoucangFn">删除记录</view>
+		<navigator  url='/pages/zufang/detail?id={{item.houseId}}'>查看房源</navigator>
+	</view>
+</view>
+<view class='b_pj' wx:if='{{bq}}'>
+	<view class='pj_bdy'>
+		<view class='title'>
+			打标签
+		</view>
+		<textarea name="pj_cent" id="pj_cent" cols="30" rows="10" placeholder="请输入您的标签">
+		</textarea>
+		<view class='btn'>确认提交</view>
+		<view class='pj_history'>
+			<view class="history_title">
+				我的标签
+			</view>
+			<view class='bq_list'>
+				<view>
+					临近地铁
+					<text bindtap="del">X</text>
+				</view>
+				<view>
+					临近地铁
+					<text bindtap="del">X</text>
+				</view>
+				<view>
+					临近地铁
+					<text bindtap="del">X</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class='gb'>X</view>
+</view>
+<view class='b_pj' wx:if="{{pj}}">
+	<view class='pj_bdy'>
+		<view class='title'>
+			打分
+		</view>
+		<view class='pj_btn'>
+			<text>一般</text>
+			<text>非常满意</text>
+		</view>
+		<view class='jdt'>
+			<text class="{{jdt>=index?'yes':''}}" data-index='{{index}}' wx:for="{{jdt_num}}"></text>
+			<view class='jdt_btn' style='left:{{jdt}}0%;'>
+				<text></text>
+				<view>1分</view>
+			</view>
+		</view>
+		<view class='btn'>确认提交</view>
+		<view class='pj_history'>
+			<view class="history_title">
+				打分历史
+			</view>
+			<view class='lists'>
+				2020-08-09 10:20<text>7分</text>
+			</view>
+		</view>
+	</view>
+	<view class='gb'>X</view>
+</view>

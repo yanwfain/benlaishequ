@@ -1,0 +1,9 @@
+.tab{display: flex;text-align: center;color: #999;}
+.tab view{flex: 1;padding:20rpx;}
+.tab view text{padding:15rpx;border-bottom: 4rpx solid #fff;display: inline-block;}
+.tab view.true text{border-bottom:4rpx solid #ffc310;color: #ffc310;font-size: 30rpx;font-weight: bold;}
+.toserce{background: #f9f9f9;padding:10rpx 20rpx;color: #999;border-radius: 40rpx;margin: 0 20rpx;}
+.title{font-weight: bold;padding:40rpx 20rpx 20rpx;}
+.now_city{padding: 20rpx;}
+.now_city navigator{display: inline-block;width: 22%;margin:0 4% 20rpx 0;background: #f9f9f9;font-size: 22rpx;text-align: center;padding:10rpx 0;}
+.now_city navigator:nth-child(4n){margin-right: 0;}

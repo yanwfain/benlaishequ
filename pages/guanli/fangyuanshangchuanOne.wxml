@@ -1,0 +1,56 @@
+<view class="top_tit1">
+	<text>1 房源信息 </text>
+	<text style="color:#959595"> —— </text>
+	<text style="color:#959595">2 房源状态 </text>
+	<text style="color:#959595"> —— </text>
+	<text style="color:#959595">3 上传照片</text>
+
+</view>
+<view class="cont">
+	<view class="list">
+		<view class="left">选择社区</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'communityAnotherName'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].communityAnotherName?pickerProDataf[countryIndex].communityAnotherName:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">选择楼座</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef1" range="{{ pickerProDataf1 }}" range-key="{{'buildingNumber'}}" value="{{countryIndex1}}">
+				<view class="txts" style="">
+					{{pickerProDataf1[countryIndex1].buildingNumber?pickerProDataf1[countryIndex1].buildingNumber:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">选择单元</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef2" range="{{ pickerProDataf2 }}" range-key="{{index}}" value="{{countryIndex2}}">
+				<view class="txts" style="">
+					{{pickerProDataf2[countryIndex2]?pickerProDataf2[countryIndex2]:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">选择房间</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef3" range="{{ pickerProDataf3 }}" range-key="{{'houseCode'}}" value="{{countryIndex3}}">
+				<view class="txts" style="">
+					{{pickerProDataf3[countryIndex3].houseCode?pickerProDataf3[countryIndex3].houseCode:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+
+</view>
+<view class="btn_sub" bindtap="submit1">下一步</view>

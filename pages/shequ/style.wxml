@@ -1,0 +1,28 @@
+<view class='app_row' wx:for="{{movieList}}">
+  <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' mode="widthFix"></image>
+  <view class='app_top'>
+		{{item.propertiesnfoEntity.communityAnotherName}}-{{item.area}}平-{{item.houseType}}{{item.discribtion}}
+		<text>{{item.price}}万起</text>
+  </view>
+  <view class='app_bottom'>
+    <view class='app_left'>
+      <view class='app_cent'>
+        {{item.area}}m²丨{{item.orientation}}丨{{item.discribtion}}丨精装修 
+      </view>
+      <view class='app_biaoqian'>
+        <text>整租</text>
+        <text>住宅</text>
+        <text>整租</text>
+        <text>临地铁</text>
+      </view>
+    </view>
+	</view>
+	<!-- <view class='bottom'>
+		<view>
+			2套在售
+		</view>
+		<view>
+			1套在租
+		</view>
+	</view> -->
+</view>

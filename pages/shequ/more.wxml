@@ -1,0 +1,31 @@
+<view class="top_title">
+  <view class="title1">社区大门</view>
+  <view class="img1">
+    <image mode="aspectFill" bindtap="topic_preview" wx:for="{{imglist}}" wx:if="{{item.content==1}}" data-url="{{item.url}}" src="{{item.url}}"></image>
+  </view>
+  <!-- <view class="sheTxt">社区介绍文字内容社区介绍文字内容社区介绍文字内容社区介绍文字内容社区介绍文字内容。</view> -->
+</view>
+<view class="top_title">
+  <view class="title1">社区实景</view>
+  <view class="img1">
+    <image mode="aspectFill" bindtap="topic_preview" wx:for="{{imglist}}" wx:if="{{item.content==2}}" data-url="{{item.url}}" src="{{item.url}}"></image>
+  </view>
+</view>
+<view class="top_title">
+  <view class="title1">楼栋外立面</view>
+  <view class="img1">
+    <image wx:for="{{imglist}}" bindtap="topic_preview" wx:if="{{item.content==3}}" data-url="{{item.url}}" src="{{item.url}}"></image>
+  </view>
+</view>
+<view class="top_title">
+  <view class="title1">社区配套</view>
+  <view class="img1">
+    <image mode="aspectFill" bindtap="topic_preview" wx:for="{{imglist}}" wx:if="{{item.content==4}}" data-url="{{item.url}}" src="{{item.url}}"></image>
+  </view>
+</view>
+<view class="top_title">
+  <view class="title1">社区配套</view>
+  <view class="img1">
+    <image mode="aspectFill" bindtap="topic_preview" wx:for="{{imglist}}" wx:if="{{item.content==5}}" data-url="{{item.url}}" src="{{item.url}}"></image>
+  </view>
+</view>

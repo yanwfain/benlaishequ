@@ -1,0 +1,88 @@
+<view class="topshaixuan" bindtap="seleFn">
+   <picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+        <view class="txt" style="">
+          {{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"社区筛选"}}
+        </view>
+      </picker>
+  <view class="triangle-down"></view>
+</view>
+<view class="bor_bb"></view>
+<view class="tabbtn">
+  <view class="seran">
+    <image src="https://legal.baike360.cn/public/uploads/z-7.png"></image>
+    <view>搜索</view>
+  </view>
+  <view class="tab-lei">
+    <view class="txt_name">户型</view>
+    <view class="triangle-down"></view>
+  </view>
+    <view class="tab-lei">
+    <view class="txt_name">面积</view>
+    <view class="triangle-down"></view>
+  </view>
+    <view class="tab-lei">
+    <view class="txt_name">楼号</view>
+    <view class="triangle-down"></view>
+  </view>
+    <view class="tab-lei">
+    <view class="txt_name">业务类型</view>
+    <view class="triangle-down"></view>
+  </view>
+</view>
+<view class="cont_list">
+  <view class="list">
+    <view class="bcground"></view>
+    <view class="list_tab">
+      <view class="left_delit">
+        <view class="top_1">3号楼1-1002</view>
+        <view class="top_2">钥匙数量：3</view>
+      </view>
+      <view class="btn1">交回钥匙</view>
+      <view class="btn2">备注</view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="bcground"></view>
+    <view class="list_tab">
+      <view class="left_delit">
+        <view class="top_1">3号楼1-1002</view>
+        <view class="top_2">钥匙数量：3</view>
+      </view>
+      <view class="btn1">交回钥匙</view>
+      <view class="btn2">备注</view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="bcground"></view>
+    <view class="list_tab">
+      <view class="left_delit">
+        <view class="top_1">3号楼1-1002</view>
+        <view class="top_2">钥匙数量：3</view>
+      </view>
+      <view class="btn1">交回钥匙</view>
+      <view class="btn2">备注</view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="bcground"></view>
+    <view class="list_tab">
+      <view class="left_delit">
+        <view class="top_1">3号楼1-1002</view>
+        <view class="top_2">钥匙数量：3</view>
+      </view>
+      <view class="btn1">交回钥匙</view>
+      <view class="btn2">备注</view>
+    </view>
+  </view>
+    <view class="list">
+    <view class="bcground"></view>
+    <view class="list_tab">
+      <view class="left_delit">
+        <view class="top_1">3号楼1-1002</view>
+        <view class="top_2">钥匙数量：3</view>
+      </view>
+      <view class="btn1">交回钥匙</view>
+      <view class="btn2">备注</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<view class="list-dv">
+	<view>城市</view>
+	<view class="right">
+		<picker bindchange="bindRegionChange" mode='region' value="{{region}}" custom-item="{{customItem}}">
+			<view class="txt" style="" wx:if="{{region.length>1}}">
+				{{region[0]}}{{region[1]}}{{region[2]}}
+			</view>
+			<view class="txt" wx:else>请选择</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list-dv">
+	<view>所在小区</view>
+	<input class="inpright" type="text" placeholder="请输入所在小区" bindinput="community" value="{{community}}"></input>
+</view>
+<view class="list-dv">
+	<view>门牌号</view>
+	<input class="inpright" type="text" placeholder="请输入门牌号" bindinput="houseCode" value="{{houseCode}}"></input>
+</view>
+<view class="list-dv">
+	<view>如何称呼</view>
+	<input class="inpright" type="text" placeholder="请输入姓名" bindinput="userName" value="{{userName}}"></input>
+</view>
+<view class="list-dv">
+	<view>联系方式</view>
+	<input class="inpright" type="text" placeholder="请输入联系方式" bindinput="userPhone" value="{{userPhone}}"></input>
+</view>
+<view class="txt_bitom">
+  <view class="tit1">注解</view>
+  <view class="txt_txt">文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内</view>
+</view>
+<view class="btn_submit" bindtap="submit">提交</view>

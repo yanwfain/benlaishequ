@@ -1,0 +1,305 @@
+<block wx:if="{{isshowtu}}">
+  <view class="optiosns" bindtap="opsshied"></view>
+  <view class="ishowm">
+    <button open-type="share" class="fenxiagyh">分享微信好友</button>
+    <view class="tubtn">生成分享海报</view>
+  </view>
+</block>
+<view class='b_box'>
+  <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}"
+    interval='{{interval}}' bindchange="bindchange" circular="{{circular}}" style="height:{{heig}}vw;">
+    <block wx:if="{{lismy.imgs.length>=1}}">
+      <block wx:for='{{lismy.imgs}}'>
+      <swiper-item>
+        <image src="{{item.url}}" data-id='{{item.id}}' class="slide-image" mode="widthFix" bindload="imageLoad" />
+      </swiper-item>
+    </block>
+    </block>
+    <block wx:else>
+      <image src="http://39.106.122.121:9000/file/1111.png" data-id='{{item.id}}' class="slide-image" mode="widthFix" bindload="imageLoad" />
+    </block>
+  </swiper>
+  <view class='title'>
+    <view class='money'>
+      <block wx:if="{{lismy.remark==1}}">
+        <block wx:if="{{jifu!=0}}"><text>{{jifu}}</text>元/月(季付)</block>
+      </block>
+      <block wx:if="{{lismy.remark==2}}">
+        <block><text>{{wanyuan}}</text>万起</block>
+      </block>
+     
+      <block wx:if="{{jifu==0}}">暂无季付数据</block>
+      <view>
+        <view class='sc' bindtap="shoucangFn" wx:if="{{lismy.collection==0}}">
+          <image style="width:60rpx;height:60rpx" src='../../image/shou.png'></image>
+          <view>收藏</view>
+        </view>
+        <view class='sc' bindtap="deleshoucangFn" wx:if="{{lismy.collection==1}}">
+          <image style="width:60rpx;height:60rpx" src='../../image/shou1.png'></image>
+          <view>取消收藏</view>
+        </view>
+        <!-- <view class='fx' bindtap="fenxianhgmessg" > -->
+        <button open-type="share" class='fx' >
+          <image style="width:24px;height:24px;margin-top:5px" src='../../image/btnress.png'></image>
+          <view style="padding-top:10rpx">分享</view>
+        </button>
+      </view>
+    </view>
+    <view class='name'>
+      {{lismy.name}}-{{lismy.bedroomNumber}}室{{lismy.livingroomNumber}}厅
+    </view>
+  </view>
+  <view class='jieshao'>
+    <view>
+      {{lismy.orientation}}
+      <view>朝向</view>
+    </view>
+    <view>
+      {{lismy.buildArea}}m²
+      <view>面积</view>
+    </view>
+    <view>
+      {{lismy.floor}}层
+      <view>楼层</view>
+    </view>
+    <view>
+      随时入住
+      <view>入住时间</view>
+    </view>
+  </view>
+  <view class='txt_box'>
+    <text class='y_box'>整租</text>
+    <text class='b_box'>住宅</text>
+    <text>整租</text>
+    <text>临地铁</text>
+  </view>
+  <view class='bottom'>
+    <view class='sm'>
+      <text>租期：</text>一年以内
+    </view>
+    <view class='sm'>
+      <text>看房：</text>需提前预约
+    </view>
+  </view>
+</view>
+<view class='b_box'>
+  <view class='tit'>
+    房源简介
+  </view>
+  <view class='tit_img'>
+    <view>
+      <image
+        src='../../image/dianshi.png'>
+      </image>
+      <view>电视</view>
+    </view>
+    <view>
+      <image
+        src='../../image/yigui.png'>
+      </image>
+      <view>衣柜</view>
+    </view>
+    <view>
+      <image
+        src='../../image/bx.png'>
+      </image>
+      <view>冰箱</view>
+    </view>
+    <view>
+      <image
+        src='../../image/kt.png'>
+      </image>
+      <view>空调</view>
+    </view>
+    <view>
+      <image
+        src='../../image/kuandai.png'>
+      </image>
+      <view>宽带</view>
+    </view>
+    <view>
+      <image
+        src='../../image/chuang.png'>
+      </image>
+      <view>床</view>
+    </view>
+    <view>
+      <image
+        src='../../image/nuanqi.png'>
+      </image>
+      <view>暖气</view>
+    </view>
+    <view>
+      <image
+        src='../../image/rsq.png'>
+      </image>
+      <view>热水器</view>
+    </view>
+    <view>
+      <image
+        src='../../image/tianranqi.png'>
+      </image>
+      <view>天然气</view>
+    </view>
+    <view>
+      <image
+        src='../../image/xiyiji.png'>
+      </image>
+      <view>洗衣机</view>
+    </view>
+  </view>
+  <view class='tit_title'>
+    户型介绍
+  </view>
+  <view class='tit_cent'>
+    户型介绍户型介绍户型介绍户型介绍户型介绍户型介绍
+  </view>
+</view>
+<view class='b_box' wx:if="{{lismy.remark==1}}">
+  <view class='tit'>
+    费用详情
+  </view>
+  <view class='flex bold'>
+    <view>付款方式</view>
+    <view>
+      租金
+      <view>(元/月)</view>
+    </view>
+    <view>
+      押金
+      <view>(元)</view>
+    </view>
+    <view>
+      服务费
+      <view>(元)</view>
+    </view>
+    <view>
+      中介费
+      <view>(元/月)</view>
+    </view>
+  </view>
+  <view class='flex' wx:for="{{rent}}" wx:if="{{rent[index]!=0}}">
+    <view wx:if="{{index==0}}">月付</view>
+    <view wx:if="{{index==1}}">年付</view>
+    <view wx:if="{{index==2}}">季付</view>
+    <view>
+      {{item}}
+    </view>
+    <view wx:if="{{lismy.amountDeposit!='0'}}">
+      {{lismy.amountDeposit}}
+    </view>
+    <view wx:else> {{rent[0]}}</view>
+    <view>
+      0
+    </view>
+    <view>
+      0
+    </view>
+  </view>
+  <!-- <view class='flex' wx:if="{{rent[0]!=0}}">
+    <view>月付</view>
+
+    <view>
+      {{rent[0]}}
+    </view>
+    <view>
+      0
+    </view>
+    <view>
+      0
+    </view>
+    <view>
+      0
+    </view>
+  </view>
+  <view class='flex' wx:if="{{rent[1]!=0}}">
+
+    <view>季付</view>
+
+    <view>
+      {{rent[1]}}
+    </view>
+    <view>
+      0
+    </view>
+    <view>
+      0
+    </view>
+    <view>
+      0
+    </view>
+  </view>
+  <view class='flex' wx:if="{{rent[2]!=0}}">
+
+    <view>年付</view>
+    <view>
+      {{rent[2]}}
+    </view>
+    <view>
+      0
+    </view>
+    <view>
+      0
+    </view>
+    <view>
+      0
+    </view>
+  </view> -->
+</view>
+<view class='b_box'>
+  <view class='tit'>
+    位置信息
+    <navigator url="/pages/shequ/detail?id={{lismy.comId}}">查看社区</navigator>
+  </view>
+  <map id="map" longitude="116.151929" latitude="39.923399" markers="{{markers}}" scale="12" show-location
+    style="width: 100%; height:500rpx;" bindtap="click"></map>
+</view>
+<view class='tit'>
+  附近房源
+</view>
+<view class='page-con'>
+  <view class='stage'>
+    <block wx:if="{{swiperList.length>1}}">
+      <view class='wrapper' bindtouchstart='start' bindtouchend='end'>
+        <block wx:for='{{swiperList}}' wx:key="index">
+          <image mode="widthFix" hidden="{{index>2}}" class='imgBasic  {{item.active ? item.swpClass : ""}}'
+            src='https://legal.baike360.cn/public/uploads/z-4.png' data-index='{{index}}'>
+            <view class="delit_txt1" bindtap="delit_zuFn" data-id="{{item.id}}">
+              <text class="item-text">9200元/月</text>
+              <view class="num_tab">
+                北花园物业-{{communityAnotherName}}-{{item.floor}}层-{{item.houseCode}}
+              </view>
+              <view class="num_tab2">
+                {{item.build_area?item.build_area+'㎡':'暂无㎡数据'}} | {{item.orientation}} |
+                {{item.bedroom_number}}室{{item.livingroom_number}}厅 | {{item.renovation?item.renovation:'暂无装修情况'}}
+              </view>
+            </view>
+          </image>
+
+        </block>
+      </view>
+    </block>
+    <block wx:if="{{swiperList.length==1}}">
+      <view class='wrapper' bindtouchstart='start' bindtouchend='end'>
+        <block wx:for='{{swiperList}}' wx:key="index">
+          <image mode="widthFix" style="left:90rpx" hidden="{{index>2}}"
+            class='imgBasic  {{item.active ? item.swpClass : ""}}'
+            src='https://legal.baike360.cn/public/uploads/z-4.png' data-index='{{index}}'>
+            <view class="delit_txt1" style="z-index:10; transform:scale(1);" bindtap="delit_zuFn" data-id="{{item.id}}">
+              <text class="item-text">9200元/月</text>
+              <view class="num_tab">
+                北花园物业-{{communityAnotherName}}-{{item.floor}}层-{{item.houseCode}}
+              </view>
+              <view class="num_tab2">
+                {{item.build_area?item.build_area+'㎡':'暂无㎡数据'}} | {{item.orientation}} |
+                {{item.bedroom_number}}室{{item.livingroom_number}}厅 | {{item.renovation?item.renovation:'暂无装修情况'}}
+              </view>
+            </view>
+          </image>
+
+        </block>
+      </view>
+    </block>
+  </view>
+</view>
+<navigator class='btn' url='/pages/lianxijingjiren/index?id={{id}}'>联系社区顾问</navigator>

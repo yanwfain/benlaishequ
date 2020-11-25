@@ -1,0 +1,8 @@
+@import "./get.wxss";
+.list{padding:20rpx;}
+.flex{display: flex;padding:20rpx;}
+.flex>.left{width: 180rpx;}
+.flex>.right{flex: 1;}
+.flex>.left>text,.flex>.right>text{font-size: 40rpx;font-weight: bold;}
+.flex>.left>view,.flex>.right>view{color: #999;}
+.bottom>navigator{padding:10rpx 30rpx;}

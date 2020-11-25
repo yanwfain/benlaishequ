@@ -1,0 +1,156 @@
+<view class="top_title">社区名称/房源名称</view>
+<view class='page-con'>
+	<view class='stage'>
+		<block wx:if="{{swiperList.length>1}}">
+			<view class='wrapper' bindtouchstart='start' bindtouchend='end'>
+				<block wx:for='{{swiperList}}' wx:key="index">
+					<image mode="widthFix" hidden="{{index>2}}" class='imgBasic  {{item.active ? item.swpClass : ""}}' src='https://legal.baike360.cn/public/uploads/z-4.png' data-index='{{index}}'>
+						<view class="delit_txt1" data-id="{{item.id}}">
+							<view class="item-text" >
+							<view>顾问杜</view>
+							<view style="font-weight:500;font-size:30rpx">18866895566</view>
+							
+							</view>
+							<view class="num_tab">
+								<view class="list">
+									<view class="txt1">180</view>
+									<view class="txt2">带看次数</view>
+								</view>
+								<view class="list">
+									<view class="txt1">682</view>
+									<view class="txt2">预约成功次数</view>
+								</view>
+								<view class="list">
+									<view class="txt1">2977</view>
+									<view class="txt2">成交次数</view>
+								</view>
+							</view>
+						</view>
+					</image>
+
+				</block>
+			</view>
+		</block>
+		<block wx:if="{{swiperList.length==1}}">
+			<view class='wrapper' bindtouchstart='start' bindtouchend='end'>
+				<block wx:for='{{swiperList}}' wx:key="index">
+					<image mode="widthFix" hidden="{{index>2}}" class='imgBasic  {{item.active ? item.swpClass : ""}}' src='https://legal.baike360.cn/public/uploads/z-4.png' data-index='{{index}}'></image>
+					<view class="delit_txt1" style="z-index:10; transform:scale(1);" data-id="{{item.id}}">
+					<view class="item-text" >
+							<view>顾问杜</view>
+							<view style="font-weight:500;font-size:30rpx">18866895566</view>
+							
+							</view>
+						<view class="num_tab">
+							<view class="list">
+								<view class="txt1">180</view>
+								<view class="txt2">带看次数</view>
+							</view>
+							<view class="list">
+								<view class="txt1">682</view>
+								<view class="txt2">预约成功次数</view>
+							</view>
+							<view class="list">
+								<view class="txt1">2977</view>
+								<view class="txt2">成交次数</view>
+							</view>
+						</view>
+					</view>
+				</block>
+			</view>
+		</block>
+	</view>
+</view>
+
+
+<!-- <view class="swiper-page" bindtouchmove="touchmove" bindtouchstart="touchstart" bindtouchend="touchend">
+  <view wx:for="{{7}}" wx:key="index" class="swiper-container">
+    <view class="item-container" style="z-index:{{indexArray[index]}}">
+      <view class="item{{index}} item-common" animation="{{animation[index]}}" bindtap="tapItemFn" data-text="{{textArray[index]}}">
+        <image class="background" src="{{imgArray[index]}}" mode='aspectFit' data-index="{{index}}"></image>
+        <text class="item-text" >顾问杜</text>
+        <view class="num_tab">
+          <view class="list">
+            <view class="txt1">180</view>
+            <view class="txt2">带看次数</view>
+          </view>
+           <view class="list">
+            <view class="txt1">682</view>
+            <view class="txt2">预约成功次数</view>
+          </view>
+           <view class="list">
+            <view class="txt1">2977</view>
+            <view class="txt2">成交次数</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view> -->
+<!-- <view class="searchBox">
+	<swiper class='shop_swiper' indicator-dots  indicator-active-color="#fff" interval="3000" duration="1000" circular='true' hidden='{{luboActive}}' bindchange="swiperChange">
+		<block wx:for="{{imgArray}}" wx:key="index">
+			<swiper-item class="imgheight">
+				<image src="../../image/timg.jpg" bindload="imgHss" class='lbImg' data-id='{{item.id}}' data-id="{{item.id}}" data-activities_id='{{item.activities_id}}' bindtap='goChannel' />
+				<text class="item-text" >顾问杜</text>
+				<view class="num_tab">
+					<view class="list">
+						<view class="txt1">180</view>
+						<view class="txt2">带看次数</view>
+					</view>
+					<view class="list">
+						<view class="txt1">682</view>
+						<view class="txt2">预约成功次数</view>
+					</view>
+					<view class="list">
+						<view class="txt1">2977</view>
+						<view class="txt2">成交次数</view>
+					</view>
+        </view>
+			</swiper-item>
+		</block>
+	</swiper>
+</view> -->
+<view class="btn_sele" style="padding:50rpx 30rpx">
+	<view class="lett_dv">
+		<view class="txt">选择他</view>
+		<switch class="tui-fr" color="#C3A874" checked="{{isChecked1}}" bindchange="changeSwitch1" />
+	</view>
+	<view class="right_txt">若不选择指定顾问，则放到接单大厅</view>
+</view>
+<view class="bgll"></view>
+<view class="top_title">预约信息</view>
+<view class="list_xinxi">
+	<view class="left">姓名</view>
+	<input class="inp_right" bindinput="inpName" value="{{inpName}}" placeholder="填写姓名"></input>
+</view>
+<view class="list_xinxi">
+	<view class="left">联系电话</view>
+	<input class="inp_right" bindinput="inphone" value="{{inphone}}" placeholder="填写联系电话"></input>
+</view>
+<view class="list_xinxi">
+	<view class="left">时间选择</view>
+	<view class="main-item-input">
+		<picker bindchange="changeDate" mode="date" fields="day" value="{{date}}">
+			<view class="picker-area-text" style="font-size:28rpx;color:#999AA6">
+				{{date_time?date_time:'请选择日期'}}
+			</view>
+		</picker>
+		<view style="color:gray">-</view>
+			<picker bindchange="bindTimeChange" mode="time" start="09:00" end="22:00" value="{{timevalue}}">
+			<view class="picker-area-text" style="font-size:28rpx;color:#999AA6">
+				{{value_time?value_time:'请选择时间'}}
+			</view>
+		</picker>
+	</view>
+</view>
+<view class="list_xinxi">
+	<view class="left">备注信息</view>
+	<input class="inp_right" bindinput="inpTxt" value="{{inpTxt}}" placeholder="备注信息"></input>
+</view>
+<view style="width:100%;height:120rpx"></view>
+
+<view class="bottom_fexd">
+	<view class="left_bot" bindtap="makePhoneCall">一键拨号</view>
+	<view class="right_bot" bindtap="submit">提交</view>
+</view>

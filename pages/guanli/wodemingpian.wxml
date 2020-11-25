@@ -1,0 +1,86 @@
+
+<block wx:if="{{imageUrlHaib}}">
+	<view class="optiosns" bindtap="opsshieds"></view>
+	<view class="ishowm">
+		<!-- <button open-type="share" class="fenxiagyh" >分享微信好友</button>
+		<view bindtap="shengchengFn" class="tubtn">生成分享海报</view> -->
+		<image class="img1_pos" bindtap="topic_preview" wx:if="{{imageUrlHaib}}" src="{{imageUrlHaib}}"></image>
+		<view class="btn_img" bindtap="imgxiaFn" data-url="{{imageUrlHaib}}" >保存图片</view>
+	</view>
+</block>
+
+<view class="user">
+	<image class="img_userhead" mode="aspectFill" wx:if="{{imgboxs[imgboxs.length-1]}}" src="{{imgboxs[imgboxs.length-1].url2}}"></image>
+	<image class="img_userhead" mode="aspectFill" bindtap="addPic1s" src="../../image/wei.png" wx:else></image>
+  	<view open-type="share" bindtap="shengqFn" class="rightTop" wx:if="{{userMid==userid}}">
+		<image src="../../image/btnress.png"></image>
+		<view class="txt_topoit">分享</view>
+		</view>
+</view>
+<view class="user_delit">
+	<view class="top_uset1">
+		<view class="user_name">
+			<view class="name_txt">
+				<view class="name"> {{lisr_user.name?lisr_user.name:'未填写'}} </view>
+				<view class="type_new" wx:if="{{lisr_user.position}}">
+					<image src="../../image/65d7a868c74246f437682b2d992984d.png"></image> 
+				 {{lisr_user.position}}
+				</view>
+				<view class="bianji" bindtap="bianjiFn" wx:if="{{userMid==userid}}">
+					<image src="../../image/xuigai.png"></image>编辑
+				</view>
+			</view>
+			<view class="modeli">{{lisr_user.tel?lisr_user.tel:'未填写'}}</view>
+		</view>
+		<image class="img_er" bindtap="imgFn" data-url="" src="../../image/2er.png"></image>
+	</view>
+	<block wx:if="{{userMid==userid}}">
+		<view class="btn_sele" style="padding:30rpx">
+	<view class="right_txt">开启后，分享时将不展示以下数据</view>
+	<view class="lett_dv">
+		<!-- <view class="txt">选择他</view> -->
+		<switch class="tui-fr" color="#C3A874" checked="{{isChecked1}}" bindchange="changeSwitch1" />
+	</view>
+</view>
+</block>
+<block wx:if="{{isChecked2!='true'}}">
+	<!-- #C3A874 -->
+	<view class="top_uset2">
+		<view class="listde">
+			<view class="num">{{date_time?date_time:'暂无'}}</view>
+			<view>从业时间</view>
+		</view>
+		<view class="shu"></view>
+		<view class="listde">
+			<view  class="num">{{lisr_user.success?lisr_user.success:'暂无'}}</view>
+			<view>成交套数</view>
+		</view>
+		<view class="shu"></view>
+		<view class="listde">
+			<view  class="num" wx:if="{{lisr_user.goodAt==0}}">房屋租赁</view>
+			<view  class="num" wx:if="{{lisr_user.goodAt==1}}">二手交易 </view>
+			<view  class="num" wx:if="{{lisr_user.goodAt==2}}">新房</view>
+			<view>擅长业务</view>
+		</view>
+	</view>
+</block>
+
+</view>
+<view style="height:100rpx"></view>
+<!-- <include src="/pages/menu.wxml"></include> -->
+<block wx:if="{{isshowtu}}">
+	<!-- <button open-type="share" class="fenxiagyh" >分享微信好友</button> -->
+	<view class="optiosns" bindtap="opsshied"></view>
+	<view class="bot_view">
+		<button open-type="share" class="butns">
+			<image src="../../image/weix.png"></image>
+			<view>微信好友</view>
+		</button>
+		<view class="shengcFn"  bindtap="shengchengFn">
+			<image src="../../image/haibao.png"></image>
+			<view>生成海报</view>
+		</view>
+	</view>
+	<view class="btndeleFn" bindtap="opsshied">关闭</view>
+</block>
+

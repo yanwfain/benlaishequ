@@ -1,0 +1,12 @@
+<!--pages/newDelit/index.wxml-->
+<view class="title">
+  {{listdelit.title}}
+</view>
+<view class="zuozhe">{{listdelit.keyWord}}</view>
+<view class="texts">
+ <rich-text nodes="{{listdelit.content}}"></rich-text>
+</view>
+<view class="time_botm">{{listdelit.createTime}}</view>
+<view class="zulins" wx:if="{{tid==1}}">租赁</view>
+<view class="zulins" wx:if="{{tid==2}}">二手</view>
+<view class="zulins" wx:if="{{tid==3}}">新房</view>

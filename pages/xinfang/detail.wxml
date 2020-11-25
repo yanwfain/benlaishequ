@@ -1,0 +1,401 @@
+<view class="banner">
+	<image class="img1" src="https://legal.baike360.cn/public/uploads/s-1.png"></image>
+	<navigator class="look_btn" url='/pages/shequ/more'>查看更多图片</navigator>
+</view>
+
+<view class="cont">
+	<view class="bancround"></view>
+	<view class="title_delit">
+		<view class="title">{{listdelit.communityAnotherName}}</view>
+		<view class="flexd">
+			<view class="list-delit">
+				<view class="txt1">楼盘报价</view>
+				<view class="txt2">1400-2800万</view>
+			</view>
+			<view class="list-delit">
+				<view class="txt1">楼盘均价</view>
+				<view class="txt2">9.21-11.62/m</view>
+			</view>
+		</view>
+	</view>
+	<button open-type="share" class="right_ressbtn">
+		<image src="https://legal.baike360.cn/public/uploads/s-2.png"></image>
+		<view>分享</view>
+	</button>
+</view>
+<view class="tab_click">
+	<view class="tab_toplist {{istab==1?'active_tab':''}}" data-id="1" bindtap="clicktabFc">社区详情 <view class="bot_botre"
+			wx:if="{{istab==1}}"></view>
+	</view>
+	<view class="tab_toplist {{istab==2?'active_tab':''}}" data-id="2" bindtap="clicktabFc">社区评价<view class="bot_botre"
+			wx:if="{{istab==2}}"></view>
+	</view>
+</view>
+<block wx:if="{{istab==1}}">
+	<view class="cont6">
+		<view class="title_zushou" style="width:100%">
+			区位图
+		</view>
+	</view>
+	<image mode="aspectFill" class="img_cont6" src="https://legal.baike360.cn/public/uploads/z-2.png"></image>
+	<view class="cont6">
+		<view class="title_zushou" style="width:100%">
+			鸟瞰图
+		</view>
+	</view>
+	<image mode="aspectFill" class="img_cont6" src="https://legal.baike360.cn/public/uploads/z-2.png"></image>
+	<view class="cont6">
+		<view class="title_zushou" style="width:100%">
+			楼座图
+		</view>
+	</view>
+	<image mode="aspectFill" class="img_cont6" src="https://legal.baike360.cn/public/uploads/z-2.png"></image>
+	<view class="cont6">
+		<view class="title_zushou" style="width:100%">
+			效果图
+		</view>
+	</view>
+	<view class="deitcont">
+		<swiper class='' style="height:400rpx" display-multiple-items="1.2" duration="1000">
+			<block wx:for="{{list}}" wx:key="index">
+				<swiper-item class="swiper1">
+					<view class="view_1" bindtap="chantabFn" data-id="{{item.id}}">
+						<image style="border-radius: 16rpx;" src="https://legal.baike360.cn/public/uploads/z-2.png"
+							class='imgsper' />
+						<view class="tab_img">
+							<view class="tab-imglist">楼盘正门</view>
+							<view class="tab-imglist">秋季</view>
+						</view>
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<view class="cont3">
+		<view class="title_zushou" style="width:100%">
+			户型设计
+		</view>
+		<view class="txt_cont3">
+			北花园一共7栋楼，8种户型。北花园一共7栋楼，8种户型，等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍
+		</view>
+	</view>
+	
+	<view class="cont4">
+		<view class="cont1_top" style="width:100%">
+			<view class="left_cont1">
+				在售户型
+			</view>
+			<navigator class="right_cont1" url='/pages/shequ/style?id={{lismy.comm.id}}'>
+				查看全部在售户型 >
+			</navigator>
+		</view>
+		<view class="deitcont">
+				<block wx:for="{{lismy.houseTypes}}" wx:key="index">
+						<view class="view_11" bindtap="chantabFn" data-id="{{item.id}}">
+							<image src="{{item.typeImg?item.typeImg:'https://legal.baike360.cn/public/uploads/z1.png'}}" class='imgsper' />
+							<view class="right_fangtitl">
+								<view class="title_swip">{{item.discribtion}}{{item.houseType}}户型约{{item.area}}平米</view>
+								<view class="tit_tabhu">
+									<view class="tab_hu">朝向：{{item.orientation}}</view>
+									<!-- <view class="tab_hu">朝向：南北</view> -->
+								</view>
+								<view class="title_swip2" style="padding:10rpx 20rpx;font-size:26rpx;font-weight: 200;color:#D0BB92">均价：{{item.price}}万</view>
+							</view>
+						</view>
+				</block>
+		</view>
+	</view>
+
+	<view class="cont6">
+		<view class="title_zushou" style="width:100%">
+			社区环境
+		</view>
+	</view>
+	<view class="cont_6_img">
+
+		<image mode="aspectFill" class="img_cont6" src="https://legal.baike360.cn/public/uploads/z-3.png"></image>
+		<view class="tab_img">
+			<view class="tab-imglist">楼盘正门</view>
+			<view class="tab-imglist">秋季</view>
+		</view>
+
+	</view>
+	<view class="txt_img_cont6">
+		房源介绍文字内容房源介绍文字内容房源介绍文字内容房源介绍文字内容房。
+	</view>
+	<view class="cont_6_img">
+
+		<image mode="aspectFill" class="img_cont6" src="https://legal.baike360.cn/public/uploads/z-3.png"></image>
+		<view class="tab_img">
+			<view class="tab-imglist">楼盘正门</view>
+			<view class="tab-imglist">秋季</view>
+		</view>
+
+	</view>
+	<view class="txt_img_cont6">
+		房源介绍文字内容房源介绍文字内容房源介绍文字内容房源介绍文字内容房。
+	</view>
+	<view class="cont6">
+		<view class="title_zushou" style="width:100%">
+			社区简介
+		</view>
+		<view class="txt_list">
+			<!-- <view class="tit_cont6">整个社区都是南北通透纯正板楼，采光通风好</view> -->
+			<view class="txt_cont6">房源介绍文字内容房源介绍文字内容房源介绍文字内容房源介绍文字内容房。</view>
+		</view>
+	</view>
+
+
+
+	<view class="cont6">
+		<view class="title_zushou" style="width:100%">
+			楼盘参数
+		</view>
+		<view class="list_tad">
+			<view class="list_tableft">社区名称：</view>
+			<view class="list_tabright" wx:if="{{lismy.comm.communityAnotherName}}">{{lismy.comm.communityAnotherName}} </view>
+		</view>
+		<view class="list_tad">
+			<view class="list_tableft"> 小区别名：</view>
+			<view class="list_tabright" wx:if="{{listdelit.communityAnotherName}}">{{listdelit.communityAnotherName}} </view>
+		</view>
+		<view class="list_tad">
+			<view class="list_tableft">开发商：</view>
+			<view class="list_tabright" wx:if="{{lismy.comm.developers}}">{{lismy.comm.developers}} </view>
+		</view>
+		<view class="list_tad">
+			<view class="list_tableft">物业公司：</view>
+			<view class="list_tabright" wx:if="{{lismy.comm.propertyCompany}}">{{lismy.comm.propertyCompany}} </view>
+		</view>
+		<view class="list_tad">
+			<view class="list_tableft"> 建筑商：</view>
+			<view class="list_tabright" wx:if="{{lismy.comm.developers}}">{{lismy.comm.developers}} </view>
+		</view>
+		<view class="list_tabtxt2">
+			<view>
+				<view wx:if="{{lismy.comm.constructionArea}}">总建筑面积：{{lismy.comm.constructionArea}}平米</view>
+				<view wx:if="{{lismy.comm.areaCovered}}">占地面积：{{lismy.comm.areaCovered}}</view>
+				<view wx:if="{{lismy.comm.plotRatio}}">容积率：{{lismy.comm.plotRatio}}</view>
+				<view wx:if="{{lismy.comm.parkingSpacesOn}}">地上车位数量：{{lismy.comm.parkingSpacesOn}}个 </view>
+				<view wx:if="{{lismy.comm.undergroundParkingSpaces}}">地下车位数量：{{lismy.comm.undergroundParkingSpaces}}个 </view>
+				<view wx:if="{{lismy.comm.propertyRight}}">房屋产权性质：{{lismy.comm.propertyRight}}年 </view>
+				<view wx:if="{{lismy.comm.totalBuildings}}">总幢数：{{lismy.comm.totalBuildings}}幢 </view>
+			</view>
+			<view>
+				<view wx:if="{{lismy.comm.householdsNnumber}}">总户数：{{lismy.comm.householdsNnumber}}户</view>
+				<view wx:if="{{lismy.comm.greeningRate}}">绿化率：{{lismy.comm.greeningRate}}%</view>
+				<view wx:if="{{lismy.comm.propertyFee}}">物业管理费：{{lismy.comm.propertyFee}}元/平/天</view>
+				<view>入住时间：2012-09-18 </view>
+				<view>开盘时间：2010-09-28 </view>
+				<view wx:if="{{lismy.comm.elevatorDuration}}">电梯运行：{{lismy.comm.elevatorDuration}}小时 </view>
+				<view wx:if="{{lismy.comm.staff}}">保安：是否24小时 （{{lismy.comm.staff}}） </view>
+			</view>
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.mainType}}">
+			主力户型：{{lismy.comm.mainType}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.policeStation}}">
+			派出所：{{lismy.comm.policeStation}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.policePhone}}">
+			派出所电话：{{lismy.comm.policePhone}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.subDistrictOffice}}">
+			街道办事处：{{lismy.comm.subDistrictOffice}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.subDistrictPhone}}">
+			街道办事处电话：{{lismy.comm.subDistrictPhone}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.broadband}}">
+			宽带方式：{{lismy.comm.broadband}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.supportingFacilities}}">
+			内部配套：{{lismy.comm.supportingFacilities}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.clubSubjects}}">
+			会所科目：{{lismy.comm.clubSubjects}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.school}}">
+			中小学幼儿园：{{lismy.comm.school}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.market}}">
+			商超：{{lismy.comm.market}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.foodMarket}}">
+			菜市场（农贸市场）：{{lismy.comm.foodMarket}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.postcode}}">
+			邮局（社区所属邮编）：{{lismy.comm.postcode}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.bank}}">
+			银行：{{lismy.comm.bank}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.garden}}">
+			公园：{{lismy.comm.garden}}
+		</view>
+		<view class="list_tad" wx:if="{{lismy.comm.hospital}}">
+			医院：{{lismy.comm.hospital}}
+		</view>
+
+
+
+	</view>
+	<view class="cont6">
+		<view class="title_zushou" style="width:100%">
+			楼盘位置
+		</view>
+	</view>
+	<image mode="aspectFill" class="img_cont6" src="https://legal.baike360.cn/public/uploads/z-2.png"></image>
+	<view class="cont6">
+		<view class="txt_list">
+			<view class="tit_cont6">项目地址</view>
+			<view class="txt_cont6">项目位于国贸正东40公里一个方向，位于潮白新城北部，紧邻102国道，从国贸开车过来只需要50分钟。
+
+				总占地面积约800亩地,总建筑面积110万平米，绿化率38%，容积率仅为1.56，是一个低密度宜居生态社区。
+
+
+			</view>
+		</view>
+
+	</view>
+	<view class="cont5">
+
+		<view class="title_zushou" style="width:100%">
+			配套地图
+		</view>
+		<view class="tab">
+			<view class="tab_lie {{tid==1?'active':''}}" bindtap="clickFn" data-id="1">交通</view>
+			<view class="tab_lie {{tid==2?'active':''}}" bindtap="clickFn" data-id="2">学校 </view>
+			<view class="tab_lie {{tid==3?'active':''}}" bindtap="clickFn" data-id="3">医院</view>
+			<view class="tab_lie {{tid==4?'active':''}}" bindtap="clickFn" data-id="4">餐饮 </view>
+			<view class="tab_lie {{tid==5?'active':''}}" bindtap="clickFn" data-id="5">娱乐</view>
+			<view class="tab_lie {{tid==6?'active':''}}" bindtap="clickFn" data-id="6">商超</view>
+		</view>
+	</view>
+	<view class="" hover-class="none" hover-stop-propagation="false"
+		style="width:100%; height:380rpx;margin:0 auto;margin-top:20rpx;">
+		<map id="map" longitude="116.151929" latitude="39.923399" markers="{{markers}}" scale="12" show-location
+			style="width: 100%; height: 100%;" bindtap="click"></map>
+	</view>
+	<view class="map_txt">
+		房源介绍文字内容房源介绍文字内容房源介绍文字内容房源介绍文字内容房。
+	</view>
+	<view class="cont6">
+		<view class="title_zushou" style="width:100%">
+			优势对比
+		</view>
+		<view class="txt_list">
+			<view class="tit_cont6">大厂与燕郊、香河相比的优势</view>
+			<view class="txt_cont6">房源介绍文字内容房源介绍文字内容房源介绍文字内容房源介绍文字内容房。</view>
+		</view>
+	</view>
+	<view class="cont1">
+		<view class="title_zushou">
+			推荐社区
+		</view>
+		<view class='page-con'>
+			<view class='stage'>
+				<block wx:if="{{swiperList.length>1}}">
+					<view class='wrapper' bindtouchstart='start2' bindtouchend='end2'>
+						<block wx:for='{{swiperList2}}' wx:key="index">
+							<image mode="widthFix" hidden="{{index>2}}" class='imgBasic  {{item.active ? item.swpClass : ""}}'
+								src='https://legal.baike360.cn/public/uploads/z-4.png' data-index='{{index}}'>
+								<view class="delit_txt1" bindtap="delit_zuFn" data-id="{{item.id}}">
+									<text class="item-text">{{item.purchasePrice}}元/月</text>
+									<view class="num_tab">
+										{{communityAnotherName}}-{{item.floor}}层-{{item.houseCode}}
+									</view>
+									<view class="num_tab2">
+										{{item.build_area?item.build_area+'㎡':'暂无㎡数据'}} | {{item.orientation}} |
+										{{item.bedroom_number}}室{{item.livingroom_number}}厅 | {{item.renovation?item.renovation:'暂无装修情况'}}
+									</view>
+								</view>
+							</image>
+
+						</block>
+					</view>
+				</block>
+				<block wx:if="{{swiperList.length==1}}">
+					<view class='wrapper' bindtouchstart='start2' bindtouchend='end2'>
+						<block wx:for='{{swiperList2}}' wx:key="index">
+							<image mode="widthFix" hidden="{{index>2}}" style="left:90rpx"
+								class='imgBasic  {{item.active ? item.swpClass : ""}}'
+								src='https://legal.baike360.cn/public/uploads/z-4.png' data-index='{{index}}'>
+								<view class="delit_txt1" style="z-index:10; transform:scale(1);" bindtap="delit_zuFn"
+									data-id="{{item.id}}">
+									<text class="item-text">{{item.purchasePrice}}元/月</text>
+									<view class="num_tab">
+										{{communityAnotherName}}-{{item.floor}}层-{{item.houseCode}}
+									</view>
+									<view class="num_tab2">
+										{{item.build_area?item.build_area+'㎡':'暂无㎡数据'}} | {{item.orientation}} |
+										{{item.bedroom_number}}室{{item.livingroom_number}}厅 | {{item.renovation?item.renovation:'暂无装修情况'}}
+									</view>
+								</view>
+							</image>
+						</block>
+					</view>
+				</block>
+			</view>
+		</view>
+	</view>
+	<image class="bot_img" src="https://legal.baike360.cn/public/uploads/z-6.png"></image>
+	<view class="txt_bit">
+		北花园一共7栋楼，8种户型。北花园一共7栋楼，8种户型，等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍
+	</view>
+	<view style="width:100%;height:120rpx"></view>
+	<view class="btn" bindtap="lianxiFn">联系社区顾问</view>
+</block>
+<block wx:if="{{istab==2}}">
+	<view class="list_punman" wx:for="{{movieList}}">
+		<view class="user_list">
+			<image class="user_heads"
+				src="https://thirdwx.qlogo.cn/mmopen/vi_32/QG8xo03MVZNGWOiay5w2AvAUhWyx3ViaBq7mVz7AS7RhfVzgxo3DiagYI90QFHLoYXVaBrymRYa55HDibj6h8lUluQ/132">
+			</image>
+			<view class="user_delit">
+				<view class="user_names">{{item.user_name}}</view>
+				<view class="user_type">{{item.role_name}}</view>
+				<view class="uset_txt">
+					{{item.context}}
+				</view>
+				<view class="bot_timesxin">
+					<view class="left_xinxin">
+						<view>评分</view>
+						<view class="xinxinlist">
+							<view class="stars  {{item.grade>=1? 'on': ''}}" ></view>
+							<view class="stars  {{item.grade>=2? 'on': ''}}" ></view>
+							<view class="stars  {{item.grade>=3? 'on': ''}}" ></view>
+							<view class="stars  {{item.grade>=4? 'on': ''}}" ></view>
+							<view class="stars  {{item.grade>=5? 'on': ''}}" ></view>
+						</view>
+					</view>
+					<view class="time_right">{{item.review_time}}</view>
+
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="bot_inpfied">
+		<view class="inp_view" bindtap="inpShow">输入你的评论</view>
+		<view class="btn_inp">发送</view>
+	</view>
+	<view style="height:200rpx"></view>
+</block>
+<block wx:if="{{isinpShow}}">
+	<view class="opitonsff" bindtap="isshowinp"></view>
+	<view class="cont_textar">
+		<view class="tit_textar">评价</view>
+		<textarea name="" bindinput="context" value="{{context}}" maxlength="999" id="" cols="30" rows="10"></textarea>
+		<view class="left_xinxin">
+			<view>对社区打分</view>
+			<view class="xinxinlist">
+				<view class="stars  {{flag>=1? 'on': ''}}" bindtap="changeColor1"></view>
+				<view class="stars  {{flag>=2? 'on': ''}}" bindtap="changeColor2"></view>
+				<view class="stars  {{flag>=3? 'on': ''}}" bindtap="changeColor3"></view>
+				<view class="stars  {{flag>=4? 'on': ''}}" bindtap="changeColor4"></view>
+				<view class="stars  {{flag>=5? 'on': ''}}" bindtap="changeColor5"></view>
+			</view>
+		</view>
+		<view class="txt_inpsubmit" bindtap="subinp_Fn">发送</view>
+	</view>
+</block>

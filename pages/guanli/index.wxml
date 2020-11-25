@@ -1,0 +1,56 @@
+<view class="user_top">
+  <image class="user_head" mode="aspectFill" src="{{listdelit.headImg}}"></image>
+  <view class="user_name">{{usershequName}}</view>
+  <view class="type" wx:if="{{shequName.length==1}}">
+    <image src="../../image/65d7a868c74246f437682b2d992984d.png"></image><text wx:for="{{shequName}}">{{item}}</text>
+  </view>
+  <view class="type" wx:if="{{shequName.length==2}}" style="width:480rpx">
+    <image src="../../image/65d7a868c74246f437682b2d992984d.png"></image><text wx:for="{{shequName}}">{{item}}</text>
+  </view>
+  <view class="type" wx:if="{{shequName.length==3}}" style="width:630rpx">
+    <image src="../../image/65d7a868c74246f437682b2d992984d.png"></image><text wx:for="{{shequName}}">{{item}}</text>
+  </view>
+  <view class="add_list">
+    <view class="left">所属社区</view>
+    <view class="right">{{shequdelit}}</view>
+  </view>
+  <view class="add_list" style="border:none">
+    <view class="left">手机号</view>
+    <view class="right">{{listdelit.phone?listdelit.phone:'暂无'}}</view>
+  </view>
+</view>
+<view class="bordd"></view>
+<view class="tab_list">
+  <view class="tab_dv" bindtap="click1">
+    <image src="../../image/1-2.png"></image>
+    <view>房源管理</view>
+  </view>
+    <view class="tab_dv" bindtap="kehuFn">
+    <image src="../../image/1-3.png"></image>
+    <view>客户管理</view>
+  </view>
+    <view class="tab_dv" bindtap="chnegjiaoFn">
+    <image src="../../image/1-1.png"></image>
+    <view>成交管理</view>
+  </view>
+    <view class="tab_dv" bindtap="click4">
+    <image src="../../image/1-7.png"></image>
+    <view>钥匙管理</view>
+  </view>
+    <view class="tab_dv" bindtap="click5">
+    <image src="../../image/1-4.png"></image>
+    <view>数据统计</view>
+  </view>
+    <view class="tab_dv" bindtap="xinpanFn">
+    <image src="../../image/1-6.png"></image>
+    <view>新盘管理</view>
+  </view>
+    <view class="tab_dv" bindtap="click7">
+    <image src="../../image/1-8.png"></image>
+    <view>带看管理</view>
+  </view>
+    <view class="tab_dv" bindtap="click8">
+    <image src="../../image/1-5.png"></image>
+    <view>我的名片</view>
+  </view>
+</view>

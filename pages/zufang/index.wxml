@@ -1,0 +1,181 @@
+<block wx:if="{{pickerShow}}">
+
+
+	<view class="opcitons" bindtap="pickerShow"></view>
+	<view class="monet_show">
+		<view class='sliderHCon'>
+			<view class='showMoney'>
+				<text class='MoneyValue'>￥{{min}}</text>
+				<text class='MoneyValue'>￥{{max}}</text>
+			</view>
+
+			<view class='twoSlider'>
+				<view class='select-construct'>
+					<view class='select-area'>
+						<view class='slider-container'>
+							<view class='leftSliderPrice sliderPrice' style='left:{{leftSliderPriceWidthX}};'>
+								<view class='sliderView'>
+									￥{{slider1Value*scale}}
+								</view>
+							</view>
+							<slider style='width:{{slider1W+"%"}}' class='slider-left' min='{{min}}' max='{{slider1Max}}'
+								color='#FFAC30' selected-color='#e5e5e5' bindchanging='changing' catchtouchstart='changeStart'
+								bindchange='changed' data-idx='1' value="{{slider1Value}}"></slider>
+							<view class='rightSliderPrice sliderPrice' style='right:{{rightSliderPriceWidthX}};'>
+								<view class='sliderView'>
+									￥{{slider2Value*scale}}
+								</view>
+							</view>
+							<slider wx:if='{{!change}}' style='width:{{slider2W+"%"}}' class='slider-right' min='{{slider2Min}}'
+								max='{{max}}' color='#e5e5e5' selected-color='#FFAC30' bindchanging='changing'
+								catchtouchstart='changeStart' bindchange='changed' data-idx='2' value="{{slider2Value}}"></slider>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="btn_pic" bindtap="btn_pic">查看房源</view>
+	</view>
+</block>
+<block wx:if="{{iswanishow}}">
+	<view class="isbacgrd" style="height:80%;top:20%" bindtap="judeleFn"></view>
+	<view class="huxingClass">
+		<view class="list_hu" style="font-size:28rpx">
+			<input class="min_leftinp" type="number" placeholder="最小金额 " bindinput="inpmin" value="{{inpmin}}"></input> 万
+			————
+			<input class="min_leftinp" type="number" placeholder="最大金额" bindinput="inpmax" value="{{inpmax}}"></input> 万
+		</view>
+		<view class="btnhu">
+			<view class="btnhu2" bindtap="subJuFndele">重置</view>
+
+			<view class="btnhu1" bindtap="subJuFn">确认</view>
+		</view>
+
+	</view>
+</block>
+<view class='top'>
+	<navigator class='city'>
+		<view class="picker_1" wx:if="{{classid==1}}">
+			<!-- {{typename}} -->
+			在租
+		</view>
+		<view class="picker_1" wx:if="{{classid==2}}">
+			<!-- {{typename}} -->
+			在售
+		</view>
+	</navigator>
+	<navigator class='serc' url="/pages/index/home">你想住在哪？</navigator>
+</view>
+<view class='category'>
+	<!-- <view bindtap="seleFn">
+		{{shequdelit?shequdelit:'物业'}}
+		<view></view>
+	</view>
+	<picker bindtap="inpolist" bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'communityAnotherName'}}"
+		value="{{countryIndex}}">
+		<view style="display:flex;align-items: center;font-weight: bold;">
+			<view>{{pickerProDataf[countryIndex].communityAnotherName?pickerProDataf[countryIndex].communityAnotherName:'社区'}}</view>
+			<view class="triangle-down"></view>
+		</view>
+	</picker> -->
+	<view style="display:flex;align-items: center;font-weight: bold;justify-content: center;" bindtap="clikFn">
+		<text>按最近时间</text> 
+		<view class="boderss">
+			<view class="triangle-down" wx:if="{{istimes==0}}"></view>
+		<view class="triangle-downs" wx:if="{{istimes==1}}"></view>
+		</view>
+	</view>
+	<view bindtap="jineFn">
+		金额
+		<view class="triangle-down" ></view>
+	</view>
+	<view bindtap="shaixuan">
+		筛选
+		<view class="triangle-down" ></view>
+	</view>
+</view>
+<!-- <view class='c_child'>
+	<view>高档小区</view>
+	<view class="true">三室一厅</view>
+
+</view> -->
+<view wx:for="{{movieList}}" class='list' bindtap="pageFn" data-id="{{item.id}}" data-house_id="{{item.house_id}}">
+	<!-- <view class='top'>
+		<text class='c_y'>出售</text>
+		<text class='c_b'>住宅</text>
+		<text>高档</text>
+		<text>临地铁</text>
+	</view> -->
+	<view class='image'>
+		<view class='big'>
+			<!-- <image style="height:400rpx"  wx:for="{{item.img}}" wx:key="index" wx:for-item="newitem" wx:if="{{index<1&&newitem.remark=='客厅图片'}}" src="{{newitem.img.url?newitem.img.url:'../../image/9cd38718fdd975715930f3f36e76d54.png'}}" mode="aspectFill"></image> -->
+			<image style="height:250px"  src="{{item.img[0].url?item.img[0].url:'../../image/9cd38718fdd975715930f3f36e76d54.png'}}" mode="aspectFill"></image>
+		</view>
+		<view>
+			<image style="height:125px"
+				src="{{item.img[1].url?item.img[1].url:'../../image/8f81f902c273412818aed87d106e0ec.png'}}"
+				mode="aspectFill"></image>
+			<image style="height:125px"
+				src= "{{item.img[2].url?item.img[2].url:'../../image/8f81f902c273412818aed87d106e0ec.png'}}"
+				mode="aspectFill"></image>
+		</view>
+	</view>
+	<view class='app_top' wx:if="{{!id}}">
+		{{item.anotherName}}- {{item.build_area}}平-{{item.bedroom_number}}居室
+		<text catchtap="shequFn" data-id="{{item.id}}" data-anothername="{{item.anotherName}}">查看社区</text>
+	</view>
+	<view class='app_top' wx:if="{{id}}">
+		{{title}}- {{item.build_area}}平-{{item.bedroom_number}}居室
+
+	</view>
+	<view class='app_bottom'>
+		<view class='app_cent' wx:if="{{!id}}">
+			{{item.build_area}}m²丨{{item.orientation}}丨{{item.bedroom_number}}室{{item.livingroom_number}}厅丨
+			<block wx:if="{{item.renovation==1}}">
+				毛坯
+			</block>
+			<block wx:if="{{item.renovation==2}}">
+				简装
+			</block>
+			<block wx:if="{{item.renovation==3}}">
+				精装
+			</block>
+			<block wx:if="{{!item.renovation}}">
+				暂无装修数据
+			</block>
+		</view>
+		<view class='app_cent' wx:if="{{id}}">
+			{{item.build_area}}m²丨{{item.orientation}}丨{{item.bedroom_number}}室{{item.livingroom_number}}厅丨{{item.renovation}}
+
+			<!-- <block wx:if="{{item.renovation==1}}">
+				毛坯
+			</block>
+			<block wx:if="{{item.renovation==2}}">
+				简装
+			</block>
+			<block wx:if="{{item.renovation==3}}">
+				精装
+			</block>
+			<block wx:if="{{!item.renovation}}">
+				暂无装修数据
+			</block> -->
+
+		</view>
+		<view class='number'>
+			房屋编号：BL3204825641
+		</view>
+		<view class='address' wx:if="{{!id}}">
+			<image src='../../image/address.png'></image>
+			{{item.community_address}}
+			<text>{{item.rent_type}}</text>
+		</view>
+		<view class='address' wx:if="{{id}}">
+			<image src='../../image/address.png'></image>
+			{{item.collection}}
+			<text>{{item.rent}}</text>
+		</view>
+	</view>
+</view>
+<view class='btm_title'>
+	社区租售，本来可以更简单
+</view>

@@ -1,0 +1,240 @@
+/* pages/chnegjiaodelit/index.wxss */
+.top_title{
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.top_title image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+}
+.righth_user{
+  width: 86%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #CFCFCF;
+}
+.user_name{
+  width: 70%;
+  font-size: 32rpx;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.right_time{
+  font-size: 28rpx;
+  text-align: right;
+  width: 25%;
+  overflow: hidden;
+/* text-overflow:ellipsis; */
+white-space: nowrap;
+}
+.cont_delt{
+  width: 100%;
+
+}
+.lou_title{
+  width: 80%;
+  margin-left: 16%;
+  display: flex;
+  /* justify-content: space-between; */
+  padding: 16rpx 0;
+}
+.list_heimg{
+  width: 80%;
+  margin-left: 16%;
+  display: flex;
+  padding: 20rpx 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.list_heimg image{
+  width: 250rpx;
+  height: 250rpx;
+  margin: 2%;
+}
+.lou_tit{
+  width: 84%;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.zulin{
+  padding:4rpx 20rpx;
+  color:white;
+  height: 36rpx;
+  font-size: 26rpx;
+  background: #C3A874;
+}
+.contliuc{
+  width: 94%;
+  margin: 0 auto;
+  padding: 40rpx 0;
+  border-top: 1px solid #CFCFCF;
+
+}
+.list_user{
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.btns_pos{
+  position: absolute;
+  width: 50%;
+  right:0;
+  top: 62rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left_bo{
+  width: 49%;
+  height: 70rpx;
+  font-size: 30rpx;
+  color: white;
+  background: #C3A874;
+  text-align: center;
+line-height: 70rpx;
+}
+.tongguo{
+  width: 49%;
+  height: 70rpx;
+  font-size: 30rpx;
+  color: #C3A874;
+  background: #303030;
+  text-align: center;
+  line-height: 70rpx;
+}
+.left_liu{
+  margin-right: 30rpx;
+  text-align: center;
+  width: 50rpx;
+  
+}
+.dui{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 100%;
+  color: white;
+  background: #C3A874;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  text-align: center;
+}
+.cha{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 100%;
+  color: white;
+  background: #F5222D;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  text-align: center;
+  
+}
+.dian{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 100%;
+  color: white;
+  background: #E5E5E5;
+  margin: 0 auto;
+}
+.heights{
+  width: 2px;
+  height: 120rpx;
+  background:#C3A874;
+  margin: 0 auto;
+
+}
+.grays{
+  background: #E5E5E5;
+}
+.right_liu{
+  width: 76%;
+}
+
+.user_liu{
+  width:100%;
+  display: flex;
+  align-items: center;
+
+}
+.user_name_liu{
+  font-size: 30rpx;
+  /* width: 100rpx;
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap; */
+}
+.user-news{
+  font-size: 28rpx;
+  color: #999999;
+  margin-left: 20rpx;
+  /* width: 130rpx;
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap; */
+}
+.stautus{
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #999999;
+}
+.reds{
+  color: red;
+}
+
+.isModel{
+  z-index: 11;
+  position: fixed;
+  top:16%;
+  height: 620rpx;
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  width: 90%;
+  left: 5%;
+
+}
+.ismodel_tit{
+  padding: 30rpx 0;
+  font-size: 34rpx;
+  font-weight: 600;
+  text-align: center;
+
+}
+.txtat{
+  width:84%;
+  margin: 0 auto;
+  height: 350rpx;
+  border:1px solid #CFCFCF;
+  padding: 20rpx ;
+}
+textarea{
+  width: 100%;
+  height:350rpx;
+}
+.btn_ismodel{
+  width: 90%;
+  margin: 0 auto;
+  background: #303030;
+  font-size: 30rpx;
+  color: #C3A874;
+  height: 86rpx;
+  line-height: 86rpx;
+  text-align: center;
+  margin-top:20rpx;
+}
+.delehide{
+  position: fixed;
+z-index: 11;
+  width: 90rpx;
+  height: 90rpx;
+  bottom: 250rpx;
+  left: 45%;
+}

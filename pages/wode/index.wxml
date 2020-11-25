@@ -1,0 +1,69 @@
+<view class="{{listdelit.roleId==1?'heads':''}}">
+	<view class="head " style="padding-top:{{statusBarHeight+40}}px">
+		<image src='{{listdelit.headImg}}'></image>
+		<navigator url="/pages/wode/info">
+			<view class='name'>{{listdelit.userName?listdelit.userName:'未授权'}}</view>
+			<!-- <view class='leve' wx:if="{{listdelit.roleId==1}}">
+				<image src='../../image/65d7a868c74246f437682b2d992984d.png'></image>社区顾问
+			</view> -->
+		</navigator>
+	</view>
+	<view class='flex'>
+		<navigator url="/pages/wode/get">
+			<view>{{save}}</view>
+			收藏记录
+		</navigator>
+		<navigator url="/pages/wode/history">
+			<view>{{see}}</view>
+			浏览记录
+		</navigator>
+	</view>
+</view>
+<view class='bdy'>
+	<view class="view">
+		<navigator url="/pages/wode/yuyue">
+			<image style="width:80rpx;height:80rpx" src='../../image/yuyue.png'></image>
+			<view>我的预约</view>
+		</navigator>
+	</view>
+	<view class="view">
+		<navigator url="/pages/wode/messages">
+			<image style="width:80rpx;height:80rpx" src='../../image/xiaoxi.png'></image>
+			<view>消息中心</view>
+		</navigator>
+	</view>
+	<view class="view">
+
+
+		<navigator url="/pages/wode/plan">
+			<image style="width:80rpx;height:80rpx" src='../../image/ri.png'></image>
+			<view>日程</view>
+		</navigator>
+	</view>
+	<view bindtap="guanliFn" class="view" wx:if="{{listdelit.roleId>=1}}">
+		<image style="width:80rpx;height:80rpx" src='../../image/guan.png'></image>
+		<view>管理入口</view>
+	</view>
+	<view class="view">
+
+		<navigator url="/pages/fangbiwen/index">
+			<image style="width:80rpx;height:80rpx" src='../../image/fang.png'></image>
+			<view>房必问</view>
+		</navigator>
+	</view>
+	<view class="view">
+
+		<navigator url="/pages/yezhu/index">
+			<image style="width:80rpx;height:80rpx" src='../../image/ye.png'></image>
+			<view>业主委托</view>
+		</navigator>
+	</view>
+	<view class="view">
+
+	<navigator url="/pages/daibanguohu/index">
+		<image style="width:80rpx;height:80rpx" src='../../image/daiban.png'></image>
+		<view>代办过户</view>
+	</navigator>
+	</view>
+</view>
+<include src="/pages/menu.wxml"></include>

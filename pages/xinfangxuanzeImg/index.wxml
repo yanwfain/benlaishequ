@@ -1,0 +1,117 @@
+<view class="top_tit1">
+	<text>1 房源信息 </text>
+	——
+	<text>2 房源状态 </text>
+	<text > —— </text>
+	<text >3 上传照片</text>
+
+</view>
+<view class="bordd"></view>
+<view class="titl_an">区位图</view>
+<view class='pages'>
+	<!-- 图片 -->
+	<view class="images_box">
+		<block wx:key="imgbox" wx:for="{{imgbox}}">
+			<view class='img-box' bindtap="topic_preview" data-url="{{item.url1}}">
+				<image class='img' mode="aspectFill" src='{{item.url1}}'></image>
+				<view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1' wx:if="{{isbtn!=1||!isbtn}}">
+					<image class='img' src='https://legal.baike360.cn/public/uploads/68dcbb7032336ced71aca2de4904939.png'></image>
+				</view>
+			</view>
+		</block>
+		<block wx:if="{{isbtn!=1||!isbtn}}">
+			<view class='img-box' bindtap='addPic1' wx:if="{{imgbox.length<99}}">
+				<image class='img' src='https://legal.baike360.cn/public/uploads/88341403898e1edaceeae78cfbcd6c4.png'></image>
+			</view>
+		</block>
+	</view>
+</view>
+<view class="titl_an"> 鸟瞰图</view>
+<view class='pages'>
+	<!-- 图片 -->
+	<view class="images_box">
+		<block wx:key="imgboxs" wx:for="{{imgboxs}}">
+			<view class='img-box'  bindtap="topic_preview1" data-url="{{item.url1}}">
+				<image class='img' mode="aspectFill" src='{{item.url1}}'></image>
+				<view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1s' wx:if="{{isbtn!=1||!isbtn}}">
+					<image class='img' src='https://legal.baike360.cn/public/uploads/68dcbb7032336ced71aca2de4904939.png'></image>
+				</view>
+			</view>
+		</block>
+		<block wx:if="{{isbtn!=1||!isbtn}}">
+			<view class='img-box' bindtap='addPic1s' wx:if="{{imgboxs.length<99}}">
+				<image class='img' src='https://legal.baike360.cn/public/uploads/88341403898e1edaceeae78cfbcd6c4.png'></image>
+			</view>
+		</block>
+	</view>
+	
+</view>
+<view class="titl_an">  楼座图</view>
+<view class='pages'>
+	<!-- 图片 -->
+	<view class="images_box">
+		<block wx:key="imgboxs1" wx:for="{{imgboxs1}}">
+			<view class='img-box' bindtap="topic_preview2" data-url="{{item.url1}}">
+				<image class='img' mode="aspectFill" src='{{item.url1}}'></image>
+				<view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1s1' wx:if="{{isbtn!=1||!isbtn}}">
+					<image class='img' src='https://legal.baike360.cn/public/uploads/68dcbb7032336ced71aca2de4904939.png'></image>
+				</view>
+			</view>
+		</block>
+		<block wx:if="{{isbtn!=1||!isbtn}}">
+			<view class='img-box' bindtap='addPic1s1' wx:if="{{imgboxs1.length<99}}">
+				<image class='img' src='https://legal.baike360.cn/public/uploads/88341403898e1edaceeae78cfbcd6c4.png'></image>
+			</view>
+		</block>
+	</view>
+	
+</view>
+<view class="titl_an"> 户型图</view>
+<view class="titl_tabrideo">
+	<view class="tab_lll" bindtap="clickrideo" data-id="1">
+		<radio  bindtap="clickrideo" data-id="1" checked="{{istid==1?true:false}}"></radio>
+		<view>住宅类户型图</view>
+	</view>
+	<view class="tab_lll" bindtap="clickrideo" data-id="2">
+		<radio bindtap="clickrideo" data-id="2" checked="{{istid==2?true:false}}"></radio>
+		<view>别墅类户型图</view>
+	</view>
+</view>
+<view class='pages'>
+	<!-- 图片 -->
+	<view class="images_box">
+		<block wx:key="imgboxs12" wx:for="{{imgboxs12}}">
+			<view class='img-box' bindtap="topic_preview3" data-url="{{item.url1}}">
+				<image class='img' mode="aspectFill" src='{{item.url1}}'></image>
+				<view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1s12' wx:if="{{isbtn!=1||!isbtn}}">
+					<image class='img' src='https://legal.baike360.cn/public/uploads/68dcbb7032336ced71aca2de4904939.png'></image>
+				</view>
+			</view>
+		</block>
+		<block wx:if="{{isbtn!=1||!isbtn}}">
+			<view class='img-box' bindtap='addPic1s12' wx:if="{{imgboxs12.length<99}}">
+				<image class='img' src='https://legal.baike360.cn/public/uploads/88341403898e1edaceeae78cfbcd6c4.png'></image>
+			</view>
+		</block>
+	</view>
+</view>
+<!-- <view class="titl_an">  阳台图片</view>
+<view class='pages'>
+	<view class="images_box">
+		<block wx:key="imgboxs12" wx:for="{{imgboxs13}}">
+			<view class='img-box' bindtap="topic_preview4" data-url="{{item.url1}}">
+				<image class='img' mode="aspectFill" src='{{item.url1}}'></image>
+				<view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1s13' wx:if="{{isbtn!=1||!isbtn}}">
+					<image class='img' src='https://legal.baike360.cn/public/uploads/68dcbb7032336ced71aca2de4904939.png'></image>
+				</view>
+			</view>
+		</block>
+		<block wx:if="{{isbtn!=1||!isbtn}}">
+			<view class='img-box' bindtap='addPic1s13' wx:if="{{imgboxs13.length<99}}">
+				<image class='img' src='https://legal.baike360.cn/public/uploads/88341403898e1edaceeae78cfbcd6c4.png'></image>
+			</view>
+		</block>
+	</view>
+</view> -->
+<view style="height:150rpx"></view>
+<view class="btn_sub" bindtap="submit3">提交</view>

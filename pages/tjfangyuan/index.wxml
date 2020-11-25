@@ -1,0 +1,69 @@
+
+<view class="cont">
+	<view class="list">
+		<view class="left">选择社区</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'anotherName'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].anotherName?pickerProDataf[countryIndex].anotherName:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">选择楼座</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef2" range="{{ pickerProDataf2 }}" range-key="{{'buildNum'}}" value="{{countryIndex2}}">
+				<view class="txts" style="">
+					{{pickerProDataf2[countryIndex2].buildNum?pickerProDataf2[countryIndex2].buildNum:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">选择单元</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef3" range="{{ pickerProDataf3 }}" range-key="{{'unit'}}" value="{{countryIndex3}}">
+				<view class="txts" style="">
+					{{pickerProDataf3[countryIndex3].unit?pickerProDataf3[countryIndex3].unit:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">选择房间</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef4" range="{{ pickerProDataf4 }}" range-key="{{'houseCode'}}" value="{{countryIndex4}}">
+				<view class="txts" style="">
+					{{pickerProDataf4[countryIndex4].houseCode?pickerProDataf4[countryIndex4].houseCode:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">业务类型</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef1" range="{{ pickerProDataf1 }}" range-key="{{'name'}}" value="{{countryIndex1}}">
+				<view class="txts" style="">
+					{{pickerProDataf1[countryIndex1].name?pickerProDataf1[countryIndex1].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+  <view class="txt_gray">注：依次选择后，检索出唯一房源。重置后选择，更新检索结果</view>
+</view>
+<block wx:if="{{pickerProDataf4[countryIndex4].houseCode}}">
+	<view class="tit_bot">检索结果</view>
+<view class="tit_bot_txt">{{pickerProDataf[countryIndex].anotherName}}-{{pickerProDataf2[countryIndex2].buildNum}}号楼-{{pickerProDataf3[countryIndex3].unit}}单元{{pickerProDataf4[countryIndex4].houseCode}}室</view>
+</block>
+
+<!-- <view class="btn_sub" bindtap="submit1">下一步</view> -->
+<view class="fied">
+  <view class="leftbtn" bindtap="chongzhi">重置</view>
+  <view class="rightbtn" bindtap="subQue">确认选择</view>
+</view>

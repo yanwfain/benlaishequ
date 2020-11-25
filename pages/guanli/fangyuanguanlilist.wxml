@@ -1,0 +1,58 @@
+<view class="bordd"></view>
+<view class="cont1">
+  <view class="tit_top">
+    <view class="left_top_tit" wx:if="{{list.res.businessType==1}}" data-txt="{{list.res.businessType}}">{{pickerProDataf[countryIndex].name}}</view>
+      <view class="left_top_tit" wx:if="{{list.res.businessType==2}}" data-txt="{{list.res.businessType}}">{{pickerProDataf3[countryIndex3].name}}</view>
+    <view class="bianji">
+      <image src="../../image/xuigai.png"></image>
+      	<picker bindchange="pickerProChangef" wx:if="{{list.res.businessType==1}}" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txt" style="" data-txt="{{list.res.businessType}}">
+				修改状态
+				</view>
+			</picker>
+      <picker bindchange="pickerProChangef3" wx:if="{{list.res.businessType==2}}" range="{{ pickerProDataf3 }}" range-key="{{'name'}}" value="{{countryIndex3}}">
+				<view class="txt" data-txt="{{list.res.businessType}}" style="">
+				修改状态
+				</view>
+			</picker>
+    </view>
+  </view>
+  <view class="user_name">{{list.res.buildingNum?list.res.buildingNum:'暂无'}}</view>
+  <view class="list_delit">
+    月租金： <text>{{list.res.rentAmount}}/月</text>
+  </view>
+    <!-- <view class="list_delit">
+    预算资金： <text>8000元</text>
+  </view>
+    <view class="list_delit">
+    接待日期： <text>2020-08-19</text>
+  </view> -->
+
+</view>
+<view class="bordd"></view>
+<view class="cont1">
+  <view class="title2">跟进记录</view>
+  <view class="list_user" wx:for="{{list.list}}">
+    <view class="user_time">{{item.createTime}}</view>
+    <view class="user_delit">{{item.content}}</view>
+  </view>
+</view>
+<view style="height:150rpx"></view>
+<view class="btn_bottom">
+  <view class="left_btn" bindtap="editFn" data-id="{{list.res.id}}" data-houseid="{{list.res.houseId}}">修改信息</view>
+  <view class="right_btn" bindtap="ismodelshow">写跟进</view>
+</view>
+<block wx:if="{{isshowModel}}">
+
+
+<view class="isbacgrd" bindtap="isdele"></view>
+<view class="isModel">
+  <view class="ismodel_tit">跟进记录</view>
+  <view class="txtat">
+    <textarea maxlength="999" auto-focus bindinput="content" value="{{content}}" placeholder="请输入"></textarea>
+  </view>
+  <view class="btn_ismodel" bindtap="subFn">确认提交</view>
+</view>
+  <image class="delehide" bindtap="isdele" src="../../image/63a00400b62b5f7121dd0785ab0c483.png"></image>
+
+</block>

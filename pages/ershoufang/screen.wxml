@@ -1,0 +1,77 @@
+<view class='title'>
+	房屋属性
+</view>
+<view class='box'>
+	<text bindtap="clickFn" wx:if="{{classid==1}}" data-id="1" class="{{classid==1?'true':''}}">在租</text>
+	<text bindtap="clickFn" wx:if="{{classid==2}}" data-id="2" class="{{classid==2?'true':''}}">在售</text>
+</view>
+<view class='title'>
+	装修
+</view>
+<view class='box'>
+	<text wx:for="{{listhu}}" bindtap="huFn" class="{{item.chenkishow?'true':''}}" data-index="{{index}}">{{item.name}}</text>
+
+</view>
+<block >
+<view class='title'>
+	设施
+</view>
+	<view class='box'>
+	<text wx:for="{{listshe}}" bindtap="sheFn" class="{{item.chenkishow?'true':''}}" data-index="{{index}}">{{item.name}}</text>
+
+</view>
+</block>
+<block wx:if="{{classid==2}}">
+
+	<view class='title'>
+		面积/m²
+	</view>
+	<view class='box'>
+
+		<text wx:for="{{listmian}}" bindtap="mianFn" class="{{item.chenkishow?'true':''}}" data-index="{{index}}">{{item.name}}</text>
+
+	</view>
+	<view class='title'>
+		权属
+	</view>
+	<view class='box'>
+		<text  wx:for="{{listgong}}"  bindtap="gongFn" class="{{item.chenkishow?'true':''}}" data-index="{{index}}">{{item.name}}</text>
+	</view>
+
+	<view class='title'>
+		用途
+	</view>
+
+	<view class='box'>
+		<text  wx:for="{{listyong}}"  bindtap="yongFn" class="{{item.chenkishow?'true':''}}" data-index="{{index}}">{{item.name}}</text>
+
+	</view>
+</block>
+<block wx:if="{{classid==1}}">
+	<view class='title'>
+		电梯
+	</view>
+	<view class='box'>
+		<text  wx:for="{{listdian}}"  bindtap="dianFn" class="{{item.chenkishow?'true':''}}" data-index="{{index}}">{{item.name}}</text>
+
+	</view>
+	<view class="ruzhuTIme">
+		<view class='title'>
+			入住时间
+		</view>
+		<view class="time_top">
+			<picker bindchange="changeDate" mode="date" fields="day" value="{{date}}">
+				<view class="picker-area-text">
+					{{date_time?date_time:'不限'}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+
+
+</block>
+<view class='bottom'>
+	<view bindtap='default'>重置</view>
+	<view bindtap='chengecity'>确认选择</view>
+</view>

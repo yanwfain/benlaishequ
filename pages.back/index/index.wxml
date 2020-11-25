@@ -1,0 +1,99 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view class='top'>
+  <navigator class='city' url='/pages/index/city'>
+    <view class="picker">
+      {{city}}
+    </view>
+  </navigator>
+  <navigator class='serc' url="/pages/index/home">你想住在哪个社区</navigator>
+</view>
+<swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange"  circular="{{circular}}" style="height:{{heig}}vw;">
+    <block wx:for='{{imgList}}'>
+      <swiper-item>
+        <image src="{{item.imgUrl}}" data-id='{{item.id}}' class="slide-image" mode="widthFix" bindload="imageLoad"/>
+      </swiper-item>
+    </block>
+  </swiper>
+<view class='menu'>
+  <navigator url='/pages/shequ/serce'>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+    <view>社区查询</view>
+  </navigator>
+  <navigator>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+    <view>租房</view>
+  </navigator>
+  <navigator>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+    <view>二手房</view>
+  </navigator>
+  <navigator>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+    <view>新房</view>
+  </navigator>
+</view>
+<view class='app_title'>
+  附近社区
+  <navigator class='t_left'>我的社区</navigator>
+</view>
+<view class='app_row'>
+  <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' mode="widthFix"></image>
+  <view class='app_top'>
+        社区名称
+  </view>
+  <view class='app_bottom'>
+    <view class='app_left'>
+      <view class='app_cent'>
+        文字社区简介
+      </view>
+      <view class='app_biaoqian'>
+        <text>整租</text>
+        <text>住宅</text>
+        <text>整租</text>
+        <text>临地铁</text>
+      </view>
+    </view>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' class='app_right'  mode="widthFix"></image>
+  </view>
+</view>
+<view class='app_ceos' style='height:{{height}}vw;'>
+  <view class='app_ceo'>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' mode="widthFix" bindload="imageLoads"></image>
+    <view class='app_ceo_font'>
+      <view class='app_ceo_font-top'>
+        杜顾问
+        <view>15515515515</view>
+      </view>
+      <view class='ceo_men'>
+        <view>
+          180
+          <view class='ceo_bottom'>带看次数</view>
+        </view>
+        <view>
+          180
+          <view class='ceo_bottom'>预约成功次数</view>
+        </view>
+        <view>
+          180
+          <view class='ceo_bottom'>成交次数</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='btm_title'>
+  社区租售，本来可以更简单
+</view>
+<include src ="/pages/menu.wxml"></include>

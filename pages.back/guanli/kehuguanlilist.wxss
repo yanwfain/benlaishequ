@@ -1,0 +1,182 @@
+/* pages/guanli/kehuguanlilist.wxss */
+.top_guanli{
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #F9F7F5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left{
+  display: flex;
+  align-items: center;
+}
+.time_top{
+  display: flex;
+  align-items: center;
+  color: #888888;
+  margin-right: 14rpx;
+}
+.triangle-down {
+  height:0;
+  border-left:4px solid transparent;
+  border-right:4px solid transparent;
+  border-top:6px solid #888888;
+  margin-left:14rpx;
+}
+.right{
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #C3A874;
+  display: flex;
+  align-items: center;
+}
+.srear{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  background: #F6F6F6;
+  display: flex;
+  padding: 0 14rpx;
+  align-items: center;
+  border-radius: 40rpx;
+}
+.inp_srear{
+  width: 86%;
+
+  padding: 12rpx;
+}
+.srear image{
+  width: 44rpx;
+  height: 44rpx;
+}
+.tit_top{
+  display: flex;
+  margin-top: 20rpx;
+}
+.left_top_tit{
+  font-size: 34rpx;
+  font-weight: 600;
+  margin-right: 20rpx;
+  color: #C3A874;
+}
+.bianji{
+  font-size: 28rpx;
+  color: #666666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bianji image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.user_name{
+  font-size: 34rpx;
+  font-weight: 600;
+  margin: 20rpx 0;
+}
+.cont{
+  width: 90%;
+  margin: 0 auto;
+}
+.type_staus{
+  width: 100%;
+  font-size: 28rpx;
+  color: #666666;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #DDDDDD;
+}
+.type_staus text{
+  color: black;
+
+}
+.list_user{
+  padding:20rpx 0;
+}
+.list_btn{
+  display: flex;
+  align-items: center;
+  width: 96%;
+  margin: 0 auto;
+
+}
+.btn{
+  width: 23%;
+  margin:4% 1%;
+  font-size: 30rpx;
+  padding:12rpx 0;
+  text-align: center;
+}
+.obg1{
+  color: black;
+  background: #EBEAEA;
+}
+.obg2{
+  color: #303030;
+  background: #C3A874;
+}
+.obg3{
+  color: #C3A874;
+  background: #303030;
+}
+.ismodeli{
+  z-index: 10;
+  position: fixed;
+  width: 90%;
+  left: 5%;
+  top: 20%;
+  background: white;
+  height: 660rpx;
+  overflow:hidden;
+}
+.title{
+  width: 100%;
+  padding: 30rpx 0;
+  font-size: 34rpx;
+  font-weight: 600;
+  text-align: center;
+}
+.modeli{
+  padding: 40rpx 0;
+  font-size: 34rpx;
+  text-align: center;
+
+}
+.btnmodel{
+  width: 90%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  background: #303030;
+  color: #C3A874;
+  margin: 0 auto;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+}
+.userlooklist{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  height: 200rpx;
+  overflow:hidden;
+  overflow-y: scroll;
+
+}
+.loko{
+  display: flex;
+  font-size: 28rpx;
+  color: #303030;
+  padding: 20rpx 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.img_dele{
+  width: 90rpx;
+  height: 90rpx;
+  position: fixed;
+  bottom: 150rpx;
+  left: 44%;
+  z-index: 11;
+}

@@ -1,0 +1,16 @@
+<view class='heads'>
+	<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+	<view class='name'>赵越</view>
+	<view class='leve'>
+		<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+		社区顾问
+	</view>
+</view>
+<view class="flexs">
+	<label>微信名</label>
+	<view>赵越</view>
+</view>
+<view class="flexs">
+	<label>手机号</label>
+	<view>15515515515</view>
+</view>

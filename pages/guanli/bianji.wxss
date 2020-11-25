@@ -1,0 +1,59 @@
+/* pages/guanli/bianji.wxss */
+.list{
+  padding: 26rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+.left{
+  width: 30%;
+  font-size: 30rpx;
+  
+}
+.img1{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+}
+.right{
+  width: 68%;
+  font-size: 28rpx;
+  text-align: right;
+  /* justify-content: ; */
+}
+picker{
+  /* width: 68%; */
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content:space-between ;
+  position: relative;
+}
+.txt{
+  display: flex;
+  align-items: center;
+}
+.btn{
+  width: 360rpx;
+  height: 80rpx;
+  background: #B38F51;
+  text-align: center;
+  font-size: 28rpx;
+  line-height:80rpx;
+  margin: 0 auto;
+  border-radius:40rpx;
+  color: white;
+  margin-top: 100rpx;
+}
+.triangle-down {
+  height:0;
+  border-left:4px solid transparent;
+  border-right:4px solid transparent;
+  border-top:6px solid #333333;
+  margin-left:14rpx;
+}
+.time_top{
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,44 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.app_ceos{
+  position: relative;
+  background: #f9f9f9;
+  padding:40rpx 20rpx;
+}
+.app_ceo{
+  width: 80%;
+  position: absolute;
+}
+.app_ceo image{width: 100%;}
+.app_ceo_font{position: absolute;width: 100%;bottom:0;left: 0;color: #fff;}
+.app_ceo_font .app_ceo_font-top{
+  padding:40rpx 20rpx ;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.app_ceo_font .app_ceo_font-top>view{font-size: 26rpx;font-weight: normal;}
+.app_ceo_font .ceo_men{
+  display: flex;
+  padding:0 20rpx 40rpx;
+}
+.app_ceo_font .ceo_men>view{flex:1;font-size: 36rpx;}
+.app_ceo_font .ceo_men .ceo_bottom{font-size: 26rpx;}

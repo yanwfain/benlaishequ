@@ -1,0 +1,55 @@
+@import "./history.wxss";
+.head{padding-bottom: 20rpx;color: #999;}
+.head>text{font-weight: bold;font-size: 30rpx;color: #000;}
+.tab{display: flex;align-items: center;}
+.tab>view{flex:1;padding:20rpx 0;text-align: center;font-size: 22rpx;}
+.tab>view.true{font-size: 30rpx;color: #ffc310;font-weight: bold;}
+.b_pj{background: rgba(0,0,0,0.8);position: fixed;left: 0;top: 0;width: 100%;height: 100%;}
+.pj_bdy{width: 83vw;background: #fff;border-radius: 12rpx;margin:20vw 5vw 5vw;padding:2vw;}
+.title{font-size: 28rpx;border-bottom: 1rpx solid #f9f9f9;padding:20rpx 10rpx;text-align: center;margin:0 20rpx}
+.pj_btn{padding:40rpx 0;}
+.pj_btn>text{display: inline-block;padding:10rpx 20rpx;background: #f9f9f9;color: #999;}
+.pj_btn>text:nth-child(2){float: right;}
+.jdt{display: flex;margin: 0 40rpx 80rpx;position: relative;}
+.jdt>text{flex: 1;background: #eee;height: 10rpx;}
+.jdt>text:first-child{border-radius: 5rpx 0 0 5rpx;}
+.jdt>text:nth-child(10){border-radius: 0 5rpx  5rpx 0;}
+.jdt>.jdt_btn{position: absolute;top: -11rpx;z-index: 9;}
+.jdt>.jdt_btn>text{display: inline-block;width: 20rpx;height: 20rpx;border-radius: 50%;background: #fff;border: 1rpx solid #eee;}
+.jdt>.jdt_btn>view{width: 100rpx;margin-left: -40rpx;text-align: center;color: #999;}
+#pj_cent{border-radius: 10rpx;border:1rpx solid #eee;padding:20rpx;height: 160rpx;width:auto;}
+.pj_bdy>.btn{margin:40rpx 0 20rpx;background: #000;color: #ffc310;text-align: center;padding:30rpx;}
+.b_pj>.gb{width: 40rpx;height: 40rpx;line-height: 40rpx;text-align: center;font-size: 36rpx;padding:10rpx;border-radius: 50%;border:2rpx solid #fff;color: #fff;margin:0 auto;}
+.section {
+  width: 100%;
+}
+.body-view{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+slider{
+  width: 90%;
+}
+.section__title{
+  padding: 20rpx 0 ;
+}
+.bottom .dele{
+  padding: 10rpx 15rpx;
+  font-size: 32rpx;
+  display: inline-block;
+  margin-left: 15rpx;
+  background: #C3A874;
+  font-size: 28rpx;
+}
+.bottom .lianxi{
+  padding: 10rpx 15rpx;
+  font-size: 32rpx;
+  display: inline-block;
+  margin-left: 15rpx;
+  background: #000;
+  color: #ffc310;
+  font-size: 28rpx;
+}

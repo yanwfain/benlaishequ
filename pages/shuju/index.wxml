@@ -1,0 +1,126 @@
+<view class="top_nav">
+  <view class="lefts" >成交数据</view>
+  <view class="rights">
+    <image src="../../image/20.png"></image>
+    <view class="txts">查看图表</view>
+  </view>
+</view>
+<view class="dv1">
+  <view class="dv1_left">
+    <view> <text style="font-size:36rpx">20</text> 套</view>
+    <view>本月成交</view>
+  </view>
+  <view class="dv1_right">
+    <view> <text style="font-size:36rpx">200</text> 套</view>
+    <view>累计成交</view>
+  </view>
+</view>
+<view class="contdv1">
+  <view class="toip_tit">客户数据</view>
+  <view class="cont">
+    <view class="cont_tab">
+      <view>今日新增</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>本月新增</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>累计客户</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+  </view>
+</view>
+<view class="contdv1">
+  <view class="toip_tit">租售数据</view>
+  <view class="cont">
+    <view class="cont_tab">
+      <view>今日新增</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>本月新增</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>累计租售</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+  </view>
+</view>
+<view class="contdv1">
+  <view class="toip_tit">新房数据</view>
+  <view class="cont">
+    <view class="cont_tab">
+      <view>今日新增</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>本月新增</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>累计新房</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+  </view>
+</view>
+<!-- <view class="contdv1">
+  <view class="toip_tit">业务数据</view>
+  <view class="cont">
+    <view class="cont_tab">
+      <view>今日确客</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>本月确客</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>累计确客</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>今日排卡</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>本月排卡</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>累计排卡</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>今日认购</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>本月认购</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>累计认购</view>
+      <view style="font-size:36rpx">7980</view>
+    </view>
+  </view>
+</view> -->
+<view class="contdv1">
+  <view class="toip_tit">名片数据</view>
+  <view class="cont">
+    <view class="cont_tab">
+      <view>今日查看</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>本月查看</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+    <view class="cont_tab">
+      <view>累计查看</view>
+      <view style="font-size:36rpx">20</view>
+    </view>
+  </view>
+</view>

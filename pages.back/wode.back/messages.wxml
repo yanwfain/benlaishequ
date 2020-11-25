@@ -1,0 +1,15 @@
+<view class='head'>
+	<picker mode="date" value="{{date_star}}" start="2020-09-01" end="{{end}}" bindchange="bindDateChangeStar">
+    <view class="picker">
+      {{date_star}}
+    </view>
+	</picker>
+	<view>
+		<text></text>
+	</view>
+	<picker mode="date" value="{{date_end}}" start="2020-09-01" end="{{end}}" bindchange="bindDateChangeEnd">
+    <view class="picker">
+      {{date_end}}
+    </view>
+	</picker>
+</view>

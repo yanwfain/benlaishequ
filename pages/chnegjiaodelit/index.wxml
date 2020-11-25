@@ -1,0 +1,166 @@
+<view class="top_title">
+  <image src="{{list_cont.headImg}}"></image>
+  <view class="righth_user">
+    <view class="user_name">{{list_cont.userName}}的成交信息</view>
+    <view class="right_time">{{list_cont.create_time}}</view>
+  </view>
+</view>
+<view class="cont_delt">
+  <view class="lou_title" style="justify-content: space-between">
+    <view class="lou_tit">{{list_cont.community_another_name}}社区{{list_cont.buildNumber}}号楼{{list_cont.houseCode}}室</view>
+    <view class="zulin" wx:if="{{list_cont.type==1}}">租赁</view>
+    <view class="zulin" wx:if="{{list_cont.type==2}}">售卖</view>
+  </view>
+  <view class="lou_title" wx:if="{{list_cont.type==1}}">
+    租金：{{list_cont.money}}元/月
+  </view>
+  <view class="lou_title"  wx:if="{{list_cont.type==1}}">
+    租户姓名：{{list_cont.kehu_name}}
+  </view>
+  <view class="lou_title"  wx:if="{{list_cont.type==2}}">
+    成交价格：{{list_cont.money}}万元
+  </view>
+  <view class="lou_title"  wx:if="{{list_cont.type==2}}">
+    成交公司：{{list_cont.gw_name}}万元
+  </view>
+  <view class="lou_title"  wx:if="{{list_cont.type==2}}">
+    客户姓名：{{list_cont.kehu_name}}
+  </view>
+  <view class="lou_title">
+    电话：{{list_cont.tel}}
+  </view>
+  <view class="lou_title">
+    身份证号：{{list_cont.sfz}}
+  </view>
+  <view class="lou_title" wx:if="{{list_cont.pay_type==1}}">
+    户籍：{{list_cont.address}}
+  </view>
+  <view class="lou_title" wx:if="{{list_cont.pay_type==1}}">
+    租赁方式： <text>整租</text>
+  </view>
+  <view class="lou_title" wx:if="{{list_cont.pay_type==2}}">
+    租赁方式：<text>合租</text>
+  </view>
+  <view class="lou_title" wx:if="{{list_cont.pay_type==3}}">
+    租赁方式： <text>其他</text>
+  </view>
+  <block wx:if="{{list_cont.type==1}}">
+    <view class="lou_title" >
+    租赁起始时间：{{list_cont.start_time}}
+  </view>
+  
+  <view class="lou_title">
+    租赁截止时间：{{list_cont.end_time}}
+  </view>
+
+  <view class="lou_title">
+    入住人数：{{list_cont.person_num}}人
+  </view>
+
+  </block>
+  <block wx:if="{{list_cont.type==2}}">
+    <view class="lou_title">
+    签约时间：{{list_cont.start_time}}
+  </view>
+  <view class="lou_title">
+    付款方式： <text wx:if="{{list_cont.pay_method==1}}">全款</text> <text wx:if="{{list_cont.pay_method==2}}">商业贷款</text> <text wx:if="{{list_cont.pay_method==3}}">公积金贷款</text><text wx:if="{{list_cont.pay_method==4}}">组合贷款</text>
+  </view>
+  <view class="lou_title">
+    贷款信息： <text wx:if="{{list_cont.loan_inf==1}}">商业贷款</text><text wx:if="{{list_cont.loan_inf==2}}">公积金贷款</text><text wx:if="{{list_cont.loan_inf==3}}">组合贷款</text>
+  </view>
+  <view class="lou_title">
+    贷款抵押：<text wx:if="{{list_cont.loan_mortgage==1}}">贷款金额</text><text wx:if="{{list_cont.loan_mortgage==2}}">贷款银行</text><text wx:if="{{list_cont.loan_mortgage==3}}">还款时间</text><text wx:if="{{list_cont.loan_mortgage==4}}">是否自还</text>
+  </view>
+  </block>
+
+  <view class="lou_title">
+    备注：{{list_cont.remark?list_cont.remark:'无备注'}}
+  </view>
+  <view class="lou_title">
+    合同（可点击放大）：
+  </view>
+  <view class="list_heimg">
+    <image bindtap="previewImg" wx:for="{{imglist}}" data-index="{{index}}" src="{{item.url}}"></image>
+  </view>
+</view>
+<view class="contliuc">
+  <view class="list_user" wx:for="{{botom_list}}">
+    <view class="btns_pos" wx:if="{{iftypeid==1&&item.flag==0&&index!=0}}">
+      <view class="left_bo" bindtap="ismodelshow">驳回</view>
+      <view class="tongguo" bindtap="tongguo">通过</view>
+    </view>
+    <view class="left_liu" wx:if="{{item.flag==1}}">
+      <view class="dui"> ✔ </view>
+      <view class="heights"></view>
+    </view>
+    <view class="left_liu" wx:if="{{item.flag==2}}">
+      <view class="cha"> ✘ </view>
+      <view class="heights grays"></view>
+    </view>
+    <view class="left_liu" wx:if="{{item.flag==0||!item.flag}}">
+      <view class="dian"> </view>
+      <view data-inedx="{{index}}" data-2="{{botom_list.length}}" wx:if="{{index <botom_list.length-1}}" class="heights grays"></view>
+
+    </view>
+    <view class="right_liu">
+      <view class="user_liu">
+        <view class="user_name_liu">{{item.userName?item.userName:'操作后确认审批人'}}</view>
+        <!-- <view class="user-news">社区经理</view> -->
+        <view class="user-news">{{item.name}}</view>
+      </view>
+      <view class="user_liu">
+        <view class="stautus" style="color:#C3A874;">{{item.roleName}}</view>
+      </view>
+    
+      <block wx:if="{{index==0&&item.flag==1}}">
+        <view class="stautus"  wx:if="{{item.flag==1}}">提交成功</view>
+      </block>
+      <view class="stautus"  wx:if="{{item.flag==1&&index!=0}}">审批通过</view>
+      <view class="stautus reds" wx:if="{{item.flag==2}}">驳回：{{item.remark}}</view>
+      <view class="stautus reds" wx:if="{{item.flag==0||!item.flag}}">待审批</view>
+    </view>
+  </view>
+  <view style="height:150rpx"></view>
+  <!-- <view class="list_user">
+    <view class="left_liu">
+      <view class="cha"> ✘ </view>
+      <view class="heights grays"></view>
+    </view>
+    <view class="right_liu">
+      <view class="user_liu">
+        <view class="user_name_liu">王有才</view>
+        <view class="user-news">社区经理</view>
+      </view>
+      <view class="stautus reds">驳回：合同模糊需重拍</view>
+    </view>
+  </view>
+  <view class="list_user">
+    <view class="btns_pos">
+      <view class="left_bo" bindtap="ismodelshow">驳回</view>
+      <view class="tongguo" bindtap="tongguo">通过</view>
+    </view>
+    <view class="left_liu">
+      <view class="dian"> </view>
+    </view>
+    <view class="right_liu">
+      <view class="user_liu">
+        <view class="user_name_liu">王有才</view>
+        <view class="user-news">社区经理</view>
+      </view>
+      <view class="stautus reds">待审批</view>
+    </view>
+  </view> -->
+</view>
+<block wx:if="{{isshowModel}}">
+
+  <view class="isbacgrd" bindtap="isdele"></view>
+  <view class="isModel">
+    <view class="ismodel_tit">驳回原因</view>
+    <view class="txtat">
+      <textarea maxlength="999" auto-focus bindinput="remark" value="{{remark}}" placeholder="请输入驳回原因"></textarea>
+    </view>
+    <view class="btn_ismodel" bindtap="subFn">确认提交</view>
+  </view>
+  <image class="delehide" bindtap="isdele" src="../../image/63a00400b62b5f7121dd0785ab0c483.png"></image>
+
+</block>

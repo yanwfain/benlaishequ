@@ -1,0 +1,30 @@
+<view class="Shouquan" wx:if="{{!hasUserInfo}}">
+  <view class="titless">
+    提示 ！
+  </view>
+  <view class="cont_tltsops">
+    您还未授权请先授权！
+  </view>
+  <view class="btn_button">
+    <view class="quxiao_btn" bindtap="ggopfn">
+      取消
+    </view>
+    <button class="butn_bottys" open-type="getUserInfo" bindgetuserinfo="getUserInfo">去授权 </button>
+  </view>
+</view>
+<view class="opsbjc" wx:if="{{!hasUserInfo}}" bindtap="ggopfn"></view>
+<view class="opsbjc" wx:if="{{isSiuser}}" bindtap="ggopfns"></view>
+<view class="Shouquan" wx:if="{{isSiuser}}">
+  <view class="titless">
+    提示 ！
+  </view>
+  <view class="cont_tltsops">
+    您的账号未绑定手机号，点击获取
+  </view>
+  <view class="btn_button">
+    <view class="quxiao_btn" bindtap="ggopfns">
+      取消
+    </view>
+    <button class="butn_bottys" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">获取 </button>
+  </view>
+</view>

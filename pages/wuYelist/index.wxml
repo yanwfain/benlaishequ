@@ -1,0 +1,19 @@
+<view class='top' style="background:white;">
+  <navigator class='city' url='/pages/index/city?city={{city}}'>
+    <view class="picker">
+      {{city}}
+    </view>
+  </navigator>
+  <navigator class='serc' url="/pages/index/home">你想住在哪个社区</navigator>
+</view>
+<!-- <view class="lookFncc" bindtap="clocjkFn"></view> -->
+<view class="tab_lei">
+  <view class="tab_view" bindtap="clocjkFn" data-name="{{item.companyName}}" data-id="{{item.id}}">
+    <image src="{{item.companyLogo}}"></image>
+    <view class="txt_bot">查看全部物业</view>
+  </view>
+  <view class="tab_view" wx:for="{{wyList}}" bindtap="clickFn" data-name="{{item.companyName}}" data-id="{{item.id}}">
+    <image src="{{item.companyLogo}}"></image>
+    <view class="txt_bot">{{item.companyName}}</view>
+  </view>
+</view>

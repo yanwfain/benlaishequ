@@ -1,0 +1,10 @@
+page{padding-top: 100rpx;background: #f9f9f9;}
+.head{display: flex;position: fixed;width: 100%;top: 0;left: 0;padding:20rpx 0;background: #fff;}
+.head>picker{flex: 1;height: 60rpx;line-height: 60rpx;background: #eee;text-align: center;margin:0 20rpx;}
+.head>view{width: 60rpx;}
+.head>view>text{display: block;height: 2rpx;background: #eee;margin:29rpx 0;}
+.head>view.btn{width: 100rpx;text-align: center;height: 60rpx;line-height: 60rpx;margin-right: 20rpx;background: #000;color: #ffc310;}
+.list{margin:40rpx 0 0;padding:30rpx;background: #fff;}
+.title{font-size: 36rpx;font-weight: bold;padding:10rpx 0;}
+.cent{color: #999;}
+.time{color: #999;padding-top: 30rpx;}

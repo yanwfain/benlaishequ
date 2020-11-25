@@ -1,0 +1,218 @@
+<view class="top_tit1">
+	<text>1 房源信息 </text>
+	——
+	<text>2 房源状态 </text>
+	<text style="color:#959595"> —— </text>
+	<text style="color:#959595">3 上传照片</text>
+
+</view>
+<view class="cont">
+	<block wx:if="{{resId}}">
+		<view class="txt">房屋：{{list.res.comName}}{{list.res.buildingNum}}号楼-{{list.res.houseCode}}室</view>
+	</block>
+	
+	<!-- <view class="txt">户型：三室两厅一厨一卫一阳台</view> -->
+	<view class="list">
+		<view class="left"><text style="color:red">*</text>业务类型</view>
+		<view class="right">
+			<picker bindchange="business_type" range="{{business_types}}" value="{{business_type}}">
+				<view class="txts" style="">
+					{{business_types[business_type]?business_types[business_type]:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list" wx:if="{{business_type==1}}">
+		<view class="left"><text style="color:red">*</text>更改状态</view>
+		<view class="right">
+			<picker bindchange="house_status" range="{{ house_statuss }}" value="{{house_status}}">
+				<view class="txts" style="">
+					{{house_statuss[house_status]?house_statuss[house_status]:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list" wx:if="{{business_type==2}}">
+		<view class="left"><text style="color:red">*</text>更改状态</view>
+		<view class="right">
+			<picker bindchange="house_status1" range="{{ house_statuss1 }}" value="{{house_status1}}">
+				<view class="txts" style="">
+					{{house_statuss1[house_status1]?house_statuss1[house_status1]:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list" wx:if="{{business_type==2}}">
+		<view class="left" style="width:20%"><text style="color:red">*</text>售价</view>
+		<input class="right" style="width:46%;text-align:right" placeholder="请输入金额" bindinput="rent_amountshou" value="{{rent_amount}}"></input>  <view>万元起</view>
+	</view>
+	<view class="list" wx:if="{{business_type==1}}">
+		<view class="left">起租日期</view>
+		<view class="right">
+			<picker bindchange="changeDate" mode="date" fields="day" value="{{date}}">
+				<view class="picker-area-text">
+					{{date_time?date_time:'请选择'}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list" wx:if="{{business_type==1}}">
+		<view class="left">租期</view>
+		<view class="right">
+			<picker bindchange="lease_term" range="{{ lease_terms }}" value="{{lease_term}}">
+				<view class="txts" style="">
+					{{lease_terms[lease_term]?lease_terms[lease_term]:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">看房时间</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef"  mode="date" fields="day" value="{{date}}">
+				<view class="txts" style="">
+					{{countryIndex?countryIndex:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">装修状况</view>
+		<view class="right">
+			<picker bindchange="renovation" range="{{ renovations }}" value="{{renovation}}">
+				<view class="txts" style="">
+					{{renovations[renovation]?renovations[renovation]:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+
+	<view class="list">
+		<view class="left">车位情况</view>
+		<view class="right">
+			<picker bindchange="parking_lot" range="{{ parking_lots }}"  value="{{parking_lot}}">
+				<view class="txts" style="">
+					{{parking_lots[parking_lot]?parking_lots[parking_lot]:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">付款方式</view>
+		<view class="right">
+			<picker bindchange="payment_method" range="{{ payment_methods }}"  value="{{payment_method}}">
+				<view class="txts" style="">
+					{{payment_methods[payment_method]?payment_methods[payment_method]:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">屋内设施</view>
+		<view class="right">
+
+		</view>
+	</view>
+	<view class="tab">
+	<view  wx:for="{{biaolist}}" class="tablei {{item.ischenak?'activetab':''}}" data-index="{{index}}" data-id="{{item.id}}" bindtap="clickcctab">{{item.name}}</view>
+</view>
+	<view class="list">
+		<view class="left">配套简介</view>
+		<view class="right">
+
+		</view>
+	</view>
+	<view class="cont1">
+		<textarea maxlength="999" placeholder="请输入配套简介" value="{{introduction}}" bindinput="introduction"></textarea>
+	</view>
+	<block wx:if="{{business_type==1}}">
+
+
+	<view class="list" style="border:none">
+		<view class="left">
+			<view class="t-1">是否接受议价</view>
+			<switch color="#C3A874" checked="{{switch1Checked}}" bindchange="switch1Change" />
+		</view>
+		<view class="right">
+			<view class="t-1">是否有钥匙</view>
+			<switch color="#C3A874" checked="{{switch1Checkeds}}" bindchange="switch1Changes" />
+		</view>
+	</view>
+	<view class="list_cont" wx:if="{{switch1Checkeds}}">
+		<view class="left">钥匙数量</view>
+		<input class="inp_ip1" type="number" placeholder="请输入数字" value="{{keysNumber}}" bindinput="keysNumber"></input>
+	</view>
+	<view class="list" style="position:relative">
+		<view class="optyis" wx:if="{{yid==1?false:true}}"></view>
+		<view class="list-left" bindtap="listFn" data-id="1">
+			<radio checked="{{yid==1?true:false}}"></radio>
+			<view class="left">押金方式</view>
+		</view>
+
+		<view class="right">
+			<picker bindchange="yanjinfangshis" range="{{ yanjinfangshis }}" value="{{yanjinfangshi}}">
+				<view class="txts" style="">
+					{{yanjinfangshis[yanjinfangshi]?yanjinfangshis[yanjinfangshi]:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+
+	<view class="list_cont" >
+		<view class="optyis" wx:if="{{yid==2?false:true}}"></view>
+	<radio-group bindchange="ycfs">
+		<radio bindtap="listFn" data-id="2" checked="{{yid==2?true:false}}"></radio>
+	</radio-group >
+
+		<view class="left" bindtap="listFn" data-id="2">固定押金</view>
+		<input class="inp_ip1" type="number" disabled="{{yid==2?false:true}}" placeholder="请输入数字" value="{{depositNumber}}" bindinput="depositNumber"></input>
+	</view>
+			
+
+		<view class="list">
+		<view class="left"><text style="color:red">*</text>租金</view>
+		<view class="right">
+
+		</view>
+	</view>
+	<!-- <radio-group bindchange="ycf"> -->
+	<checkbox-group bindchange="checkboxChange">
+		<view class="list_cont" style="padding:10rpx 0">
+			<view class="left_1" bindtap="checkFn" data-id="1">
+				<checkbox checked="{{iid?true:false}}" value="1"></checkbox >
+				<view class="left">月付</view>
+			</view>
+			<input class="inp_ip1" type="number" disabled="{{iid?false:true}}" placeholder="请输入金额" value="{{null1}}" bindinput="rent_amount" data-index="1"></input>
+		</view>
+			<view class="list_cont" style="padding:10rpx 0rpx">
+			<view class="left_1" bindtap="checkFn" data-id="2">
+				<checkbox  checked="{{iid2?true:false}}" value="2"></checkbox >
+				<view class="left">季付</view>
+			</view>
+			<input class="inp_ip1" type="number" disabled="{{iid2?false:true}}" placeholder="请输入金额" value="{{null2}}"  bindinput="rent_amount2" data-index="2"></input>
+		</view>
+			<view class="list_cont" style="padding:10rpx 0rpx">
+			<view class="left_1" bindtap="checkFn" data-id="3">
+				<checkbox  checked="{{iid3?true:false}}" value="3"></checkbox >
+				<view class="left">年付</view>
+			</view>
+			<input class="inp_ip1" type="number" disabled="{{iid3?false:true}}" placeholder="请输入金额" value="{{null3}}" bindinput="rent_amount3" data-index="3"></input>
+		</view>
+	</checkbox-group>
+
+	</block>
+
+	
+</view>
+<view style="height:200rpx"></view>
+<view class="btn_sub" bindtap="sunmit2">下一步</view>

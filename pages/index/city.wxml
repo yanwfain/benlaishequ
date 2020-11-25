@@ -1,0 +1,14 @@
+<navigator url='/pages/shequ/serce' class='toserce'>你想住在哪个社区？</navigator>
+<view class='title'>当前城市</view>
+<view class='now_city'>
+	<view bindtap="chengecity" class="txtststus" data-text="{{city}}" data-index="99999"><image src='../../image/address.png'></image>{{city}}</view>
+	<view class='getcity' bindtap="getLocation">重新定位</view>
+</view>
+<view class='now_city'>
+	<view bindtap="chengecity" class="city_list" data-text="北京市">北京市</view>
+	<view bindtap="chengecity" class="city_list" data-text="上海市">上海市</view>
+	<view bindtap="chengecity" class="city_list" data-text="广州市">广州市</view>
+	<view bindtap="chengecity" class="city_list" data-text="深圳市">深圳市</view>
+	<!-- <view bindtap="chengecity" data-index="1">上海</view>
+	<view bindtap="chengecity" data-index="2">广州</view> -->
+</view>

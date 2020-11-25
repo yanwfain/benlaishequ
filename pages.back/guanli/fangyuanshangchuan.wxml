@@ -1,0 +1,170 @@
+<view class="top_tit1">
+	<text>1 房源信息 </text>
+	——
+	<text>2 房源状态 </text>
+	<text style="color:#959595"> —— </text>
+	<text style="color:#959595">3 上传照片</text>
+
+</view>
+<view class="cont">
+	<view class="txt">房屋：北花园社区-23号楼-1单元1202室</view>
+	<view class="txt">户型：三室两厅一厨一卫一阳台</view>
+	<view class="list">
+		<view class="left">业务类型</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">更改状态</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">起租日期</view>
+		<view class="right">
+			<picker bindchange="changeDate" mode="date" fields="day" value="{{date}}">
+				<view class="picker-area-text">
+					{{date_time?date_time:'请选择'}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">租期</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">看房时间</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">装修状况</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">车位情况</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">付款方式</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">配套简介</view>
+		<view class="right">
+
+		</view>
+	</view>
+	<view class="cont1">
+		<textarea maxlength="999" placeholder="请输入跟进记录" value=""></textarea>
+	</view>
+	<view class="list" style="border:none">
+		<view class="left">
+			<view class="t-1">是否接受议价</view>
+			<switch color="#C3A874" checked="{{switch1Checked}}" bindchange="switch1Change" />
+		</view>
+		<view class="right">
+			<view class="t-1">是否有钥匙</view>
+			<switch color="#C3A874" checked="{{switch1Checkeds}}" bindchange="switch1Changes" />
+		</view>
+	</view>
+	<view class="list_cont" wx:if="{{switch1Checkeds}}">
+		<view class="left">钥匙数量</view>
+		<input class="inp_ip1" type="number" placeholder="请输入数字" value=""></input>
+	</view>
+	<view class="list">
+		<view class="left">押金方式</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list_cont" >
+		<radio checked="true"></radio>
+		<view class="left">固定押金</view>
+		<input class="inp_ip1" type="number" placeholder="请输入数字" value=""></input>
+	</view>
+	<view class="list">
+		<view class="left">租金</view>
+		<view class="right">
+
+		</view>
+	</view>
+	<radio-group bindchange="ycf">
+		<view class="list_cont" style="padding:10rpx 0">
+			<view class="left_1">
+				<radio checked="{{iid==1?true:false}}" value="1"></radio>
+				<view class="left">月付</view>
+			</view>
+			<input class="inp_ip1" type="number" placeholder="请输入金额" value=""></input>
+		</view>
+			<view class="list_cont" style="padding:10rpx 0rpx">
+			<view class="left_1">
+				<radio checked="{{iid==2?true:false}}" value="2"></radio>
+				<view class="left">季付</view>
+			</view>
+			<input class="inp_ip1" type="number" placeholder="请输入金额" value=""></input>
+		</view>
+			<view class="list_cont" style="padding:10rpx 0rpx">
+			<view class="left_1">
+				<radio checked="{{iid==3?true:false}}" value="3"></radio>
+				<view class="left">年付</view>
+			</view>
+			<input class="inp_ip1" type="number" placeholder="请输入金额" value=""></input>
+		</view>
+	</radio-group>
+	
+</view>
+<view class="btn_sub" bindtap="sunmit2">下一步</view>

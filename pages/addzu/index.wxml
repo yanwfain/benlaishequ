@@ -1,0 +1,233 @@
+<view class="txt_top" wx:if="{{top_list}}">
+驳回信息：{{top_list}}
+</view>
+
+<block wx:if="{{!pageid}}">
+<view class="list-dv">
+	<!-- 有个默认社区可以选择 -->
+	<view> <text style="font-size:28rpx;color:red;">*</text> 社区</view>
+	<view class="right">
+		<picker bindchange="pickerProChangef4" range="{{ pickerProDataf4 }}" range-key="{{'communityAnotherName'}}" value="{{countryIndex4}}">
+			<view class="txt" style="">
+				{{pickerProDataf4[countryIndex4].communityAnotherName?pickerProDataf4[countryIndex4].communityAnotherName:"请选择社区"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list-dv" wx:if="{{countryIndex4||countryIndex4==0}}">
+	<view> <text style="font-size:28rpx;color:red;">*</text> 楼号</view>
+	<view class="right">
+		<picker bindchange="pickerProChangef5" range="{{ pickerProDataf5 }}" range-key="{{'buildingNumber'}}" value="{{countryIndex5}}">
+			<view class="txt" style="">
+				{{pickerProDataf5[countryIndex5].buildingNumber?pickerProDataf5[countryIndex5].buildingNumber:"请选择楼号"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list-dv"  wx:if="{{countryIndex5}}">
+	<view> <text style="font-size:28rpx;color:red;">*</text> 单元</view>
+	<view class="right">
+		<picker bindchange="pickerProChangef3" range="{{ pickerProDataf3 }}" range-key="{{index}}" value="{{countryIndex3}}">
+			<view class="txt" style="">
+				{{pickerProDataf3[countryIndex3]?pickerProDataf3[countryIndex3]:"请选择单元"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list-dv" wx:if="{{countryIndex3}}">
+	<view> <text style="font-size:28rpx;color:red;">*</text> 房号</view>
+	<view class="right">
+		<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'houseCode'}}" value="{{countryIndex}}">
+			<view class="txt" style="">
+				{{pickerProDataf[countryIndex].houseCode?pickerProDataf[countryIndex].houseCode:"请选择房号"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+</block>
+<block wx:if="{{pageid}}">
+	<view class="list-dv">房源信息：{{list_cont.community_another_name}}社区{{list_cont.buildNumber}}号楼{{list_cont.houseCode}}室</view>
+</block>
+<view class="list-dv" wx:if="{{typePage==1}}">
+	<view> <text style="font-size:28rpx;color:red;">*</text> 租金</view>
+	<input class="inpright" type="number" placeholder="请输入租金" bindinput="money" value="{{ money}}"></input>
+</view>
+<view class="list-dv" wx:if="{{typePage==2}}">
+	<view> <text style="font-size:28rpx;color:red;">*</text> 成交价格</view>
+	<input class="inpright" type="number" style="width:70%" placeholder="请输入成交价格" bindinput="money" value="{{ money}}"></input>万元
+</view>
+<block wx:if="{{typePage==1}}">
+<view class="list-dv">
+	<view> <text style="font-size:28rpx;color:red;">*</text> 租户姓名</view>
+	<input class="inpright" type="text" placeholder="请输入您的姓名" bindinput="kehuName" value="{{kehuName}}"></input>
+</view>
+</block>
+<block wx:if="{{typePage==2}}">
+<view class="list-dv">
+	<view> <text style="font-size:28rpx;color:red;">*</text> 客户姓名</view>
+	<input class="inpright" type="text" placeholder="请输入姓名" bindinput="kehuName" value="{{kehuName}}"></input>
+</view>
+</block>
+<view class="list-dv">
+	<view> <text style="font-size:28rpx;color:red;">*</text> 电话</view>
+	<input class="inpright" type="number" placeholder="请输入您的手机号" bindinput="tel" value="{{tel}}"></input>
+</view>
+<view class="list-dv" wx:if="{{typePage==1}}">
+	<view>户籍</view>
+	<view class="right">
+		<picker class="right_btn" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+			
+			<view class="picker" wx:if="{{region.length>1&&!address}}">
+				{{region[0]}}{{region[1]}}{{region[2]}}
+			</view>
+			<view class="picker" wx:if="{{address}}">
+				{{address}}
+			</view>
+			<view class="picker" wx:if="{{region.length<1&&!address}}">请选择户籍</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list-dv">
+	<view>身份证号</view>
+	<input class="inpright" type="idcard" placeholder="请输入您的身份证号" bindinput="sfz" value="{{sfz}}"></input>
+</view>
+<view class="list-dv">
+	<view>成交公司</view>
+	<input class="inpright" type="text" placeholder="请输入成交公司" bindinput="gwName" value="{{gwName}}"></input>
+</view>
+
+<block wx:if="{{typePage==1}}">
+
+
+<view class="list-dv">
+	<view><text style="font-size:28rpx;color:red;">*</text>租赁方式</view>
+	<view class="right">
+		<picker bindchange="pickerProChangef1" range="{{ pickerProDataf1 }}" range-key="{{'name'}}" value="{{countryIndex1}}">
+			<view class="txt" style="">
+				{{pickerProDataf1[countryIndex1].name?pickerProDataf1[countryIndex1].name:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list-dv">
+	<view> <text style="font-size:28rpx;color:red;">*</text> 租赁起始时间</view>
+	<view class="right">
+		<picker class="right_btn" mode="date" bindchange="bindDateChange" custom-item="{{customItem}}">
+			<view class="picker" >
+        {{startData?startData:'请选择'}}
+			</view> 
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list-dv">
+	<view> <text style="font-size:28rpx;color:red;">*</text> 租赁截止时间</view>
+	<view class="right">
+		<picker class="right_btn" mode="date" start="{{startData}}" bindchange="bindDateChange1" custom-item="{{customItem}}">
+			<view class="picker">
+        {{endData?endData:'请选择'}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list-dv">
+	<view>入住人数</view>
+	<view class="right">
+		<picker bindchange="pickerProChangef2" range="{{ pickerProDataf2 }}" range-key="{{'name'}}" value="{{countryIndex2}}">
+			<view class="txt" style="">
+				{{pickerProDataf2[countryIndex2].name?pickerProDataf2[countryIndex2].name:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+
+</block>
+<block wx:if="{{typePage ==2}}">
+
+<view class="list-dv">
+	<view>签约时间</view>
+	<view class="right">
+		<picker class="right_btn" mode="date" bindchange="bindDateChange" custom-item="{{customItem}}">
+			<view class="picker" >
+        {{startData?startData:'请选择'}}
+			</view> 
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list-dv">
+	<view>付款方式</view>
+	<view class="right">
+		<picker bindchange="pickerProChangef12" range="{{ pickerProDataf12 }}" range-key="{{'name'}}" value="{{countryIndex12}}">
+			<view class="txt" style="">
+				{{pickerProDataf12[countryIndex12].name?pickerProDataf12[countryIndex12].name:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list-dv">
+	<view>贷款信息</view>
+	<view class="right">
+		<picker bindchange="pickerProChangef10" range="{{ pickerProDataf10 }}" range-key="{{'name'}}" value="{{countryIndex10}}">
+			<view class="txt" style="">
+				{{pickerProDataf10[countryIndex10].name?pickerProDataf10[countryIndex10].name:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list-dv">
+	<view>贷款抵押</view>
+	<view class="right">
+		<picker bindchange="pickerProChangef11" range="{{ pickerProDataf11 }}" range-key="{{'name'}}" value="{{countryIndex11}}">
+			<view class="txt" style="">
+				{{pickerProDataf11[countryIndex11].name?pickerProDataf11[countryIndex11].name:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+	
+</block>
+<view class="list-dv">
+	<view>备注</view>
+	<view class="right">
+	
+	</view>
+</view>
+<textarea class="txtarea" maxlength="9999" bindinput="remark" value="{{remark}}" placeholder="填写备注信息"></textarea>
+<view class="list-dv" style="border:none">
+	<view>上传合同（拍照）</view>
+	<view class="right">
+
+	</view>
+</view>
+<view class='pages'>
+	<!-- 图片 -->
+	<view class="images_box">
+		<block wx:key="imgbox" wx:for="{{imgbox}}">
+			<view class='img-box' bindtap="topic_preview" data-url="{{item.url1}}">
+				<image class='img' mode="aspectFill" src='{{item.url1}}'></image>
+				<view class='img-delect' data-deindex='{{index}}' catchtap='imgDelete1' wx:if="{{isbtn!=1||!isbtn}}">
+					<image class='img' src='https://legal.baike360.cn/public/uploads/68dcbb7032336ced71aca2de4904939.png'></image>
+				</view>
+			</view>
+		</block>
+		<block wx:if="{{isbtn!=1||!isbtn}}">
+			<view class='img-box' bindtap='addPic1' wx:if="{{imgbox.length<99}}">
+				<image class='img' src='https://legal.baike360.cn/public/uploads/88341403898e1edaceeae78cfbcd6c4.png'></image>
+			</view>
+		</block>
+	</view>
+</view>
+<view style="height:130rpx"></view>
+<view class="btn_sub" bindtap="submit3">提交</view>

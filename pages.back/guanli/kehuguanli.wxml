@@ -1,0 +1,59 @@
+<view class="bordd"></view>
+<view class="cont1">
+  <view class="tit_top">
+    <view class="left_top_tit">{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"选择状态"}}</view>
+    <view class="bianji">
+      <image src="../../image/xuigai.png"></image>
+      	<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txt" style="">
+				修改状态
+				</view>
+			</picker>
+    </view>
+  </view>
+  <view class="user_name">王女士</view>
+  <view class="list_delit">
+    客户意向： <text>求租</text>
+  </view>
+    <view class="list_delit">
+    预算资金： <text>8000元</text>
+  </view>
+    <view class="list_delit">
+    接待日期： <text>2020-08-19</text>
+  </view>
+
+</view>
+<view class="bordd"></view>
+<view class="cont1">
+  <view class="title2">跟进记录</view>
+  <view class="list_user">
+    <view class="user_time">2020-08-19 18:00</view>
+    <view class="user_delit">张三：客户有新的需求</view>
+  </view>
+   <view class="list_user">
+    <view class="user_time">2020-08-19 18:00</view>
+    <view class="user_delit">张三：客户有新的需求</view>
+  </view>
+   <view class="list_user">
+    <view class="user_time">2020-08-19 18:00</view>
+    <view class="user_delit">张三：客户有新的需求</view>
+  </view>
+</view>
+<view class="btn_bottom">
+  <view class="left_btn" bindtap="editFn">修改信息</view>
+  <view class="right_btn" bindtap="ismodelshow">写跟进</view>
+</view>
+<block wx:if="{{isshowModel}}">
+
+
+<view class="isbacgrd" bindtap="isdele"></view>
+<view class="isModel">
+  <view class="ismodel_tit">跟进记录</view>
+  <view class="txtat">
+    <textarea maxlength="999" auto-focus value="" placeholder="请输入"></textarea>
+  </view>
+  <view class="btn_ismodel" bindtap="subFn">确认提交</view>
+</view>
+  <image class="delehide" bindtap="isdele" src="../../image/63a00400b62b5f7121dd0785ab0c483.png"></image>
+
+</block>

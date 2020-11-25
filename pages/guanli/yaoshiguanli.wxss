@@ -1,0 +1,390 @@
+/* pages/guanli/yaoshiguanli.wxss */
+
+.topshaixuan{
+  /* width: 100%; */
+  /* margin-left: 20rpx; */
+  width: 96%;
+  margin: 0 auto;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  align-items: center;
+color: #1F1F1F;
+}
+.topshaixuans{
+  /* margin-left: 20rpx; */
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  align-items: center;
+color: #1F1F1F;
+}
+.right_user{
+  font-size: 30rpx;
+  color: #C3A874;
+}
+.triangle-down {
+  height:0;
+  border-left:4px solid transparent;
+  border-right:4px solid transparent;
+  border-top:6px solid #333333;
+  margin-left:14rpx;
+}
+.bor_bb{
+  margin-top: 30rpx;
+  width: 100%;
+  height: 1px;
+  background: #F9F7F5;
+}
+.tabbtn{
+  width: 94%;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 30rpx 0;
+}
+.seran{
+  width: 24%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F6F6F6;
+  padding: 10rpx 0;
+  border-radius: 60rpx;
+  margin-right: 10rpx;
+}
+.seran image{
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 10rpx;
+}
+.seran view{
+  color: #CFCFCF;
+}
+.tab-lei{
+  width: 23%;
+  font-size: 28rpx;
+  color: #888888;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab-lei .triangle-down{
+  border-top:6px solid #F6F6F6;
+}
+.list{
+  width: 100%;
+}
+.bcground{
+  width: 100%;
+  height: 20rpx;
+  background: #F9F7F5;
+}
+.list_tab{
+  width: 90%;
+  margin: 0 auto;
+  padding: 26rpx 0;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list_tab image{
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 100%;
+}
+.left_delit{
+  width: 36%;
+}
+.top_1{
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+
+}
+.top_2{
+  font-size: 26rpx;
+}
+.btn1{
+  padding: 14rpx 10rpx;
+  color: white;
+  font-size: 26rpx;
+  background: #C3A874;
+  width: 124rpx;
+  text-align: center;
+}
+.btn2{
+  padding: 14rpx 10rpx;
+  color: #C3A874;
+  font-size: 26rpx;
+  background: #303030;
+  width: 124rpx;
+  text-align: center;
+}
+.sliderHCon {
+  height: 230rpx;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.MoneyValue {
+  font-size: 22rpx;
+  text-align: center;
+  color: #666;
+  margin-top: 15rpx;
+}
+.showMoney {
+  display: flex;
+  justify-content: space-between;
+  width: 68%;
+  margin-top: 36px;
+  position: absolute;
+  color: #666;
+  font-size: 22rpx;
+}
+ 
+.showMoney text {
+  margin-right: -67rpx;
+}
+.twoSlider {
+  width: 93%;
+  height:100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.twoSlider .leftSliderPrice {
+  position: absolute;
+  top: -34rpx;
+  left: 0;
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 40rpx;
+  padding: 20rpx;
+  text-align: center;
+  color: #FFF;
+}
+.sliderPrice view {
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+  font-size: 22rpx;
+}
+.twoSlider .rightSliderPrice {
+  position: absolute;
+  top: -34rpx;
+  right: 0;
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 40rpx;
+  padding: 20rpx;
+  text-align: center;
+  color: #FFF;
+}
+.sliderView {
+  /* border: solid red 1rpx; */
+  color: red;
+}
+ 
+/* 滑动样式 */
+.select-construct{
+  width: 100%;
+}
+.select-area{
+  width: 80%;
+  padding: 30px;
+  /* padding: 30px 10% 15px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn_pic{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #303030;
+  color: #C3A874;
+  font-size: 30rpx;
+  font-weight: 600;
+
+}
+
+.slider-container{
+  width: 100%;
+  display: flex;
+  padding: 20px 0 10px;
+  position: relative;
+}
+.slider-left,.slider-right{
+  margin-right: -8rpx;
+}
+.monet_show{
+  width:100%;
+  top:200rpx;
+  position: fixed;
+  left:0;
+  z-index: 2;
+  background: white;
+}
+.opcitons{
+  
+  position: fixed;
+  top:20%;
+  left:0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: black;
+  opacity: .6;
+}
+.huxingClass{
+  width: 100%;
+  position: fixed;
+  z-index: 12;
+  top: 170rpx;
+  left: 0;
+  background: white;
+  padding-top: 30rpx;
+}
+.list_hu{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 32rpx;
+  padding: 14rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hu_txt{
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+.gou{
+  font-size: 32rpx;
+  font-weight: 600;
+  color:#C3A874;
+}
+.btnhu{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: #303030;
+  color: #C3A874;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+.btnhu1{
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: #303030;
+  color: #C3A874;
+}
+.btnhu2{
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: #C3A874;
+  color: #303030;
+}
+.min_leftinp{
+  width: 200rpx;
+  font-size: 28rpx;
+  background: #F6F6F6;
+  text-align: center;
+  padding: 18rpx 0;
+  margin: 20rpx 0;
+}
+.ismodeli{
+  z-index: 10;
+  position: fixed;
+  width: 90%;
+  left: 5%;
+  top: 8%;
+  background: white;
+  /* height: 850rpx; */
+  padding-bottom: 20rpx;
+  overflow:hidden;
+  /* padding-bottom: 10rpx ; */
+}
+.title{
+  width: 100%;
+  padding: 30rpx 0;
+  font-size: 34rpx;
+  font-weight: 600;
+  text-align: center;
+}
+.modeli{
+  padding: 40rpx 0;
+  font-size: 34rpx;
+  text-align: center;
+
+}
+.btnmodel{
+  width: 90%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  background: #303030;
+  color: #C3A874;
+  margin: 0 auto;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+}
+.userlooklist{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  height: 200rpx;
+  overflow:hidden;
+  overflow-y: scroll;
+
+}
+.loko{
+  /* display: flex; */
+  font-size: 28rpx;
+  color: #303030;
+  padding: 20rpx 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.img_dele{
+  width: 90rpx;
+  height: 90rpx;
+  position: fixed;
+  bottom: 130rpx;
+  left: 44%;
+  z-index: 11;
+}
+.txtat{
+  width:84%;
+  margin: 0 auto;
+  height: 200rpx;
+  border:1px solid #CFCFCF;
+  padding: 20rpx ;
+}
+textarea{
+  width: 100%;
+  height:200rpx;
+}

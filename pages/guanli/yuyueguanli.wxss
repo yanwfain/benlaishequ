@@ -1,0 +1,46 @@
+.list{padding:20rpx;border-top: 15rpx solid #f9f9f9;border-bottom: 15rpx solid #f9f9f9;}
+.bdy{display: flex;}
+.bdy>image{width: 300rpx;}
+.bdy>view{flex: 1;padding-left: 15rpx;}
+.title{font-weight: bold;font-size: 32rpx;}
+.txt{color: #999;padding:15rpx 0}
+.txt_box{padding:0rpx;}
+.txt_box>text{background: #f9f9f9;padding:5rpx 10rpx;display: inline-block;margin-right:15rpx;font-size: 20rpx;}
+.txt_box>text.y_box{background: #ffc310;color: #fff;}
+.txt_box>text.b_box{background: #666;color: #fff;}
+.address{padding:20rpx 0;color: #999;}
+.address>image{display:inline-block ;width: 26rpx;height: 26rpx;}
+.address>text{float: right;font-weight: bold;font-size: 30rpx;color: #ffc310;}
+.bottom{padding:40rpx 0 20rpx;text-align: right;}
+.bottom>view,.bottom>navigator{padding:10rpx 15rpx;font-size: 32rpx;display: inline-block;margin-left: 15rpx;}
+.bottom>view{background: #ffc310;}
+.bottom>navigator{background: #000;color: #ffc310;}
+.user_xinxi{
+  width: 96%;
+  margin: 0 auto;
+  padding-top:10rpx;
+  border-top: 1px solid #B7B7B7;
+  margin-top: 10rpx;
+  position: relative;
+}
+.txt_user1{
+  padding: 4rpx 0;
+  font-size: 26rpx;
+  color: #666666;
+}
+.lianxiB{
+  padding: 14rpx 26rpx;
+  background: #303030;
+  color: #C3A874;
+  position: absolute;
+  top: 40rpx;
+  right: 10rpx;
+}
+.lianxiF{
+  padding: 14rpx 26rpx;
+  background: #C3A874;
+  color: white;
+  position: absolute;
+  top: 40rpx;
+  right: 190rpx;
+}

@@ -1,0 +1,16 @@
+<view class='heads'>
+	<image src='{{listdelit.headImg}}'></image>
+	<view class='name'>{{listdelit.userName}}</view>
+	<view class='leve' style="margin:0 auto" wx:if="{{listdelit.roleId==1}}">
+		<image src='../../image/65d7a868c74246f437682b2d992984d.png'></image>
+		社区顾问
+	</view>
+</view>
+<view class="flexs">
+	<label>微信名</label>
+	<view>{{listdelit.userName?listdelit.userName:'暂无'}}</view>
+</view>
+<view class="flexs">
+	<label>手机号</label>
+	<view>{{listdelit.phone?listdelit.phone:'暂无'}}</view>
+</view>

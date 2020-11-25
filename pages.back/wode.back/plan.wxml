@@ -1,0 +1,18 @@
+<view class='list'>
+	<view class='flex'>
+		<view class='left'>
+			<text>09:00</text>
+			<view>2020-08-28</view>
+		</view>
+		<view class='right'>
+			<text>预约看房</text>
+			<view>朝阳区高碑店北花园小区</view>
+		</view>
+	</view>
+	<view class='bottom'>
+		<view class='b_y'>联系顾问</view>
+		<view class='b_h'>处理</view>
+		<view>取消待办</view>
+		<navigator>查看详情</navigator>
+	</view>
+</view>

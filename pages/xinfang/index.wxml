@@ -1,0 +1,46 @@
+<view class="top_seraet">
+  <view class="txt_topq">新房</view>
+  <view class="right_top">
+    <image src="../../image/z-7.png"></image>
+    <input class="inp_top" placeholder="请输入项目关键字" type="text"  />
+  </view>
+</view>
+<swiper indicator-dots autoplay="true" indicator-color="gray" indicator-active-color="#dd441c" interval="3000" duration="1000" circular='true' bindchange="bindchange">
+	<block wx:for='{{imgList}}'>
+		<swiper-item>
+			<image src="{{item.img}}" mode="aspectFill" data-id='{{item.id}}' class="slide-image" />
+		</swiper-item>
+	</block>
+</swiper>
+<view class="tab">
+  <view class="tab_vie {{taid==1?'active':''}}" bindtap="clickFns" data-id="1">全部</view>
+  <view class="heis"></view>
+  <view class="tab_vie {{taid==2?'active':''}}" bindtap="clickFns" data-id="2">旅居</view>
+  <view class="heis"></view>
+  <view class="tab_vie {{taid==3?'active':''}}" bindtap="clickFns" data-id="3">学区</view>
+  <view class="heis"></view>
+  <view class="tab_vie {{taid==4?'active':''}}" bindtap="clickFns" data-id="4">投资</view>
+  <view class="heis"></view>
+  <view class="tab_vie {{taid==5?'active':''}}" bindtap="clickFns" data-id="5">环京</view>
+</view>
+<view class="contList" wx:for="{{movieList}}" bindtap="binddelir" data-id="{{item.id}}">
+  <image class="img_cont" src="../../image/1.png"></image>
+  <view class="titl_cont">
+    <view class="shetitle">{{item.communityAnotherName}}</view>
+    <view class="xiaotitle">建筑面积 140m-190m  |  户型 {{item.mainType}}</view>
+    <view class="tab_xiaot">
+      <view class="tabcont b1">整租</view>
+      <view class="tabcont b2">住宅</view>
+      <view class="tabcont b3">整租</view>
+      <view class="tabcont b4">临地铁</view>
+    </view>
+    <view class="bot_ddress">
+      <view class="address_left">
+        <image src="../../image/address.png"></image>
+        <view class="address_txt">{{item.communityAddress}}</view>
+      </view>
+      <view class="right_txt">均价:92000元/m</view>
+    </view>
+  </view>
+</view>
+<image wx:if="{{isscroll}}" bindtap="scrollFn" class="img_fied" src="../../image/b2da8c14dbe02cffec3e76a1501892a.png"></image>

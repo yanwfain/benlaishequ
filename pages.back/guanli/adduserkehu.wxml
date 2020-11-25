@@ -1,0 +1,42 @@
+<view class="list">
+	<view class="left">客户姓名</view>
+	<input class="inp" placeholder="请输入客户姓名" value=""></input>
+</view>
+<view class="list">
+	<view class="left">手机号</view>
+	<input class="inp" placeholder="请输入手机号码" value=""></input>
+</view>
+<view class="list">
+	<view class="left">客户意向</view>
+	<view class="picker">
+		<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+			<view class="txt" style="">
+				{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list">
+	<view class="left">客户状态</view>
+	<view class="picker">
+		<picker bindchange="pickerProChangef1" range="{{ pickerProDataf1 }}" range-key="{{'name'}}" value="{{countryIndex1}}">
+			<view class="txt" style="">
+				{{pickerProDataf1[countryIndex1].name?pickerProDataf1[countryIndex1].name:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list">
+	<view class="left">预算资金</view>
+	<input class="inp" placeholder="请输入金额(元)" value=""></input>
+</view>
+<view class="list" style="border:none">
+	<view class="left">跟进记录</view>
+	<view></view>
+</view>
+<view class="cont">
+  <textarea maxlength="999" placeholder="请输入跟进记录" value=""></textarea>
+</view>
+<view class="submit">确认提交</view>

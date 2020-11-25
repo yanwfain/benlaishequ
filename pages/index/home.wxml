@@ -1,0 +1,26 @@
+<view class='tab'>
+	<view class="{{tid==0?'true':''}}" bindtap='tab' data-index='0'><text>在售</text></view>
+	<view class="{{tid==1?'true':''}}" bindtap='tab' data-index='1'><text>在租</text></view>	
+</view>
+<input url='/pages/shequ/serce' class='toserce' placeholder="你想住在哪个社区？" value="{{keyword}}" bindconfirm="bindconfirm" confirm-type='search'></input>
+<!-- <view class='title' style="color:gray;justify-content: space-between;display:flex;">
+	<view>历史搜索</view>
+	<view>清空</view>
+</view>
+<view class='now_city'>
+	<navigator ur='/page/index?id=1'>新城国际</navigator>
+	<navigator ur='/page/index?id=2'>阳光上东</navigator>
+	<navigator ur='/page/index?id=2'>阳光上东</navigator>
+	<navigator ur='/page/index?id=2'>阳光上东</navigator>
+	<navigator ur='/page/index?id=2'>阳光上东</navigator>
+</view> -->
+<view class='title'>周边热搜</view>
+<view class='now_city'>
+	<view bindtap="clickclass">新城国际</view>
+	<view bindtap="clickclass">阳光上东</view>
+	<!-- <navigator ur='/page/index?id=1'>新城国际</navigator>
+	<navigator ur='/page/index?id=2'>阳光上东</navigator>
+	<navigator ur='/page/index?id=2'>阳光上东</navigator> -->
+	<!-- <navigator ur='/page/index?id=2'>阳光上东</navigator>
+	<navigator ur='/page/index?id=2'>阳光上东</navigator> -->
+</view>

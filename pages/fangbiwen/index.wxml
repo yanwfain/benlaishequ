@@ -1,0 +1,39 @@
+<view class="srear">
+	<image src="https://legal.baike360.cn/public/uploads/z-7.png"></image>
+	<input class="inp_srear" placeholder="请输入您想了解的关键字" value="{{keyword}}" bindconfirm="bindconfirm" confirm-type='search'></input>
+</view>
+<view class="tab_lei">
+  <view class="tab_lbar {{tid==1?'active':''}}" bindtap="clickFn" data-id="1">
+    房屋租赁
+    <view class="bot_bor {{tid==1?'sctive':''}}"></view>
+  </view>
+   <view class="tab_lbar {{tid==2?'active':''}}" bindtap="clickFn" data-id="2">
+    二手交易
+    <view class="bot_bor {{tid==2?'sctive':''}}"></view>
+  </view>
+   <view class="tab_lbar {{tid==3?'active':''}}" bindtap="clickFn" data-id="3">
+    新房
+    <view class="bot_bor {{tid==3?'sctive':''}}"></view>
+  </view>
+</view>
+<view class="tab_dv">
+  <view class="dv">标签一</view>
+  <view class="dv">标签一</view>
+  <view class="dv">标签一</view>
+</view>
+<block wx:for="{{movieList}}" >
+  <view class="cont" bindtap="contdelitFn" data-id="{{item.id}}">
+    <view class="left_cont">
+      <view class="title_cont">{{item.title}}</view>
+      <view class="txt">
+      {{item.content}}
+      </view>
+      <view class="zulins" wx:if="{{tid==1}}">租赁</view>
+      <view class="zulins" wx:if="{{tid==2}}">二手</view>
+      <view class="zulins" wx:if="{{tid==3}}">新房</view>
+    </view>
+    <image src=""></image>
+  </view>
+  <view class="border"></view>
+</block>
+<view wx:if="{{movieList.length<1}}" style="padding:20rpx 0;font-size:28rpx;text-align:center">没有更多数据了</view>

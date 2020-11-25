@@ -1,0 +1,69 @@
+<view class='top'>
+  <navigator class='city'>
+    <view class="picker">
+      {{typename}}
+    </view>
+  </navigator>
+  <navigator class='serc' url="/pages/index/home">你想住在哪？</navigator>
+</view>
+<view class='category'>
+	<view>
+		物业
+		<view></view>
+	</view>
+	<view>
+		社区
+		<view></view>
+	</view>
+	<view>
+		金额
+		<view></view>
+	</view>
+	<view>
+		筛选
+		<view></view>
+	</view>
+</view>
+<view class='c_child'>
+	<view>高档小区</view>
+	<view class="true">三室一厅</view>
+	<view>学区房</view>
+	<view>智能生活</view>
+</view>
+<view class='list'>
+	<view class='top'>
+		<text class='c_y'>出售</text>
+		<text class='c_b'>住宅</text>
+		<text>高档</text>
+		<text>临地铁</text>
+	</view>
+	<view class='image'>
+		<view class='big'>
+			<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' mode="widthFix"></image>
+		</view>
+		<view>
+			<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' mode="widthFix"></image>
+			<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' mode="widthFix"></image>
+		</view>
+	</view>
+	<view class='app_top'>
+		北花园小区-140平-4居室
+		<text>查看社区</text>
+  </view>
+  <view class='app_bottom'>
+      <view class='app_cent'>
+        120m²丨朝南丨3室1厅丨精装修 
+      </view>
+      <view class='number'>
+        房屋编号：BL3204825641
+			</view>
+			<view class='address'>
+				<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+				朝阳区朝阳里朝阳路朝阳号
+				<text>￥400万起</text>
+      </view>
+    </view>
+</view>
+<view class='btm_title'>
+  社区租售，本来可以更简单
+</view>

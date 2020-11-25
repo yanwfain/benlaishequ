@@ -1,0 +1,117 @@
+<view class="top_head">
+	<view class="topshaixuan" bindtap="seleFn">
+		<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+			<view class="txt" style="">
+				{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"社区筛选"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+	<view class="right" bindtap="adduserFn">
+		<text style="font-size:40rpx;">+ </text>添加房源
+	</view>
+</view>
+
+<view class="bor_bb"></view>
+<view class="tabbtn">
+	<view class="seran">
+		<image src="https://legal.baike360.cn/public/uploads/z-7.png"></image>
+		<view>搜索</view>
+	</view>
+	<view class="tab-lei">
+		<view class="txt_name">户型</view>
+		<view class="triangle-down"></view>
+	</view>
+	<view class="tab-lei">
+		<view class="txt_name">面积</view>
+		<view class="triangle-down"></view>
+	</view>
+	<view class="tab-lei">
+		<view class="txt_name">楼号</view>
+		<view class="triangle-down"></view>
+	</view>
+	<view class="tab-lei">
+		<view class="txt_name">业务类型</view>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list_user">
+	<view class="bordd"></view>
+	<view class="cont">
+		<view class="tit_top">
+			<view class="left_top_tit">{{pickerProDataf1[countryIndex1].name?pickerProDataf1[countryIndex1].name:"选择状态"}}</view>
+			<view class="bianji">
+				<image src="../../image/xuigai.png"></image>
+				<picker bindchange="pickerProChangef1" range="{{ pickerProDataf1 }}" range-key="{{'name'}}" value="{{countryIndex1}}">
+					<view class="txt" style="">
+						修改状态
+					</view>
+				</picker>
+			</view>
+		</view>
+		<view class="user_name">
+			<view>3号楼1-1002</view>
+			<view class="rightmoney">2000元/月</view>
+		</view>
+		<view class="type_staus">
+			最近跟近： <text>刚刚装修好，简欧式装修风格</text>
+		</view>
+		<view class="list_btn">
+			<view class="btn"></view>
+			<view class="btn obg1" bindtap="editFn">跟进记录</view>
+			<view class="btn obg2" bindtap="delitFn">修改信息</view>
+			<view class="btn obg3" bindtap="delitFn1">写跟进</view>
+		</view>
+	</view>
+</view>
+<view class="list_user">
+	<view class="bordd"></view>
+	<view class="cont">
+		<view class="tit_top">
+			<view class="left_top_tit">{{pickerProDataf1[countryIndex1].name?pickerProDataf1[countryIndex1].name:"选择状态"}}</view>
+			<view class="bianji">
+				<image src="../../image/xuigai.png"></image>
+				<picker bindchange="pickerProChangef1" range="{{ pickerProDataf1 }}" range-key="{{'name'}}" value="{{countryIndex1}}">
+					<view class="txt" style="">
+						修改状态
+					</view>
+				</picker>
+			</view>
+		</view>
+		<view class="user_name">
+			<view>3号楼1-1002</view>
+			<view class="rightmoney">2000元/月</view>
+		</view>
+		<view class="type_staus">
+			最近跟近： <text>刚刚装修好，简欧式装修风格</text>
+		</view>
+		<view class="list_btn">
+			<view class="btn"></view>
+			<view class="btn obg1" bindtap="editFn">跟进记录</view>
+			<view class="btn obg2" bindtap="delitFn">修改信息</view>
+			<view class="btn obg3" bindtap="delitFn1">写跟进</view>
+		</view>
+	</view>
+</view>
+<block wx:if="{{ishow}}">
+
+<view class="isbacgrd" bindtap="delequxiao"></view>
+<view class="isnumModel">
+	<view class="ismodelTop">
+		<view class="delequxiao" bindtap="delequxiao">取消</view>
+		<view class="btnsubmit" bindtap="submit_btn">确定</view>
+	</view>
+  <radio-group bindchange="ycfp">
+    <view class="modellist1">
+      <radio checked="{{tid==1?true:false}}" value="1"></radio>
+      <view class="txt_ismodel">检索房源编号</view>
+      <input class="inp_ismode" placeholder="请输入房源编号" bindinput="num_type" value="{{num_type}}"></input>
+    </view>
+    <view class="modellist1">
+      <radio checked="{{tid==2?true:false}}" value="2"></radio>
+      <view class="txt_ismodel">上传社区信息</view>
+     <view style="width:60%"></view>
+    </view>
+  </radio-group>
+</view>
+</block>

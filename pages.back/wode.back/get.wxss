@@ -1,0 +1,11 @@
+@import "./history.wxss";
+.list{padding:0;}
+.title{font-size: 36rpx;}
+.bdy{display: block;}
+.bdy>image{width: 100%;}
+.bdy>view{padding-left: 0;padding:20rpx}
+.txt_box{padding:15rpx 0 0 ;}
+.address{padding:0 20rpx 20rpx;}
+.txt{padding:15rpx 0 0;}
+.bottom>view.b_y{background: #f2ece5;}
+.bottom>view.b_h{background: #eaeaea;}

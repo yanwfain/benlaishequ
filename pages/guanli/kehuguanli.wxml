@@ -1,0 +1,82 @@
+<view class="bordd"></view>
+
+<view class="cont_1">
+	<view class="cont_btnpos">
+		<!-- <view class="tuijian2" bindtap="tuuijianlou" data-id="{{listcont.customer.id}}">推荐楼盘</view> -->
+		<view class="tuijian1" bindtap="tuijianFn" data-id="{{listcont.customer.id}}">推荐房源</view>
+	</view>
+	<view class="tit_top">
+		<view class="left_top_tit">{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:'未选择'}}</view>
+
+		<view class="bianji" bindtap="binajiFn">
+			<image src="../../image/xuigai.png"></image>
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txt" style="">
+					修改状态
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class="user_name">{{listcont.customer.userRealName}}</view>
+	<view class="list_delit">
+		客户意向： <text wx:if="{{listcont.customer.userIntention==1}}">寻租</text><text wx:if="{{listcont.customer.userIntention==2}}">买房</text><text wx:if="{{listcont.customer.userIntention==3}}">出租</text><text wx:if="{{listcont.customer.userIntention==4}}">出售</text><text wx:if="{{listcont.customer.userIntention==5}}">委托</text><text wx:if="{{listcont.customer.userIntention==6}}">出租出售</text>
+	</view>
+	<view class="list_delit">
+		预算资金： <text>{{listcont.customer.userBudget}}</text>
+	</view>
+	<view class="list_delit">
+		接待日期： <text>{{listcont.customer.recivDate}}</text>
+	</view>
+
+</view>
+<view class="bordds">
+	推荐房源
+</view>
+<block>
+
+
+<view class="cont1" wx:for="{{listcont.follows}}" >
+	<view class="iti_tit">
+		<view class="title2" data-houseid="{{item.houseId}}" bindtap="fangyuanFn">{{item.name}}{{item.buildNum}}号楼{{item.houseCode}}</view>
+		<view class="type_tit" wx:if="{{item.businessType==1}}">租赁</view>
+		<view class="type_tit" wx:if="{{item.businessType==2}}">售卖</view>
+	</view>
+	<view class="iti_tit" style="padding:16px 0;border:none">
+		<view class="title2">跟进记录</view>
+		<view class="btnxie" bindtap="ismodelshow" data-recourseId="{{item.recourseId}}">写跟进</view>
+	</view>
+	<block wx:if="{{item.follow.length>=1}}">
+	<view class="list_user" wx:for="{{item.follow}}" wx:if="{{index<1}}" wx:key="index" wx:for-item="newitem">
+		<view class="user_time">{{newitem.follow_time}}</view>
+		<view class="user_delit">{{newitem.content}}</view>
+	</view>
+	<view style="text-align:center" wx:if="{{item.follow.length>1&&!item.isshow}}" data-recourseid="{{item.recourseId}}" data-index="{{index}}" bindtap="zhankailist">展开更多</view>
+	</block>
+	<block wx:if="{{item.isshow}}">
+		<view class="list_user" wx:for="{{item.follow}}" wx:if="{{index>0}}" wx:key="index" wx:for-item="newitem">
+		<view class="user_time">{{newitem.follow_time}}</view>
+		<view class="user_delit">{{newitem.content}}</view>
+	</view>
+	<view style="text-align:center" wx:if="{{item.isshow}}" data-recourseid="{{item.recourseId}}" data-index="{{index}}" bindtap="shouqilist">收起更多</view>
+	</block>
+
+</view>
+<view class="bordd"></view>
+</block>
+<view style="height:50rpx"></view>
+<!-- <view class="btn_bottom">
+	<view class="left_btn" bindtap="editFn">修改信息</view>
+	<view class="right_btn" bindtap="ismodelshow">写跟进</view>
+</view> -->
+<block wx:if="{{isshowModel}}">
+	<view class="isbacgrd" bindtap="isdele"></view>
+	<view class="isModel">
+		<view class="ismodel_tit">跟进记录</view>
+		<view class="txtat">
+			<textarea maxlength="999" auto-focus bindinput="content" value="{{ content}}" placeholder="请输入"></textarea>
+		</view>
+		<view class="btn_ismodel" bindtap="subFn">确认提交</view>
+	</view>
+	<image class="delehide" bindtap="isdele" src="../../image/63a00400b62b5f7121dd0785ab0c483.png"></image>
+
+</block>

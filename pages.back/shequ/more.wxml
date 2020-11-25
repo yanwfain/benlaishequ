@@ -1,0 +1,36 @@
+<view class="top_title">
+  <view class="title1">社区大门</view>
+  <view class="img1">
+    <image mode="aspectFill" src="../../image/1.png"></image>
+  </view>
+  <view class="sheTxt">社区介绍文字内容社区介绍文字内容社区介绍文字内容社区介绍文字内容社区介绍文字内容。</view>
+</view>
+<view class="top_title">
+  <view class="title1">社区大门</view>
+  <view class="img1">
+    <image mode="aspectFill" src="https://legal.baike360.cn/public/uploads/2.png"></image>
+    <image mode="aspectFill" src="https://legal.baike360.cn/public/uploads/3.png"></image>
+  </view>
+</view>
+<view class="top_title">
+  <view class="title1">楼栋外立面</view>
+  <view class="img1">
+    <image mode="aspectFill" src="https://legal.baike360.cn/public/uploads/4.png"></image>
+    <image mode="aspectFill" src="https://legal.baike360.cn/public/uploads/5.png"></image>
+    <image mode="aspectFill" src="https://legal.baike360.cn/public/uploads/6.png"></image>
+    <image mode="aspectFill" src="https://legal.baike360.cn/public/uploads/7.png"></image>
+  </view>
+</view>
+<view class="top_title">
+  <view class="title1">社区配套</view>
+  <view class="img1">
+    <image mode="aspectFill" src="https://legal.baike360.cn/public/uploads/8.png"></image>
+    <image mode="aspectFill" src="https://legal.baike360.cn/public/uploads/9.png"></image>
+  </view>
+</view>
+<view class="top_title">
+  <view class="title1">社区配套</view>
+  <view class="img1">
+    <image mode="aspectFill" src="https://legal.baike360.cn/public/uploads/10.png"></image>
+  </view>
+</view>

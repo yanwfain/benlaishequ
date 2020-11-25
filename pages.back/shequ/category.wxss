@@ -1,0 +1,11 @@
+.img{padding:0 5vw;overflow: hidden;}
+.img navigator{
+	width: 32.5vw;
+	margin:20rpx 5vw 20rpx 0;
+	padding:5vw;
+	float: left;
+	background: #f9f9f9;
+}
+.img navigator:nth-child(2n){margin:20rpx 0;}
+.img navigator image{width: 100%;}
+.img navigator view{border-top: 1rpx solid #eee;padding:20rpx 0;text-align: center;}

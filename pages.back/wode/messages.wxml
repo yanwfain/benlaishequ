@@ -1,0 +1,21 @@
+<view class='head'>
+	<picker mode="date" value="{{date_star}}" start="2020-09-01" end="{{end}}" bindchange="bindDateChangeStar">
+    <view class="picker">
+      {{date_star}}
+    </view>
+	</picker>
+	<view>
+		<text></text>
+	</view>
+	<picker mode="date" value="{{date_end}}" start="2020-09-01" end="{{end}}" bindchange="bindDateChangeEnd">
+    <view class="picker">
+      {{date_end}}
+    </view>
+	</picker>
+	<view class='btn'>确认</view>
+</view>
+<view class='list'>
+	<view class='title'>预约信息提交成功</view>
+	<view class='cent'>您的北花园小区预约已提交请等待</view>
+	<view class='time'>2020-09-24 18:20:18</view>
+</view>

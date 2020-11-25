@@ -1,0 +1,18 @@
+.app_rows{padding:20rpx;display: flex;}
+.app_rows navigator{flex: 1;margin-right: 40rpx;text-align: center;background: #eee;border-radius: 8rpx;padding: 30rpx 0;}
+.app_rows navigator:nth-child(2n){margin-right: 0;}
+.app_rows navigator image{width: 20rpx;}
+.app_rows navigator view{font-size: 22rpx;}
+.app_rows navigator view text{display: inline-block;width: 22rpx;height: 22rpx;font-size: 16rpx;background: #ffc310;color: #fff;}
+.app_top{font-size: 36rpx;font-weight: bold;}
+.top .city{flex: 1;}
+.top .serc{flex: 2;}
+.tochange{position: fixed;top:100rpx;left: 0;width: 100%;z-index: 2;display: flex;}
+.app_left{flex: 1;background: #eee;padding:20rpx 0;	}
+.app_left .list{padding:20rpx 0 20rpx 20rpx;}
+.app_left .list.true{color: #ffc310;}
+.app_right{flex: 2;background: #fff;padding:20rpx 0;}
+.app_right .list{padding:20rpx;}
+.app_right .list>image{display: inline-block;width: 24rpx;height: 24rpx;margin-right: 10rpx;}
+.app_right .list.true{color: #ffc310;}
+.app_right .list.true>text{float: right; color: #ffc310;}

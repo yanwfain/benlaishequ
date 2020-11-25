@@ -1,0 +1,44 @@
+<view class="top_tit1">
+	<text>1 房源信息 </text>
+	<text > —— </text>
+	<text >2 房源状态 </text>
+	<text style="color:#959595"> —— </text>
+	<text style="color:#959595">3 上传照片</text>
+
+</view>
+<view class="cont">
+	<view class="list">
+		<view class="left">新房状态</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+  </view>
+  <view class="list">
+		<view class="left">售价</view>
+    <input class="inps" type="number" placeholder="请输入数字" bindinput="shoujia" value="{{shoujia}}" />
+    <view>万元</view>
+	</view>
+	<view class="list">
+		<view class="left">产品</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef1" range="{{ pickerProDataf1 }}" range-key="{{'name'}}" value="{{countryIndex1}}">
+				<view class="txts" style="">
+					{{pickerProDataf1[countryIndex1].name?pickerProDataf1[countryIndex1].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+  <view class="list">
+		<view class="left">佣金</view>
+    <input class="inps" type="number" placeholder="请输入佣金比例" bindinput="bili" value="{{bili}}" />
+    <view>%</view>
+	</view>
+
+</view>
+<view class="btn_sub" bindtap="submit1">下一步</view>

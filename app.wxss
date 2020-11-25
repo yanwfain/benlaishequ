@@ -1,0 +1,106 @@
+/**app.wxss**/
+page{background: #fff;font-size: 26rpx;}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+.top{
+  display: flex;
+  padding: 20rpx;
+}
+.top .city{
+  padding:20rpx 60rpx 20rpx 20rpx;
+}
+.top .city .picker{
+  position: relative;
+
+}
+.top .city .picker::after{
+  position: absolute;
+  right: -40rpx;
+  top: 17rpx;
+  width: 0;
+  height: 0;
+  border: 10rpx solid transparent;
+  border-top-color: #333;
+  display: block;
+  content: '';
+}
+.top .serc{
+  flex: 1;
+  border:1rpx solid #eee;
+  color: #eee;
+  padding: 19rpx;
+  border-radius: 40rpx;
+}
+swiper swiper-item image{
+  width: 100vw;
+}
+.menu{display: flex;padding:40rpx 0;}
+.menu navigator{flex:1;text-align: center;}
+.menu navigator image{width: 100rpx;height: 100rpx;}
+.app_title{font-size: 40rpx;font-weight: bold;padding: 20rpx;}
+.app_title .t_left{font-size: 26rpx ;font-weight: normal;float: right;color: #ff0;}
+.app_row{border-bottom: 20rpx solid #f9f9f9;}
+.app_row image{width: 100%;}
+.app_top{padding:20rpx;}
+.app_row .app_bottom{
+  display: flex;
+  padding:0 20rpx 40rpx;
+}
+.app_row .app_bottom .app_left{flex: 1;}
+.app_row .app_bottom .app_left .app_cent{}
+.app_row .app_bottom .app_left .app_biaoqian{padding:20rpx 0 40rpx;}
+.app_row .app_bottom .app_left .app_biaoqian text{display: inline-block;margin-right: 10rpx;background: #eee;padding:0 10rpx}
+.app_row .app_bottom .app_right{width: 160rpx;}
+.tabbar_padding{height: 120rpx;}
+.tabbar{height: 100rpx;position: fixed;width: 100%;left: 0;bottom: 0;display: flex;background:#fff;border-top: 1rpx solid #f9f9f9;padding-top: 10rpx;}
+.tabbar>navigator{flex: 1;text-align: center;}
+.tabbar>navigator>image{width: 60rpx;height: 60rpx;}
+.btm_title{padding:100rpx 0;text-align: center;color: #ccc;background: #f9f9f9;}
+/*  */
+.app_ceos{
+  position: relative;
+  background: #f9f9f9;
+  padding:40rpx 20rpx;
+}
+.app_ceo{
+  width: 80%;
+  position: absolute;
+}
+.app_ceo image{width: 100%;}
+.app_ceo_font{position: absolute;width: 100%;bottom:0;left: 0;color: #fff;}
+.app_ceo_font .app_ceo_font-top{
+  padding:40rpx 20rpx ;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.app_ceo_font .app_ceo_font-top>view{font-size: 26rpx;font-weight: normal;}
+.app_ceo_font .ceo_men{
+  display: flex;
+  padding:0 20rpx 40rpx;
+}
+.app_ceo_font .ceo_men>view{flex:1;font-size: 36rpx;}
+.app_ceo_font .ceo_men .ceo_bottom{font-size: 26rpx;}
+/*  */
+.bordd{
+  width: 100%;
+  height: 16rpx;
+  background: #F9F7F5;
+
+}
+.isbacgrd{
+  position: fixed;
+  z-index: 10;
+  background: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .6;
+}

@@ -1,0 +1,42 @@
+
+<view class="user">
+	<image class="img_userhead" src="https://legal.baike360.cn/public/uploads/z-8.png"></image>
+  	<button open-type="share" class="rightTop">
+		<image src="../../image/btnress.png"></image>
+		<view class="txt_topoit">分享</view>
+	</button>
+</view>
+<view class="user_delit">
+	<view class="top_uset1">
+		<view class="user_name">
+			<view class="name_txt">
+				<view class="name"> 顾问社 </view>
+				<view class="type_new">
+					<image src="../../image/65d7a868c74246f437682b2d992984d.png"></image> 社区顾问
+				</view>
+				<view class="bianji" bindtap="bianjiFn">
+					<image src="../../image/xuigai.png"></image>编辑
+				</view>
+			</view>
+			<view class="modeli">189 9088 2771</view>
+		</view>
+		<image class="img_er" src="../../image/2er.png"></image>
+	</view>
+	<view class="top_uset2">
+		<view class="listde">
+			<view class="num">180</view>
+			<view>带看次数</view>
+		</view>
+		<view class="shu"></view>
+		<view class="listde">
+			<view  class="num">180</view>
+			<view>带看次数</view>
+		</view>
+		<view class="shu"></view>
+		<view class="listde">
+			<view  class="num">180</view>
+			<view>带看次数</view>
+		</view>
+	</view>
+</view>
+<include src="/pages/menu.wxml"></include>

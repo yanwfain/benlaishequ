@@ -1,0 +1,61 @@
+<view class="cont">
+	<view class="list">
+		<view class="left">选择社区</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">选择楼座</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">选择单元</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">选择房间</view>
+		<view class="right">
+			<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+				<view class="txts" style="">
+					{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+				</view>
+			</picker>
+			<view class="triangle-down"></view>
+		</view>
+	</view>
+	<view class="list">
+		<view class="left">业务类型</view>
+		<view class="right">
+			<view class="txts" style="">
+				新房
+			</view>
+		</view>
+	</view>
+	<view class="txt_gray">注：依次选择后，检索出唯一房源。重置后选择，更新检索结果</view>
+</view>
+<view class="tit_bot">检索结果</view>
+<view class="tit_bot_txt">北花园社区-23号楼-1单元1202室</view>
+<view class="fied">
+  <view class="leftbtn" bindtap="chongzhi">重置</view>
+  <view class="rightbtn" bindtap="subQue">确认选择</view>
+</view>

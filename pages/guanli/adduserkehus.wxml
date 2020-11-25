@@ -1,0 +1,111 @@
+<view class="divheight" style="height:{{height-40}}px">
+	<view class="list">
+	<view class="left"><text style="color:red">*</text>客户姓名</view>
+	<input class="inp" placeholder="请输入客户姓名" bindinput="user_real_name" value="{{user_real_name}}"></input>
+</view>
+<view class="list">
+	<view class="left"><text style="color:red">*</text>客户性别</view>
+	<view class="picker">
+		<picker bindchange="pickerProChangef4" range="{{ pickerProDataf4 }}" range-key="{{'name'}}" value="{{countryIndex4}}">
+			<view class="txt" style="">
+				{{pickerProDataf4[countryIndex4].name?pickerProDataf4[countryIndex4].name:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list">
+	<view class="left"><text style="color:red">*</text>手机号</view>
+	<input class="inp" placeholder="请输入手机号码" type="number" bindinput="user_phone" value="{{user_phone}}"></input>
+</view>
+<view class="list">
+	<view class="left"><text style="color:red">*</text>预算资金</view>
+	<input class="inp" placeholder="请输入金额(元)" bindinput="user_budget" value="{{user_budget}}"></input>
+</view>
+<view class="list">
+	<view class="left"><text style="color:red">*</text>客户意向</view>
+	<view class="picker">
+		<picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+			<view class="txt" style="">
+				{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list">
+	<view class="left">客户年龄</view>
+	<input class="inp" placeholder="请输入客户年龄" type="number" bindinput="age" value="{{age}}"></input>
+</view>
+<view class="list">
+	<view class="left">接待日期</view>
+	<view class="picker">
+		<picker bindchange="changeDate" mode="date" fields="day" value="{{date}}">
+			<view class="txt" style="">
+				{{date_time?date_time:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+
+<!-- 请选择接待人 -->
+<view class="list">
+	<view class="left">接待人</view>
+	<input class="inp" placeholder="默认自己为接待人" bindinput="receptionist" value="{{receptionist?receptionist:'默认自己为接待人'}}"></input>
+</view>
+
+<view class="list">
+	<view class="left">客户状态</view>
+	<view class="picker">
+		<picker bindchange="pickerProChangef1" range="{{ pickerProDataf1 }}" range-key="{{'name'}}" value="{{countryIndex1}}">
+			<view class="txt" style="">
+				{{pickerProDataf1[countryIndex1].name?pickerProDataf1[countryIndex1].name:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+
+<!-- <view class="list">
+	<view class="left">起租时间</view>
+	<view class="picker">
+		<picker bindchange="changeDate1" mode="date" fields="day" value="{{date}}">
+			<view class="txt" style="">
+				{{qidate_time?qidate_time:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list">
+	<view class="left">租期</view>
+	<view class="picker">
+		<picker bindchange="pickerProChangef2" range="{{ pickerProDataf2}}" range-key="{{'name'}}" value="{{countryIndex2}}">
+			<view class="txt" style="">
+				{{pickerProDataf2[countryIndex2].name?pickerProDataf2[countryIndex2].name:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view> -->
+<view class="list">
+	<view class="left">支付方式</view>
+	<view class="picker">
+		<picker bindchange="pickerProChangef3" range="{{ pickerProDataf3}}" range-key="{{'name'}}" value="{{countryIndex3}}">
+			<view class="txt" style="">
+				{{pickerProDataf3[countryIndex3].name?pickerProDataf3[countryIndex3].name:"请选择"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<!-- <view class="list" style="border:none">
+	<view class="left">跟进记录</view>
+	<view></view>
+</view>
+<view class="cont">
+  <textarea maxlength="999" placeholder="请输入跟进记录" bindinput="user_comment" value="{{user_comment}}"></textarea>
+</view> -->
+</view>
+<view class="submit" bindtap="submit">确认提交</view>

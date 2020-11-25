@@ -1,0 +1,34 @@
+/* pages/guanli/bianji.wxss */
+.list{
+  padding: 26rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+.left{
+  width: 30%;
+  font-size: 30rpx;
+  
+}
+.img1{
+  width: 80rpx;
+  height: 80rpx;
+}
+.right{
+  width: 68%;
+  font-size: 28rpx;
+  text-align: right;
+}
+.btn{
+  width: 360rpx;
+  height: 80rpx;
+  background: #B38F51;
+  text-align: center;
+  font-size: 28rpx;
+  line-height:80rpx;
+  margin: 0 auto;
+  border-radius:40rpx;
+  color: white;
+  margin-top: 100rpx;
+}

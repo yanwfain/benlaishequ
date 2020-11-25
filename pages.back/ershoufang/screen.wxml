@@ -1,0 +1,46 @@
+<view class='title'>
+	房屋属性
+</view>
+<view class='box'>
+	<text class='true'>在售</text>
+	<text>在租</text>
+</view>
+<view class='title'>
+	户型
+</view>
+<view class='box'>
+	<text class='true'>不限</text>
+	<text>一居</text>
+	<text>二居</text>
+	<text>三居</text>
+</view>
+<view class='title'>
+	面积/m²
+</view>
+<view class='box'>
+	<text class='true'>100以下</text>
+	<text>100-150</text>
+	<text>150-200</text>
+	<text>200+</text>
+</view>
+<view class='title'>
+	房屋特色
+</view>
+<view class='box'>
+	<text class='true'>双卫生间</text>
+	<text class='true'>有电梯</text>
+	<text>可养宠物</text>
+	<text>近地铁</text>
+</view>
+<view class='title'>
+	供暖方式
+</view>
+<view class='box'>
+	<text class='true'>集体供暖</text>
+	<text>独立供暖</text>
+	<text>中央供暖</text>
+</view>
+<view class='bottom'>
+	<view bindtap='default'>重置</view>
+	<view bindtap='sure'>确认选择</view>
+</view>

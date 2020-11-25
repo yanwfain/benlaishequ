@@ -1,0 +1,8 @@
+page{padding-bottom: 100rpx;}
+.title{color: #333;padding:20rpx;}
+.box{padding:0 20rpx 60rpx}
+.box>text{display: inline-block;width: 150rpx;padding:5rpx 0;background: #f9f9f9;margin:0 15rpx 20rpx 0;text-align: center;font-size: 24rpx;}
+.box>text.true{background: #ffc310;color: #fff;}
+.bottom{height: 100rpx;position: fixed;bottom: 0;left: 0;width: 100%;display: flex;}
+.bottom>view{flex:1;background: #f9f9f9;font-weight: bold;text-align: center;height: 100rpx;line-height: 100rpx;font-size: 32rpx;}
+.bottom>view:nth-child(2){flex: 2;background: #ffc310;color: #fff;}

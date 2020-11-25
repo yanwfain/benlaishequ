@@ -1,0 +1,207 @@
+<block wx:if="{{pickerShow}}">
+
+
+	<view class="opcitons" bindtap="pickerShow"></view>
+	<view class="monet_show">
+		<view class='sliderHCon'>
+			<view class='showMoney'>
+				<text class='MoneyValue'>￥{{min}}</text>
+				<text class='MoneyValue'>￥{{max}}</text>
+			</view>
+
+			<view class='twoSlider'>
+				<view class='select-construct'>
+					<view class='select-area'>
+						<view class='slider-container'>
+							<view class='leftSliderPrice sliderPrice' style='left:{{leftSliderPriceWidthX}};'>
+								<view class='sliderView'>
+									￥{{slider1Value*scale}}
+								</view>
+							</view>
+							<slider style='width:{{slider1W+"%"}}' class='slider-left' min='{{min}}' max='{{slider1Max}}' color='#FFAC30' selected-color='#e5e5e5' bindchanging='changing' catchtouchstart='changeStart' bindchange='changed' data-idx='1'></slider>
+							<view class='rightSliderPrice sliderPrice' style='right:{{rightSliderPriceWidthX}};'>
+								<view class='sliderView'>
+									￥{{slider2Value*scale}}
+								</view>
+							</view>
+							<slider wx:if='{{!change}}' style='width:{{slider2W+"%"}}' class='slider-right' min='{{slider2Min}}' max='{{max}}' color='#e5e5e5' selected-color='#FFAC30' bindchanging='changing' catchtouchstart='changeStart' bindchange='changed' data-idx='2'></slider>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="btn_pic">查看房源</view>
+	</view>
+</block>
+<block wx:if="{{iswanishow}}">
+	<view class="isbacgrd" style="height:80%;top:20%" bindtap="judeleFnwan"></view>
+	<view class="huxingClass">
+		<view class="list_hu" style="font-size:28rpx">
+			<input class="min_leftinp" type="number" placeholder="最小金额 " bindinput="inpminwan" value="{{inpminwan}}"></input> 万
+			————
+			<input class="min_leftinp" type="number" placeholder="最大金额" bindinput="inpmaxwan" value="{{inpmaxwan}}"></input> 万
+		</view>
+		<view class="btnhu">
+			<view class="btnhu2" bindtap="subJuFndelewan">重置</view>
+
+			<view class="btnhu1" bindtap="subJuFnwan">确认</view>
+		</view>
+		
+	</view>
+</block>
+<view class="topshaixuan">
+	<!-- <view class="topshaixuans" bindtap="seleFn"> -->
+	<view class="topshaixuans" >
+		<view class="txt">{{shequdelit?shequdelit:'社区筛选'}}</view>
+		<view class="txt"></view>
+		<!-- <picker bindchange="pickerProChangef" range="{{ pickerProDataf }}" range-key="{{'name'}}" value="{{countryIndex}}">
+			<view class="txt" style="">
+				{{pickerProDataf[countryIndex].name?pickerProDataf[countryIndex].name:"社区筛选"}}
+			</view>
+		</picker> -->
+		<!-- <view class="triangle-down"></view> -->
+	</view>
+  <view class="right" bindtap="addzuFn">
+		<text style="font-size:40rpx;">+ </text>添加租赁
+	</view>
+    <view class="right" bindtap="addshouFn">
+		<text style="font-size:40rpx;">+ </text>添加售卖
+	</view>
+</view>
+<view class="bor_bb"></view>
+<view class="tabbtn">
+	<view class="seran">
+		<image src="https://legal.baike360.cn/public/uploads/z-7.png"></image>
+		<view>搜索</view>
+	</view>
+	<view class="tab-lei">
+		<picker bindchange="pickerProChangef2" range="{{ pickerProDataf2 }}" range-key="{{'name'}}" value="{{countryIndex2}}">
+			<view class="txt_name" style="">
+				{{pickerProDataf2[countryIndex2].name?pickerProDataf2[countryIndex2].name:"业务类型"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+	<view class="tab-lei" bindtap="huxinFn">
+		<view class="txt_name">户型</view>
+		<view class="triangle-down"></view>
+	</view>
+	<!-- <view class="tab-lei" bindtap="jineFn">
+		<view class="txt_name">价格</view>
+		<view class="triangle-down"></view>
+	</view> -->
+	<view class="tab-lei">
+		<picker bindchange="pickerProChangef3" range="{{ pickerProDataf3 }}" range-key="{{'name'}}" value="{{countryIndex3}}">
+			<view class="txt_name" style="">
+				{{pickerProDataf3[countryIndex3].name?pickerProDataf3[countryIndex3].name:"状态"}}
+			</view>
+		</picker>
+		<view class="triangle-down"></view>
+	</view>
+	<view class="tab-lei" bindtap="louFn">
+		<view class="txt_name">楼号</view>
+		<view class="triangle-down"></view>
+	</view>
+</view>
+<view class="list_user" wx:for="{{movieList}}" >
+	<view class="bordd"></view>
+	<view class="cont">
+	<view class="cont_times">{{item.createTime}}</view>
+		<view class="tit_top">
+			<block wx:if="{{!status}}">
+
+		
+			<view class="left_top_tit" wx:if="{{item.conStatus==0}}">未审核</view>
+			<view class="left_top_tit" wx:if="{{item.conStatus==1}}">审核中</view>
+			<view class="left_top_tit" wx:if="{{item.conStatus==2}}">已通过</view>
+			<view class="left_top_tit" wx:if="{{item.conStatus==3}}">已驳回</view>
+		</block>
+			<view class="left_top_tit" wx:if="{{status==0}}">未审核</view>
+			<view class="left_top_tit" wx:if="{{status==1}}">审核中</view>
+			<view class="left_top_tit" wx:if="{{status==2}}">已通过</view>
+			<view class="left_top_tit" wx:if="{{status==3}}">已驳回</view>
+			<!-- <view class="bianji" bindtap="delitFn" data-index="{{index}}" data-id="{{item.id}}">
+				<image src="../../image/xuigai.png"></image>
+					<view class="txt"  style="">
+						修改状态
+					</view>
+			</view> -->
+		</view>
+		<view class="user_name">{{item.houseCode}}</view>
+    	<view class="type_staus" style="border:none">
+			客户名称： <text>{{item.kehuName}}</text>
+		</view>
+		<view class="type_staus">
+			业务类型： <text wx:if="{{item.type==1}}">租赁</text> <text wx:if="{{item.type==2}}">售卖</text>
+		</view>
+		<view class="list_btn">
+			<!-- <block wx:if="{{quanxian==1}}">
+				<view class="btn"></view>
+			<view class="btn"></view>
+			</block> -->
+	
+      <view class="btn obg1" bindtap="xuigaiFn" data-type="{{item.type}}" data-id="{{item.id}}">修改信息</view>
+			<view class="btn obg3" bindtap="lookFn" data-id="{{item.id}}">查看信息</view>
+			<!-- <view class="btn obg2" bindtap="tel" wx:if="{{quanxian>1}}" data-tel="{{item.tel}}">打电话</view>
+			<view class="btn obg3" bindtap="delitFn1" wx:if="{{quanxian>1}}" data-id="{{item.id}}">审核</view> -->
+			<view class="btn obg2" bindtap="tel" data-id="{{item.id}}" >打电话</view>
+			<view class="btn obg3" bindtap="delitFn1"  data-id="{{item.id}}">审核</view>
+		</view>
+	</view>
+</view>
+<block wx:if="{{huishow}}">
+	<view class="isbacgrd" style="height:80%;top:20%" bindtap="judeleFn"></view>
+	<view class="huxingClass">
+		<view class="list_hu" wx:for="{{listJu}}" data-index="{{index}}" data-id="{{item.id}}" bindtap="clickjuFn">
+			<view class="hu_txt">{{item.name}}</view>
+			<view wx:if="{{item.chenkhu}}" class="gou">√</view>
+		</view>
+		<view class="btnhu">
+			<view class="btnhu2" bindtap="subJuFndele">重置</view>
+
+			<view class="btnhu1" bindtap="subJuFn">确认</view>
+		</view>
+		
+	</view>
+</block>
+<block wx:if="{{mianishow}}">
+	<view class="isbacgrd" style="height:80%;top:20%" bindtap="miandeleFn"></view>
+	<view class="huxingClass">
+		<view class="list_hu" style="font-size:28rpx">
+			<input class="min_leftinp" type="number" placeholder="最小面积" bindinput="inpmin" value="{{inpmin}}"></input> 平
+			————
+			<input class="min_leftinp" type="number" placeholder="最大面积" bindinput="inpmax" value="{{inpmax}}"></input> 平
+		</view>
+			<view class="btnhu">
+			<view class="btnhu2" bindtap="subMianuFndele">重置</view>
+			<view class="btnhu1" bindtap="subMianuFn">确认</view>
+		</view>
+	</view>
+</block>
+<block wx:if="{{louishow}}">
+	<view class="isbacgrd" style="height:80%;top:20%" bindtap="loudeleFn"></view>
+	<view class="huxingClass">
+		<view class="list_hu" style="font-size:28rpx">
+			<input class="min_leftinp" type="number" placeholder="输入楼号" bindinput="louinp" value="{{louinp}}"></input> 楼号
+			————
+			<input class="min_leftinp" type="number" placeholder="输入单元号" bindinput="daninp" value="{{daninp}}"></input> 单元
+		</view>
+		<view class="btnhu">
+			<view class="btnhu2" bindtap="subLouFndele">重置</view>
+			<view class="btnhu1" bindtap="subLouFn">确认</view>
+		</view>
+	</view>
+</block>
+<block wx:if="{{isstatusop}}">
+	<view class="isbacgrd" bindtap="isShowque" style="height:100%;top:0%" ></view>
+	<view class="class_list">
+		<view class="list_on {{bottid==='0'?'activet':''}}" data-id="0" bindtap="clicklist_c">未审核</view>
+		<view class="list_on {{bottid==1?'activet':''}}" data-id="1" bindtap="clicklist_c">审核中</view>
+		<view class="list_on {{bottid==2?'activet':''}}" data-id="2" bindtap="clicklist_c">已通过</view>
+		<view class="list_on {{bottid==3?'activet':''}}" data-id="3" bindtap="clicklist_c">已驳回</view>
+		<view class="btn1">
+			<!-- <view class="submits">取消</view> -->
+			<view class="deled_s" bindtap="substatusFn">确定</view>
+		</view>
+	</view>
+</block>

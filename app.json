@@ -1,0 +1,77 @@
+{
+	"pages": [
+	
+		"pages/index/index",
+		"pages/guanli/index",
+		"pages/xinpanguanli/detail",
+		"pages/guanli/kehuguanlilist",
+		"pages/guanli/fangyuanguanlilist",
+		"pages/guanli/fangyuanguanlilistxin",
+		"pages/guanli/fangyuanguanli",
+		"pages/guanli/fangyuanshangchuan",
+		"pages/guanli/fangyuanshangchuanOne",
+		"pages/guanli/fangyuanshangchuanThree",
+		"pages/guanli/kehuguanli",
+		"pages/guanli/adduserkehu",
+		"pages/guanli/adduserkehus",
+		"pages/guanli/bianji",
+		"pages/guanli/wodemingpian",
+		"pages/guanli/yuyueguanli",
+		"pages/guanli/shequxiangqing",
+		"pages/guanli/lianxijingjiren",
+		"pages/guanli/yaoshiguanli",
+		"pages/guanli/shequtupian",
+		"pages/chnegjiao/index",   
+		"pages/addzu/index",
+		"pages/addshou/index",
+		"pages/xinfanginp/index",
+		"pages/xinfangxuanzeOne/index",
+		"pages/xinfangxuanzeImg/index",
+		"pages/xinfangxuanze/index",
+		"pages/chnegjiaodelit/index",
+		"pages/tjfangyuan/index",
+		"pages/tjloupan/index",
+		"pages/fangbiwen/index",
+		"pages/yezhu/index",
+		"pages/newDelit/index",
+		"pages/daibanguohu/index",
+
+		"pages/wode/history",
+		"pages/wode/info",
+		"pages/wode/index",
+		"pages/lianxijingjiren/index",
+		"pages/zufang/detail",
+		"pages/ershoufang/screen",
+		"pages/ershoufang/index",
+		"pages/ershoufang/detail",
+		"pages/shequ/serce",
+		"pages/wuYelist/index",
+		"pages/shequ/style",
+		"pages/shequ/category",
+		"pages/logs/logs",
+		"pages/index/city",
+		"pages/index/home",
+		"pages/shequ/detail",
+		"pages/xinfang/index",
+		"pages/xinfang/detail",
+		"pages/shuju/index",
+		
+		
+		"pages/shequ/more",
+		"pages/zufang/index",
+		"pages/shouquan/index"
+	
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "本来社区",
+		"navigationBarTextStyle": "black"
+	},
+	"permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+	"sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,27 @@
+<view class='list' wx:for="{{movieList}}">
+	<view class='bdy'>
+		<image src="{{img[0].url?img[0].url:'../../image/9cd38718fdd975715930f3f36e76d54.png'}}" mode='widthFix'></image>
+		<view>
+			<view class='title'>
+				{{item.communityName}}{{item.buildNum}}号楼{{item.houseCode}}
+			</view>
+			<view class='txt'>
+				120m²丨{{item.orientation}}|{{item.bedroom_number}}室{{item.livingroom_number}}厅丨<block wx:if="{{item.renovation==1}}">毛坯</block> <block wx:if="{{item.renovation==2}}">简装</block><block wx:if="{{item.renovation==3}}">精装</block><block wx:if="{{!item.renovation}}">无装修情况</block>
+			</view>
+			<view class='txt_box'>
+				<text class='y_box'>整租</text>
+				<text class='b_box'>住宅</text>
+				<text>整租</text>
+				<text>临地铁</text>
+			</view>
+		</view>
+	</view>
+	<view class='address'>
+		<image src=''></image>
+		<text>{{item.rent_type}}</text>
+	</view>
+	<view class='bottom'>
+		<view data-id="{{item.id}}" bindtap="deleshoucangFn">删除记录</view>
+		<navigator  url="/pages/zufang/detail?id={{item.houseId}}">查看房源</navigator>
+	</view>
+</view>

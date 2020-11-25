@@ -1,0 +1,362 @@
+<view class="banner">
+	<image class="img1" src="https://legal.baike360.cn/public/uploads/s-1.png"></image>
+	<view class="look_btn">查看更多图片</view>
+</view>
+
+<view class="cont">
+	<view class="bancround"></view>
+	<view class="title_delit">
+		<view class="title">北花园小区</view>
+		<view class="flexd">
+			<view class="list-delit">
+				<view class="txt1">楼盘报价</view>
+				<view class="txt2">1400-2800万</view>
+			</view>
+			<view class="list-delit">
+				<view class="txt1">楼盘均价</view>
+				<view class="txt2">9.21-11.62/m</view>
+			</view>
+		</view>
+	</view>
+	<button open-type="share" class="right_ressbtn">
+		<image src="https://legal.baike360.cn/public/uploads/s-2.png"></image>
+		<view>分享</view>
+	</button>
+</view>
+<view class="zushou_cont">
+	<view class="title_zushou">
+		租售房源
+	</view>
+	<view class="cont_zushoudelit">
+		<view class="zu_list">
+			<view class="txt_zu1">19</view>
+			<view class="txt_zu2">在租房源(套)</view>
+		</view>
+		<view class="zu_list">
+			<view class="txt_zu1">21</view>
+			<view class="txt_zu2">在售房源(套)</view>
+		</view>
+	</view>
+</view>
+<view class="cont1">
+	<view class="cont1_top">
+		<view class="left_cont1">
+			在租优质房源
+		</view>
+		<view class="right_cont1">
+			查看全部房源 >
+		</view>
+	</view>
+	<view class="swiper-page" bindtouchmove="touchmove" bindtouchstart="touchstart" bindtouchend="touchend">
+		<view wx:for="{{7}}" wx:key="index" class="swiper-container">
+			<view class="item-container" style="z-index:{{indexArray[index]}}">
+				<view class="item{{index}} item-common" animation="{{animation[index]}}" bindtap="tapItemFn" data-text="{{textArray[index]}}">
+					<image class="background" src="{{imgArray[index]}}" mode='aspectFit'></image>
+					<!-- <text class="item-text">{{textArray[index]}}</text> -->
+					<text class="item-text" >9200元/月</text>
+					<view class="num_tab">
+						北花园物业-北花园小区-3室1…
+					</view>
+					<view class="num_tab2">
+						120m | 朝南 | 3室1厅 | 精装修
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- <button bindtap="tapLeft" style="position:absolute;top:0;left:20rpx">往左滑</button>
+  <button bindtap="tapRight" style="position:absolute;top:0;right:20rpx">往右滑</button> -->
+	</view>
+</view>
+<view class="cont1">
+	<view class="cont1_top">
+		<view class="left_cont1">
+			在售优质房源
+		</view>
+		<view class="right_cont1">
+			查看全部房源 >
+		</view>
+	</view>
+	<view class="swiper-page" bindtouchmove="touchmove" bindtouchstart="touchstart" bindtouchend="touchend">
+		<view wx:for="{{7}}" wx:key="index" class="swiper-container">
+			<view class="item-container" style="z-index:{{indexArray[index]}}">
+				<view class="item{{index}} item-common" animation="{{animation[index]}}" bindtap="tapItemFn" data-text="{{textArray[index]}}">
+					<image class="background" src="{{imgArray[index]}}" mode='aspectFit'></image>
+					<!-- <text class="item-text">{{textArray[index]}}</text> -->
+					<text class="item-text" >9200元/月</text>
+					<view class="num_tab">
+						北花园物业-北花园小区-3室1…
+					</view>
+					<view class="num_tab2">
+						120m | 朝南 | 3室1厅 | 精装修
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- <button bindtap="tapLeft" style="position:absolute;top:0;left:20rpx">往左滑</button>
+  <button bindtap="tapRight" style="position:absolute;top:0;right:20rpx">往右滑</button> -->
+	</view>
+</view>
+<view class="cont3">
+	<view class="title_zushou">
+		户型设计
+	</view>
+	<view class="txt_cont3">
+		北花园一共7栋楼，8种户型。北花园一共7栋楼，8种户型，等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍
+	</view>
+</view>
+<view class="cont4">
+	<view class="cont1_top">
+		<view class="left_cont1">
+			在租优质房源
+		</view>
+		<view class="right_cont1">
+			查看全部房源 >
+		</view>
+	</view>
+	<view class="deitcont">
+		<swiper class='' display-multiple-items="2.2" duration="1000">
+			<block wx:for="{{list}}" wx:key="index">
+				<swiper-item class="swiper1">
+					<view class="view_1" bindtap="chantabFn" data-id="{{item.id}}">
+						<image src="https://legal.baike360.cn/public/uploads/z1.png" class='imgsper' />
+					</view>
+					<view class="title_swip">4居室</view>
+					<view class="title_swip1">一厅四卧一阳台 | 246m</view>
+					<view class="title_swip2">9200元/月</view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+</view>
+<view class="cont4">
+	<view class="cont1_top">
+		<view class="left_cont1">
+			在售优质房源
+		</view>
+		<view class="right_cont1">
+			查看全部房源 >
+		</view>
+	</view>
+	<view class="deitcont">
+		<swiper class='' display-multiple-items="2.2" duration="1000">
+			<block wx:for="{{list}}" wx:key="index">
+				<swiper-item class="swiper1">
+					<view class="view_1" bindtap="chantabFn" data-id="{{item.id}}">
+						<image src="https://legal.baike360.cn/public/uploads/z1.png" class='imgsper' />
+					</view>
+					<view class="title_swip">4居室</view>
+					<view class="title_swip1">一厅四卧一阳台 | 246m</view>
+					<view class="title_swip2">9200元/月</view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+</view>
+<view class="cont5">
+
+	<view class="title_zushou">
+		配套地图
+	</view>
+	<view class="tab">
+		<view class="tab_lie {{tid==1?'active':''}}" bindtap="clickFn" data-id="1">交通</view>
+		<view class="tab_lie {{tid==2?'active':''}}" bindtap="clickFn" data-id="2">学校 </view>
+		<view class="tab_lie {{tid==3?'active':''}}" bindtap="clickFn" data-id="3">医院</view>
+		<view class="tab_lie {{tid==4?'active':''}}" bindtap="clickFn" data-id="4">餐饮 </view>
+		<view class="tab_lie {{tid==5?'active':''}}" bindtap="clickFn" data-id="5">娱乐</view>
+		<view class="tab_lie {{tid==6?'active':''}}" bindtap="clickFn" data-id="6">商超</view>
+	</view>
+</view>
+<view class="" hover-class="none" hover-stop-propagation="false" style="width:100%; height:380rpx;margin:0 auto;margin-top:20rpx;">
+	<map id="map" longitude="116.151929" latitude="39.923399" markers="{{markers}}" scale="12" show-location style="width: 100%; height: 100%;" bindtap="click"></map>
+</view>
+<view class="map_txt">
+	房源介绍文字内容房源介绍文字内容房源介绍文字内容房源介绍文字内容房。
+</view>
+<view class="cont6">
+	<view class="title_zushou">
+		社区简介
+	</view>
+	<view class="txt_list">
+		<view class="tit_cont6">整个社区都是南北通透纯正板楼，采光通风好</view>
+		<view class="txt_cont6">房源介绍文字内容房源介绍文字内容房源介绍文字内容房源介绍文字内容房。</view>
+	</view>
+	<view class="txt_list">
+		<view class="tit_cont6">户型介绍</view>
+		<view class="txt_cont6">房源介绍文字内容房源介绍文字内容房源介绍文字内容房源介绍文字内容房。</view>
+	</view>
+</view>
+<view class="cont6">
+	<view class="title_zushou">
+		楼盘位置
+	</view>
+
+
+</view>
+<image mode="aspectFill" class="img_cont6" src="https://legal.baike360.cn/public/uploads/z-2.png"></image>
+<view class="cont6">
+	<view class="txt_list">
+		<view class="tit_cont6">楼盘地址</view>
+		<view class="txt_cont6">北京市朝阳区北花园街道</view>
+	</view>
+	<view class="txt_list">
+		<view class="tit_cont6">环线位置</view>
+		<view class="txt_cont6">东五环至东六环之间</view>
+	</view>
+	<view class="txt_list">
+		<view class="tit_cont6">户型介绍</view>
+		<view class="txt_cont6">房源介绍文字内容房源介绍文字内容房源介绍文字内容房源介绍文字内容房。</view>
+	</view>
+</view>
+<view class="cont6">
+	<view class="title_zushou">
+		社区环境
+	</view>
+</view>
+<view class="cont_6_img">
+
+	<image mode="aspectFill" class="img_cont6" src="https://legal.baike360.cn/public/uploads/z-3.png"></image>
+	<view class="tab_img">
+		<view class="tab-imglist">楼盘正门</view>
+		<view class="tab-imglist">秋季</view>
+	</view>
+
+</view>
+<view class="txt_img_cont6">
+	房源介绍文字内容房源介绍文字内容房源介绍文字内容房源介绍文字内容房。
+</view>
+<view class="cont_6_img">
+
+	<image mode="aspectFill" class="img_cont6" src="https://legal.baike360.cn/public/uploads/z-3.png"></image>
+	<view class="tab_img">
+		<view class="tab-imglist">楼盘正门</view>
+		<view class="tab-imglist">秋季</view>
+	</view>
+
+</view>
+<view class="txt_img_cont6">
+	房源介绍文字内容房源介绍文字内容房源介绍文字内容房源介绍文字内容房。
+</view>
+
+<view class="cont6">
+	<view class="title_zushou">
+		楼盘参数
+	</view>
+	<view class="list_tad">
+		<view class="list_tableft">社区名称：</view>
+		<view class="list_tabright">北京市朝阳区八里庄1号 </view>
+	</view>
+	<view class="list_tad">
+		<view class="list_tableft"> 小区别名：</view>
+		<view class="list_tabright">远洋天地 </view>
+	</view>
+	<view class="list_tad">
+		<view class="list_tableft">开发商：</view>
+		<view class="list_tabright">远洋地产 </view>
+	</view>
+	<view class="list_tad">
+		<view class="list_tableft">物业公司：</view>
+		<view class="list_tabright">华夏幸福基业 </view>
+	</view>
+	<view class="list_tad">
+		<view class="list_tableft"> 建筑商：</view>
+		<view class="list_tabright">中国新兴保信建设总公司 </view>
+	</view>
+	<view class="list_tabtxt2">
+		<view>
+			<view>总建筑面积：8810平米</view>
+			<view>占地面积：9255平米</view>
+			<view>容积率：1.5</view>
+			<view>地上车位数量：291个 </view>
+			<view>地下车位数量：1893个 </view>
+			<view>房屋产权性质：70年 </view>
+			<view>总幢数：18幢 </view>
+		</view>
+		<view>
+			<view>总户数：2522户</view>
+			<view>绿化率：30%</view>
+			<view>物业管理费：1.99元/平/天.5</view>
+			<view>入住时间：2012-09-18 </view>
+			<view>开盘时间：2010-09-28 </view>
+			<view>电梯运行：24小时 </view>
+			<view>保安：24小时保安 </view>
+		</view>
+	</view>
+	<view class="list_tad">
+		主力户型：南北通透，全南2户，客厅朝北
+	</view>
+	<view class="list_tad">
+		派出所：朝阳区八里庄派出所
+	</view>
+	<view class="list_tad">
+		派出所电话：010-65581095
+	</view>
+	<view class="list_tad">
+		街道办事处：朝阳区八里庄街道办
+	</view>
+	<view class="list_tad">
+		街道办事处电话：010-65581095
+	</view>
+	<view class="list_tad">
+		宽带方式：美江、联通
+	</view>
+	<view class="list_tad">
+		内部配套：喷泉、健身设施、人工湖、儿童乐园
+	</view>
+	<view class="list_tad">
+		会所科目：恒温游泳池
+	</view>
+	<view class="list_tad">
+		中小学幼儿园：芳草地小学
+	</view>
+	<view class="list_tad">
+		商超：京客隆超市、聚宝隆超市、物美超市
+	</view>
+	<view class="list_tad">
+		菜市场（农贸市场）：新发地
+	</view>
+	<view class="list_tad">
+		邮局（社区所属邮编）：100009
+	</view>
+	<view class="list_tad">
+		银行：建设银行、邮储银行、浦发银行
+	</view>
+	<view class="list_tad">
+		公园：中央公园、将府公园
+	</view>
+	<view class="list_tad">
+		医院：朝阳医院、朝阳中医院
+	</view>
+
+
+
+</view>
+<view class="cont1">
+	<view class="title_zushou">
+		推荐社区
+	</view>
+	<view class="swiper-page" bindtouchmove="touchmove" bindtouchstart="touchstart" bindtouchend="touchend">
+		<view wx:for="{{7}}" wx:key="index" class="swiper-container">
+			<view class="item-container" style="z-index:{{indexArray[index]}}">
+				<view class="item{{index}} item-common" animation="{{animation[index]}}" bindtap="tapItemFn" data-text="{{textArray[index]}}">
+					<image class="background" src="https://legal.baike360.cn/public/uploads/z-5.png" mode='aspectFit'></image>
+					<!-- <text class="item-text">{{textArray[index]}}</text> -->
+					<!-- <text class="item-text" >9200元/月</text> -->
+					<view class="num_tab3">
+						北花园社区
+					</view>
+					<view class="num_tab2">
+						在售20套 | 在租房2145套
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- <button bindtap="tapLeft" style="position:absolute;top:0;left:20rpx">往左滑</button>
+  <button bindtap="tapRight" style="position:absolute;top:0;right:20rpx">往右滑</button> -->
+	</view>
+</view>
+<image class="bot_img" src="https://legal.baike360.cn/public/uploads/z-6.png"></image>
+<view class="txt_bit">
+	北花园一共7栋楼，8种户型。北花园一共7栋楼，8种户型，等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍等文字介绍内容介绍
+</view>
+<view style="width:100%;height:120rpx"></view>
+<view class="btn">联系社区顾问</view>

@@ -1,0 +1,79 @@
+<view class='tab'>
+	<view class="{{!tid?'true':''}}" bindtap="clickFn" data-id="">
+		全部预约
+	</view>
+	<view class="{{tid==='0'?'true':''}}" bindtap="clickFn" data-id="0">
+		预约中
+	</view>
+	<view class="{{tid==1?'true':''}}" bindtap="clickFn" data-id="1">
+		准备看房
+	</view>
+	<view class="{{tid==2?'true':''}}" bindtap="clickFn" data-id="2">
+		已完成
+	</view>
+	<view class="{{tid==3?'true':''}}" bindtap="clickFn" data-id="3">
+		已取消
+	</view>
+</view>
+<view class='list' wx:for="{{movieList}}" data-houseId="{{item.houseId}}" bindtap="delitFn">
+	<view class='head'>
+		<text wx:if="{{item.follow_status==0}}">预约中</text><text wx:if="{{item.follow_status==1}}">准备看房</text><text wx:if="{{item.follow_status==2}}">已完成</text><text wx:if="{{item.follow_status==3}}">已取消</text>丨看房时间：{{item.orderTime}}
+	</view>
+	<view class='bdy'>
+		<image src='http://yt.baike360.cn/index/image/6.png' mode='widthFix'></image>
+		<view>
+			<view class='title'>
+				{{item.name}} {{item.livingroom_number}}号楼 {{item.houseCode}}
+			</view>
+			<view class='txt'>
+				{{item.build_area}}m²丨{{item.orientation}}丨{{item.bedroom_number}}室{{item.livingroom_number}}厅丨{{item.renovation}}
+				<text class='y_box'>整租</text>
+				<text class='b_box'>住宅</text>
+				<text>整租</text>
+				<text>临地铁</text>
+			</view>
+		</view>
+	</view>
+	<!-- <view class='address'>
+		<image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+		朝阳区高碑店<text>{{item.rent_type}}</text>
+	</view> -->
+	<view class='bottom'>
+		<view class="dele" wx:if="{{item.follow_status==0}}" catchtap="deleFn" data-id="{{item.id}}" data-agentId="{{item.agentId}}" data-index="{{index}}">取消预约</view>
+		<view class="dele" wx:if="{{item.follow_status==2}}">再次预约</view>
+		<view class="dele" wx:if="{{item.follow_status==2}}" catchtap="pingjiaFn">评价顾问</view>
+		<view class="lianxi" wx:if="{{item.follow_status!=3&&item.follow_status!=0}}" data-id="{{item.id}}" catchtap      ="telFn">联系顾问</view>
+	</view>
+</view>
+<view style="font-size:28rpx;color:gray;text-align:center;padding:40rpx 0;" wx:if="{{movieList.length<1}}">没有更多数据了</view>
+<view class='b_pj' wx:if="{{show}}">
+	<view class='pj_bdy'>
+		<view class='title'>
+			评价
+		</view>
+		<view class='pj_btn'>
+			<text>非常差</text>
+			<text>非常满意</text>
+		</view>
+		<view class='jdt'>
+			<view class="section section_gap">
+				<text class="section__title"  wx:if="{{slider4}}">当前评分：  <text style="color:#ffc310"> {{slider4}}分 </text> </text>
+				<view class="body-view">
+				 <text>1</text>	<slider activeColor="#ffc310" min="1" max="10" bindchanging="slider3change" value="{{slider4}}" /> <text>10</text>
+				</view>
+			</view>
+		</view>
+		<textarea name="pj_cent" id="pj_cent" cols="30" rows="10" bindinput="liuvalue" value="{{liuvalue}}" placeholder="请输入您的评语">
+		</textarea>
+		<view class='btn' bindtap="inpsubmitFn">确认提交</view>
+	</view>
+	<view class='gb' bindtap="subshow">X</view>
+</view>
+<wxs module="we">
+  var parseInt = function (value) {
+  return value.parseInt(2);
+}
+module.exports = {
+	parseInt : parseInt
+}
+</wxs>

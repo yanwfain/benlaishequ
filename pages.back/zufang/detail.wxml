@@ -1,0 +1,187 @@
+<view class='b_box'>
+  <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange"  circular="{{circular}}" style="height:{{heig}}vw;">
+    <block wx:for='{{imgList}}'>
+      <swiper-item>
+        <image src="{{item.imgUrl}}" data-id='{{item.id}}' class="slide-image" mode="widthFix" bindload="imageLoad"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='title'>
+    <view class='money'>
+      <text>9200</text>元/月(季付)
+      <view>
+        <view class='sc'>
+          <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+          <view>收藏</view>
+        </view>
+        <view class='fx'>
+          <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+          <view>分享</view>
+        </view>
+      </view>
+    </view>
+    <view class='name'>
+      北花园物业-北花园小区-3室1厅
+    </view>
+  </view>
+  <view class='jieshao'>
+    <view>
+      南北
+      <view>朝向</view>
+    </view>
+    <view>
+      53m²
+      <view>面积</view>
+    </view>
+    <view>
+      高/4层
+      <view>楼层</view>
+    </view>
+    <view>
+      随时入住
+      <view>入住时间</view>
+    </view>
+  </view>
+  <view class='txt_box'>
+    <text class='y_box'>整租</text>
+    <text class='b_box'>住宅</text>
+    <text>整租</text>
+    <text>临地铁</text>
+  </view>
+  <view class='bottom'>
+    <view class='sm'>
+      <text>租期：</text>一年以内
+    </view>
+    <view class='sm'>
+      <text>看房：</text>需提前预约
+    </view>
+  </view>
+</view>
+<view class='b_box'>
+  <view class='tit'>
+    房源简介
+  </view>
+  <view class='tit_img'>
+    <view>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+      <view>电视</view>
+    </view>
+    <view>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+      <view>电视</view>
+    </view>
+    <view>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+      <view>电视</view>
+    </view>
+    <view>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+      <view>电视</view>
+    </view>
+    <view>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+      <view>电视</view>
+    </view>
+    <view>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+      <view>电视</view>
+    </view>
+    <view>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+      <view>电视</view>
+    </view>
+    <view>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+      <view>电视</view>
+    </view>
+    <view>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+      <view>电视</view>
+    </view>
+    <view>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>
+      <view>电视</view>
+    </view>
+  </view>
+  <view class='tit_title'>
+    户型介绍
+  </view>
+  <view class='tit_cent'>
+    户型介绍户型介绍户型介绍户型介绍户型介绍户型介绍
+  </view>
+</view>
+<view class='b_box'>
+  <view class='tit'>
+    费用详情
+  </view>
+  <view class='flex bold'>
+    <view>付款方式</view>
+    <view>
+      租金
+      <view>(元/月)</view>
+    </view>
+    <view>
+      押金
+      <view>(元)</view>
+    </view>
+    <view>
+      服务费
+      <view>(元)</view>
+    </view>
+    <view>
+      中介费
+      <view>(元/月)</view>
+    </view>
+  </view>
+  <view class='flex'>
+    <view>月付</view>
+    <view>
+      6000
+    </view>
+    <view>
+      6000
+    </view>
+    <view>
+      1000
+    </view>
+    <view>
+      0
+    </view>
+  </view>
+</view>
+<view class='b_box'>
+  <view class='tit'>
+    位置信息
+    <navigator>查看社区</navigator>
+  </view>
+  <image class='map' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' mode='widthFix'></image>
+</view>
+<view class='tit'>
+  附近房源
+</view>
+<view class='app_ceos' style='height:{{height}}vw;'>
+  <view class='app_ceo'>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg' mode="widthFix" bindload="imageLoads"></image>
+    <view class='app_ceo_font'>
+      <view class='app_ceo_font-top'>
+        杜顾问
+        <view>15515515515</view>
+      </view>
+      <view class='ceo_men'>
+        <view>
+          180
+          <view class='ceo_bottom'>带看次数</view>
+        </view>
+        <view>
+          180
+          <view class='ceo_bottom'>预约成功次数</view>
+        </view>
+        <view>
+          180
+          <view class='ceo_bottom'>成交次数</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<navigator class='btn'>联系社区顾问</navigator>

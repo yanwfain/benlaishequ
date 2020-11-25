@@ -1,0 +1,13 @@
+<view class="list">
+  <view class="left">头像</view>
+  <image mode="aspectFill" class="img1" src="../../image/z-8.png"></image>
+</view>
+<view class="list">
+  <view class="left">姓名</view>
+  <input class="right" value="" placeholder="请输入您的姓名"></input>
+</view>
+<view class="list">
+  <view class="left">手机号</view>
+  <input class="right" type="number" value="" placeholder="请输入您的手机号"></input>
+</view>
+<view class="btn">确定</view>

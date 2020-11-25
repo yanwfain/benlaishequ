@@ -1,0 +1,30 @@
+.b_box{border-bottom: 20rpx solid #f9f9f9;}
+.title{padding:20rpx;}
+.money{color: #ffc310;line-height: 80rpx;}
+.money>text{font-size: 36rpx;font-weight: bold;}
+.money>view{width: 200rpx;display: flex;float: right;line-height: 1;padding-top:20rpx}
+.money>view>view{flex:1;text-align: center;}
+.money>view>view>image{width: 20rpx;height:20rpx;}
+.name{font-size: 32rpx;font-weight: bold;}
+.jieshao{margin:20rpx 20rpx 0;border-top: 1rpx solid #eee;border-bottom: 1rpx solid #eee;padding:20rpx 0;display: flex;}
+.jieshao>view{flex: 1;text-align: center;color: #666;}
+.jieshao.view>view{font-size: 22rpx;color: #999;}
+.txt_box{padding:20rpx;}
+.txt_box>text{background: #f9f9f9;padding:5rpx 10rpx;display: inline-block;margin-right:15rpx;font-size: 20rpx;}
+.txt_box>text.y_box{background: #ffc310;color: #fff;}
+.txt_box>text.b_box{background: #666;color: #fff;}
+.bottom{padding:20rpx;}
+.sm>text{font-weight: bold;}
+.tit{font-size: 36rpx;font-weight: bold;padding:30rpx 20rpx}
+.tit_img{overflow: hidden;}
+.tit_img>view{width:20vw;text-align: center;float: left;}
+.tit_img>view>image{width: 50rpx;height: 50rpx;}
+.tit_title{font-weight: bold;padding:10rpx 20rpx;}
+.tit_cent{color: #666;padding:10rpx 20rpx;}
+.flex{display: flex;}
+.flex>view{flex: 1;text-align: center;font-weight: bold;}
+.flex>view:nth-child(5n+1){text-align: left;text-indent: 20rpx;}
+.tit>navigator{display: inline-block;float: right;font-size: 26rpx;font-weight: normal;color: #ffc310;background: #000;padding:10rpx 20rpx;}
+.map{width: 100%;}
+page{padding-bottom: 110rpx;}
+.btn{width: 100%;height: 100rpx;background: #ffc310;color: #fff;font-weight: bold;font-size: 36rpx;position: fixed;left: 0;bottom: 0;line-height: 100rpx;text-align: center;}

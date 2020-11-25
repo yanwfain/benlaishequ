@@ -1,0 +1,29 @@
+<view class='list' wx:for="{{movieList}}">
+	<view class='bdy'>
+
+		<view>
+			<view class="txt_user1"> <text wx:if="{{item.followStatus==0}}" style="font-size:17px;font-weight:bold;padding-right:10rpx;color:black">预约中 </text> 
+				<text style="font-size:17px;font-weight:bold;padding-right:10rpx;color:black" wx:if="{{item.followStatus==1}}">准备看房 </text>
+				<text style="font-size:17px;font-weight:bold;padding-right:10rpx;color:black" wx:if="{{item.followStatus==2}}">已完成 </text>
+				<text style="font-size:17px;font-weight:bold;padding-right:10rpx;color:black" wx:if="{{item.followStatus==3}}">已取消 </text>
+				预约时间： {{item.orderTime}}</view>
+			<view class='title' style="padding:10rpx 0">
+				{{item.name}} {{item.buildNum}}号楼 {{item.houseCode}}室
+			</view>
+			<view class="txt_user1">房源编号：45647891231</view>
+		</view>
+	</view>
+	<view class="user_xinxi">
+		<view class="lianxiF" bindtap="faqiFn" wx:if="{{item.followStatus == 0}}" data-index="{{index}}" data-id="{{item.id}}">接收预约</view>
+		<view class="lianxiF" bindtap="wanchengFn" wx:if="{{item.followStatus == 1}}" data-index="{{index}}" data-id="{{item.id}}">完成预约</view>
+		<view class="lianxiB" data-tel="{{item.phone}}" bindtap="telFn">联系用户</view>
+		<view class="txt_user1">预约用户：{{item.appName}}</view>
+		<view class="txt_user1" bindtap="makePhoneCall" data-tel="{{item.phone}}">电话：{{item.phone}}</view>
+		<view class="txt_user1">备注：{{item.remark}}</view>
+	</view>
+	<!-- <view class='bottom'>
+		<view>删除记录</view>
+		<navigator>查看房源</navigator>
+	</view> -->
+</view>
+<view style="font-size:28rpx;color:gray;text-align:center;padding:20rpx 0;" wx:if="{{movieList.length<1}}">没有更多数据了</view>

@@ -1,0 +1,30 @@
+.head{padding:40rpx 20rpx;display: flex;}
+.heads{background: url(http://yt.baike360.cn/index/image/13.png) no-repeat center;background-size: 100% 100%;}
+.head>image{width: 160rpx;height: 160rpx;border-radius: 50%;}
+.head>navigator{flex:1;padding-left:30rpx;padding-top: 40rpx;width: 60%;}
+.name{font-weight: bold;font-size: 36rpx;}
+.leve{width: 200rpx;
+  font-size: 26rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #E3D3AC 0%,#C3A874 100%);
+  padding:2rpx 0;
+  border-radius: 60rpx;
+  margin-top: 20rpx;
+  }
+.leve>image{width: 26rpx;height:26rpx; margin-right: 10rpx;}
+.flex{margin:0 5vw;background: #333;display: flex;text-align: center;border-radius: 20rpx 20rpx 0 0;padding: 20rpx 0;}
+.flex>navigator{color: #fff;flex: 1;}
+.flex>navigator>view{color: #ab956b;font-weight: bold;font-size: 30rpx;}
+.bdy{margin: 20rpx 5vw;display: flex;flex-wrap: wrap;}
+.bdy>navigator{width: 48%;padding:40rpx 0;background: #f7f7f7;text-align: center; margin:1%;}
+.bdy>navigator>image{width: 50rpx;height: 50rpx;}
+.bdy>view>image{width: 50rpx;height: 50rpx;}
+.bdy>navigator:nth-child(2n){margin: 0 0 2vw 0;}
+.view{
+  width:48%;padding:40rpx 0;background: #f7f7f7;float: left;text-align: center; margin:1%;
+}
+.view image{
+  width: 50rpx;height: 50rpx;
+}

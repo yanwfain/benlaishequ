@@ -1,0 +1,11 @@
+<navigator url='/pages/shequ/serce' class='toserce'>你想住在哪个社区？</navigator>
+<view class='title'>当前城市</view>
+<view class='now_city'>
+	<text bindtap="chengecity" data-index="99999"><image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600661911114&di=bb991286d16ece675de92289bfdfbc83&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F20%2F99%2F2256cd8f725b549.jpg'></image>北京</text>
+	<view class='getcity' bindtap="getcity">重新定位</view>
+</view>
+<view class='now_city'>
+	<text bindtap="chengecity" data-index="0">北京</text>
+	<text bindtap="chengecity" data-index="1">上海</text>
+	<text bindtap="chengecity" data-index="2">广州</text>
+</view>

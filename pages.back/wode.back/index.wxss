@@ -1,0 +1,13 @@
+.head{padding:40rpx 20rpx;display: flex;}
+.head>image{width: 160rpx;height: 160rpx;border-radius: 50%;}
+.head>navigator{flex:1;padding-left:30rpx;padding-top: 40rpx;}
+.name{font-weight: bold;font-size: 36rpx;}
+.leve{display: inline-block;padding:5rpx 15rpx;border-radius: 20rpx;background: #ab8001;font-size: 20rpx;}
+.leve>image{width: 20rpx;height: 20rpx;}
+.flex{margin:0 5vw;background: #333;display: flex;text-align: center;border-radius: 20rpx 20rpx 0 0;padding: 20rpx 0;}
+.flex>navigator{color: #fff;flex: 1;}
+.flex>navigator>view{color: #ab956b;font-weight: bold;font-size: 30rpx;}
+.bdy{margin: 20rpx 5vw;}
+.bdy>navigator{width: 44vw;padding:40rpx 0 	30rpx;background: #f7f7f7;float: left;text-align: center; margin:0 2vw 2vw 0;}
+.bdy>navigator>image{width: 50rpx;height: 50rpx;}
+.bdy>navigator:nth-child(2n){margin: 0 0 2vw 0;}

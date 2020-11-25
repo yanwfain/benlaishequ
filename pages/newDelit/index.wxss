@@ -1,0 +1,41 @@
+/* pages/newDelit/index.wxss */
+.title{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 32rpx;
+  font-weight: 600;
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden;
+}
+.zuozhe{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 28rpx;
+  color: #B7B7B7;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #979797;
+}
+.texts{
+  width: 90%;
+  margin: 0 auto;
+  
+}
+.time_botm{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 28rpx;
+  color: #B7B7B7;
+  padding: 20rpx 0;
+
+}
+.zulins{
+  margin-left: 5%;
+  padding: 6rpx 0;
+  width: 100rpx;
+  font-size: 28rpx;
+  color: white;
+  background: #C3A874;
+  text-align: center;
+} 
